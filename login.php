@@ -1,0 +1,90 @@
+<?php
+require 'fungsi/functions.php';
+
+
+
+if (isset($_POST["login"])) {
+    $username = $_POST["username"];
+    $password = $_POST["password"];
+
+    $query = "SELECT region, jabatan FROM admin WHERE username = '$username' AND password = '$password'";
+    $result = mysqli_query($conn, $query);
+
+    if ($result && mysqli_num_rows($result) === 1) {
+        $row = mysqli_fetch_assoc($result);
+        $region = $row['region'];
+        $jabatan = $row['jabatan'];
+
+        session_start();
+        $_SESSION['region'] = $region;
+
+        if ($jabatan === 'admin kota') {
+            header('Location: pilihdesa.php');
+            exit;
+        } elseif ($jabatan === 'admin desa') {
+            header('Location: desa.php');
+            exit;
+        }
+    } else {
+        $error = "Username atau password salah.";
+    }
+}
+
+?>
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Login | e-GeDe</title>
+</head>
+
+<body>
+    <section class="login-page">
+        <div class="top-asset">
+            <img src="img/assets/asset-2-login.png" alt="">
+        </div>
+        <div class="logo">
+            <p>Gerbang Desa Digital</p>
+            <img src="img/assets/logo-egede.png" alt="logo">
+        </div>
+        <div class="login-wrapper">
+            <div class="title">
+                <h1>Login</h1>
+            </div>
+            <div class="error">
+                <?php if (isset($error)) : ?>
+                    <p>Username / Password Salah</p>
+                <?php endif; ?>
+            </div>
+            <div class="form">
+                <form action="" method="post">
+                    <div class="input">
+                        <img src="img/icon/user.png" alt="">
+                        <div class="spacer"></div>
+                        <input type="text" name="username" autocomplete="off" placeholder="Username" required>
+                    </div>
+                    <div class="input">
+                        <img src="img/icon/lock.png" alt="">
+                        <div class="spacer"></div>
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+                    <button type="submit" name="login">
+                        <img src="img/icon/login.png" alt="">
+                        <p>LOGIN</p>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="bottom-asset">
+            <img src="img/assets/asset-1-login.png" alt="">
+        </div>
+    </section>
+</body>
+
+</html>
