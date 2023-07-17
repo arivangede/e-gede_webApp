@@ -1,5 +1,347 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
 
+body {
+  display: none;
+}
+
+@media screen and (max-width: 425px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --text: #c0c0c0;
+  }
+
+  body {
+    display: block;
+    font-family: "Poppins", sans-serif;
+    color: rgb(19, 19, 19);
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* =================================== LOGIN BG */
+
+  @keyframes fade-in-top-asset {
+    0% {
+      opacity: 0;
+      transform: translateY(-10rem);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(-5rem);
+    }
+  }
+
+  @keyframes fade-in-bot-asset {
+    0% {
+      opacity: 0;
+      transform: translate(0, 7rem);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translate(0, 2rem);
+    }
+  }
+
+  @keyframes fade-in-logo {
+    0% {
+      opacity: 0;
+      transform: translateX(7rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .login-page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .top-asset,
+  .bottom-asset {
+    width: 100%;
+    position: relative;
+  }
+
+  .top-asset img {
+    transform: translateY(-5rem);
+    width: 100%;
+    animation: 1.2s fade-in-top-asset;
+  }
+
+  .bottom-asset img {
+    transform: translateY(2rem);
+    width: 100%;
+    animation: 1.5s fade-in-bot-asset;
+  }
+
+  .logo {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 0.5rem;
+    transform: translate(0);
+    animation: 0.5s fade-in-logo;
+  }
+
+  .logo img {
+    width: 5rem;
+    height: auto;
+    margin-left: 0.5rem;
+  }
+
+  .logo p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    position: relative;
+    width: 9rem;
+    text-align: end;
+    font-style: italic;
+    padding: 0 0.5rem;
+  }
+
+  .logo p::after {
+    content: "";
+
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    height: 100%;
+    width: 2px;
+    background-color: var(--text);
+  }
+
+  /* =================================== LOGIN BG END */
+
+  /* =================================== LOGIN FORM */
+  @keyframes fade-in-form {
+    0% {
+      opacity: 0;
+      transform: translate(0, 3rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+  }
+
+  .login-wrapper {
+    margin-top: -5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: 2s fade-in-form;
+  }
+
+  .login-wrapper .title {
+    margin-bottom: 2rem;
+  }
+
+  .login-wrapper .title h1 {
+    font-size: 2rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  }
+
+  .login-wrapper .form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form .input {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    position: relative;
+  }
+  .form .input input {
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.3rem 0.3rem 3rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px var(--text);
+    transition: 0.5s ease-in-out;
+  }
+
+  .form input:focus {
+    outline: none;
+    box-shadow: 0 0 10px red;
+  }
+
+  .form button {
+    width: 90%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--text);
+    color: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .form button:hover {
+    background-color: red;
+  }
+
+  .form button p {
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+  }
+
+  .form button p::after {
+    content: "";
+    position: absolute;
+    right: 0.5rem;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background-color: white;
+  }
+
+  .form button img {
+    width: 1.5rem;
+  }
+
+  .form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  form .input img {
+    position: absolute;
+    left: 0.5rem;
+    width: 1.5rem;
+  }
+
+  .input .spacer {
+    position: absolute;
+    left: 2.5rem;
+    height: 80%;
+    width: 1px;
+    background-color: var(--text);
+  }
+
+  /* =================================== LOGIN FORM END */
+
+  /* =================================== DESA */
+  .head {
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    z-index: 0;
+    top: 0;
+    left: 0;
+  }
+
+  .logo-nama-desa {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0.2rem 1rem;
+    background-image: url("../img/assets/asset-1-homepage.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 0.1rem;
+    background-position-x: 0.2rem;
+  }
+
+  .logo-nama-desa .logo-desa {
+    width: 4rem;
+    margin-right: 1rem;
+  }
+
+  .logo-nama-desa .nama-desa {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 0 0.5rem;
+  }
+
+  .logo-nama-desa .nama-desa h1 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+
+  .logo-nama-desa .nama-desa p {
+    font-size: 0.6rem;
+    text-transform: capitalize;
+  }
+
+  /* BODY */
+  .body {
+    position: relative;
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    z-index: 2;
+  }
+
+  .body .carrousel-card {
+    display: flex;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+  }
+
+  .body .carrousel-card .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95vw;
+    height: 9rem;
+    margin: 0 0.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    scroll-snap-align: start;
+  }
+
+  .body .carrousel-card .card img {
+    width: 26rem;
+  }
+
+  /* =================================== DESA END */
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -248,5 +590,85 @@ form .input img {
 /* =================================== LOGIN FORM END */
 
 /* =================================== DESA */
+.head {
+  width: 100vw;
+  height: 5rem;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+.logo-nama-desa {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.2rem 1rem;
+  background-image: url("../img/assets/asset-1-homepage.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 0.1rem;
+  background-position-x: 0.2rem;
+}
+
+.logo-nama-desa .logo-desa {
+  width: 4rem;
+  margin-right: 1rem;
+}
+
+.logo-nama-desa .nama-desa {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  padding: 0 0.5rem;
+}
+
+.logo-nama-desa .nama-desa h1 {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.logo-nama-desa .nama-desa p {
+  font-size: 0.6rem;
+  text-transform: capitalize;
+}
+
+/* BODY */
+.body {
+  position: relative;
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  z-index: 2;
+}
+
+.carrousel-card {
+  display: flex;
+  width: 100vw;
+  overflow: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.carrousel-card .card-carrousel {
+  width: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  margin: 0 0.5rem;
+  scroll-snap-align: start;
+  padding: 0.2rem;
+}
+
+.carrousel-card .card-carrousel img {
+  width: 24rem;
+}
 
 /* =================================== DESA END */
