@@ -651,17 +651,20 @@ form .input img {
 .carrousel-card {
   display: flex;
   width: 100vw;
-  overflow: auto;
+  height: 10rem;
+  overflow-x: auto;
   scroll-snap-type: x mandatory;
+  background-color: white;
 }
 
 .carrousel-card .card-carrousel {
-  width: 25rem;
+  width: max-content;
+  height: max-content;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 1rem;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-radius: 0.3rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin: 0 0.5rem;
   scroll-snap-align: start;
   padding: 0.2rem;
@@ -669,6 +672,47 @@ form .input img {
 
 .carrousel-card .card-carrousel img {
   width: 24rem;
+}
+
+/* MENU GRID */
+.menu-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url("../img/assets/asset-menu-10.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.menu-grid .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 8rem;
+  width: 7rem;
+  padding: 1rem 0 0 0;
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  border-radius: 1rem;
+  margin: 0.3rem;
+}
+
+.menu-grid .menu p {
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 0.5rem;
+  color: white;
+  background-color: firebrick;
+}
+
+.menu-grid .menu img {
+  width: 60px;
 }
 
 /* =================================== DESA END */

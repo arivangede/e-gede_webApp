@@ -47,6 +47,48 @@ if (isset($_SESSION['region'])) {
                 <img src="img/assets/asset-3-carrousel-homepage.png" alt="iklan">
             </section>
         </div>
+
+
+        <div class="menu-grid">
+            <div class="menu 1">
+                <img src="img/assets/asset-menu-1.png" alt="icon">
+                <p>E-News</p>
+            </div>
+            <div class="menu 2">
+                <img src="img/assets/asset-menu-2.png" alt="icon">
+                <p>Peta Desa</p>
+            </div>
+            <div class="menu 3">
+                <img src="img/assets/asset-menu-3.png" alt="icon">
+                <p>Produk Hukum</p>
+            </div>
+            <div class="menu 4">
+                <img src="img/assets/asset-menu-4.png" alt="icon">
+                <p>Pengaduan</p>
+            </div>
+            <div class="menu 5">
+                <img src="img/assets/asset-menu-5.png" alt="icon">
+                <p>Informasi Publik</p>
+            </div>
+            <div class="menu 6">
+                <img src="img/assets/asset-menu-6.png" alt="icon">
+                <p>Satu Data</p>
+            </div>
+            <div class="menu 7">
+                <img src="img/assets/asset-menu-7.png" alt="icon">
+                <p>Layanan Kependudukan</p>
+            </div>
+            <div class="menu 8">
+                <img src="img/assets/asset-menu-8.png" alt="icon">
+                <p>Keuangan Desa</p>
+            </div>
+            <div class="menu 9">
+                <img src="img/assets/asset-menu-9.png" alt="icon">
+                <p>Inovasi Desa</p>
+            </div>
+        </div>
+
+
     </div>
 
 </body>
