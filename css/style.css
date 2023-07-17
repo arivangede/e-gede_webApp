@@ -651,7 +651,7 @@ form .input img {
 .carrousel-card {
   display: flex;
   width: 100vw;
-  height: 10rem;
+  height: 9rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   background-color: white;
@@ -678,12 +678,8 @@ form .input img {
 .menu-grid {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: end;
   flex-wrap: wrap;
-  background-image: url("../img/assets/asset-menu-10.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .menu-grid .menu {

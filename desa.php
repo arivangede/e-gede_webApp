@@ -88,6 +88,14 @@ if (isset($_SESSION['region'])) {
             </div>
         </div>
 
+        <div class="e-news">
+            <div class="card-e-news">
+                <div class="card-pict">
+                    <img src="img/assets/asset-enews-1.png" alt="e-news">
+                </div>
+                <div class="card-"></div>
+            </div>
+        </div>
 
     </div>
 
