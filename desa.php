@@ -12,7 +12,6 @@ if (isset($_SESSION['region'])) {
     $imagePath = "img/$region/desa.png";
 }
 
-
 ?>
 
 
@@ -24,7 +23,7 @@ if (isset($_SESSION['region'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>ini desa</title>
+    <title>e-GeDe | <?= $region; ?></title>
 </head>
 
 <body>
@@ -88,14 +87,104 @@ if (isset($_SESSION['region'])) {
             </div>
         </div>
 
-        <div class="e-news">
-            <div class="card-e-news">
-                <div class="card-pict">
-                    <img src="img/assets/asset-enews-1.png" alt="e-news">
-                </div>
-                <div class="card-"></div>
+        <section class="e-news">
+            <div class="title-e-news">
+                <h1>E-News</h1>
             </div>
-        </div>
+            <div class="e-news-content">
+                <div class="card-e-news">
+                    <div class="card-pict">
+                        <img src="img/assets/asset-enews-1.png" alt="e-news">
+                    </div>
+                    <div class="card-body">
+                        <h1 class="headline">Laporan Realisasi Anggaran Pendapatan Desa Tahun 2020</h1>
+                        <h5 class="tanggal-waktu">Selasa, 09 Maret 2021</h5>
+                        <p class="ringkasan">Laporan Realisasi Anggaran ...</p>
+                        <div class="card-btn">
+                            <button class="enews-button">More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-e-news">
+                    <div class="card-pict">
+                        <img src="img/assets/asset-enews-2.png" alt="e-news">
+                    </div>
+                    <div class="card-body">
+                        <h1 class="headline">HUT Kota Denpasar ke-234</h1>
+                        <h5 class="tanggal-waktu">Rabu, 09 Maret 2022</h5>
+                        <p class="ringkasan">HUT Kota Denpasar ke-234 ...</p>
+                        <div class="card-btn">
+                            <button class="enews-button">More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-e-news">
+                    <div class="card-pict">
+                        <img src="img/assets/asset-enews-3.png" alt="e-news">
+                    </div>
+                    <div class="card-body">
+                        <h1 class="headline">Rapat Koordinasi Kepsek SD SMP</h1>
+                        <h5 class="tanggal-waktu">Kamis, 15 Juni 2017</h5>
+                        <p class="ringkasan">Rapat pembahasan penerimaan ...</p>
+                        <div class="card-btn">
+                            <button class="enews-button">More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-e-news">
+                    <div class="card-pict">
+                        <img src="img/assets/asset-enews-4.png" alt="e-news">
+                    </div>
+                    <div class="card-body">
+                        <h1 class="headline">Penyerahan Sertifikat PTSL</h1>
+                        <h5 class="tanggal-waktu">Senin, 09 maret 2021</h5>
+                        <p class="ringkasan">Penyerahan Sertifikat hasil ...</p>
+                        <div class="card-btn">
+                            <button class="enews-button">More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-e-news">
+                    <div class="card-pict">
+                        <img src="img/assets/asset-enews-5.png" alt="e-news">
+                    </div>
+                    <div class="card-body">
+                        <h1 class="headline">Kegiatan PROKASIH</h1>
+                        <h5 class="tanggal-waktu">Selasa, 24 Oktober 2017</h5>
+                        <p class="ringkasan">Kegiatan PROKASIH (Program ...</p>
+                        <div class="card-btn">
+                            <button class="enews-button">More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-e-news">
+                    <div class="card-pict">
+                        <img src="img/assets/asset-enews-5.png" alt="e-news">
+                    </div>
+                    <div class="card-body">
+                        <h1 class="headline">Kegiatan PROKASIH</h1>
+                        <h5 class="tanggal-waktu">Selasa, 24 Oktober 2017</h5>
+                        <p class="ringkasan">Kegiatan PROKASIH (Program ...</p>
+                        <div class="card-btn">
+                            <button class="enews-button">More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-e-news">
+                    <div class="card-pict">
+                        <img src="img/assets/asset-enews-5.png" alt="e-news">
+                    </div>
+                    <div class="card-body">
+                        <h1 class="headline">Kegiatan PROKASIH</h1>
+                        <h5 class="tanggal-waktu">Selasa, 24 Oktober 2017</h5>
+                        <p class="ringkasan">Kegiatan PROKASIH (Program ...</p>
+                        <div class="card-btn">
+                            <button class="enews-button">More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
     </div>
 
