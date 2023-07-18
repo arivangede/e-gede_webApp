@@ -5,11 +5,11 @@ require 'fungsi/functions.php';
 session_start();
 
 $kecamatan = "Denpasar Utara";
-$kota = "Denpasar";
+$kabupaten = "Denpasar";
 
-if (isset($_SESSION['region'])) {
-    $region = $_SESSION['region'];
-    $imagePath = "img/$region/desa.png";
+if (isset($_SESSION['desa'])) {
+    $desa = $_SESSION['desa'];
+    $imagePath = "img/$desa/desa.png";
 }
 
 ?>
@@ -23,7 +23,7 @@ if (isset($_SESSION['region'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>e-GeDe | <?= $region; ?></title>
+    <title>e-GeDe | <?= $desa; ?></title>
 </head>
 
 <body>
@@ -31,13 +31,16 @@ if (isset($_SESSION['region'])) {
         <div class="logo-nama-desa">
             <img class="logo-desa" src="<?= $imagePath; ?>" alt="logoDesa">
             <div class="nama-desa">
-                <h1><?= $region; ?></h1>
-                <p>Kec. <?= $kecamatan; ?> Kota <?= $kota; ?></p>
+                <h1><?= $desa; ?></h1>
+                <p>Kec. <?= $kecamatan; ?> Kota <?= $kabupaten; ?></p>
             </div>
         </div>
     </header>
 
     <div class="body">
+        <div class="logout">
+            <a href="fungsi/logout.php">logout</a>
+        </div>
         <div class="carrousel-card">
             <section class="card-carrousel 1">
                 <img src="img/assets/asset-2-carrousel-homepage.png" alt="iklan">

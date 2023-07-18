@@ -1,32 +1,36 @@
 <?php
-require 'fungsi/functions.php';
+session_start();
+require_once 'fungsi/functions.php'; // Memuat file functions.php yang berisi koneksi ke database
 
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
 
-
-if (isset($_POST["login"])) {
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-
-    $query = "SELECT region, jabatan FROM admin WHERE username = '$username' AND password = '$password'";
+    // Periksa login ke database berdasarkan username dan password
+    $query = "SELECT * FROM admin WHERE username = '$username' AND password = '$password'";
     $result = mysqli_query($conn, $query);
 
-    if ($result && mysqli_num_rows($result) === 1) {
+    if (mysqli_num_rows($result) > 0) {
+        // Login berhasil
         $row = mysqli_fetch_assoc($result);
-        $region = $row['region'];
-        $jabatan = $row['jabatan'];
 
-        session_start();
-        $_SESSION['region'] = $region;
+        // Tetapkan informasi login ke session
+        $_SESSION['username'] = $row['username'];
+        $_SESSION['jabatan'] = $row['jabatan'];
+        $_SESSION['desa'] = $row['desa'];
 
-        if ($jabatan === 'admin kota') {
-            header('Location: pilihdesa.php');
-            exit;
-        } elseif ($jabatan === 'admin desa') {
-            header('Location: desa.php');
-            exit;
+        // Redirect ke halaman yang sesuai berdasarkan jabatan
+        if ($row['jabatan'] === 'admin kota') {
+            header("Location: pilihdesa.php");
+            exit();
+        } elseif ($row['jabatan'] === 'admin desa') {
+            $desa = $row['desa'];
+            header("Location: desa.php");
+            exit();
         }
     } else {
-        $error = "Username atau password salah.";
+        // Login gagal
+        echo "Username, password, atau jabatan salah.";
     }
 }
 
