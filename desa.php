@@ -3,7 +3,25 @@
 require 'fungsi/functions.php';
 
 session_start();
-$kecamatan = $_SESSION['kecamatan'];
+if(isset($_SESSION['kecamatan'])){
+
+$id_kecamatan = $_SESSION['kecamatan'];
+$query_kecamatan = "SELECT nama_kecamatan FROM kecamatan WHERE id_kecamatan = $id_kecamatan";
+    $result_kecamatan = mysqli_query($conn, $query_kecamatan);
+    if ($result_kecamatan && mysqli_num_rows($result_kecamatan) > 0) {
+        // Ambil nama kecamatan dari hasil query
+        $row_kecamatan = mysqli_fetch_assoc($result_kecamatan);
+        $nama_kecamatan = $row_kecamatan['nama_kecamatan'];
+    } else {
+        // Jika data kecamatan tidak ditemukan, berikan nilai default
+        $nama_kecamatan = "Kecamatan Tidak Diketahui";
+    }
+} else {
+    // Jika tidak ada ID kecamatan dalam session, berikan nilai default
+    $nama_kecamatan = "Kecamatan Belum Dipilih";
+}
+
+$kecamatan = $nama_kecamatan;
 
 $kabupaten = "Denpasar";
 

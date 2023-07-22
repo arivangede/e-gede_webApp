@@ -58,7 +58,7 @@ if (isset($_POST['submit']) && isset($_POST['pilihdesa'])) {
             $id_kecamatan = $row['id_kecamatan'];
             $nama_kecamatan = $row['nama_kecamatan'];
             $selected = ($nama_kecamatan == $selected_kecamatan) ? 'selected' : "";
-            echo "<option value= '$nama_kecamatan' $selected >$nama_kecamatan</option>";
+            echo "<option value= '$id_kecamatan'>$nama_kecamatan</option>";
        }
        ?>
         
@@ -73,7 +73,7 @@ if (isset($_POST['submit']) && isset($_POST['pilihdesa'])) {
                 $id_desa = $row['id_desa'];
                 $nama_desa = $row['nama_desa'];
                 $selected = ($nama_desa == $selected_desa) ? 'selected' : "";
-                echo "<option value ='$nama_desa' $selected >$nama_desa</option>";
+                echo "<option value ='$id_desa' $selected >$nama_desa</option>";
             }
             ?>
     </select><br><br>

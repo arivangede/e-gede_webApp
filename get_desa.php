@@ -15,7 +15,7 @@
         $id_desa = $row['id_desa'];
         $nama_desa = $row['nama_desa'];
         echo "<option value= '' >Pilih</option>";
-        echo "<option value='$id_desa'>$nama_desa</option>";
+        echo "<option value='$nama_desa'>$nama_desa</option>";
     }
 } else {
     // Tampilkan pesan jika tidak ada desa yang tersedia
