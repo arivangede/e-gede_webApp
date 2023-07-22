@@ -3,14 +3,17 @@
 require 'fungsi/functions.php';
 
 session_start();
+$kecamatan = $_SESSION['kecamatan'];
 
-$kecamatan = "Denpasar Utara";
 $kabupaten = "Denpasar";
 
 if (isset($_SESSION['desa'])) {
     $desa = $_SESSION['desa'];
     $imagePath = "img/$desa/desa.png";
+    
 }
+
+
 
 ?>
 
