@@ -24,7 +24,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             header("Location: pilihdesa.php");
             exit();
         } elseif ($row['jabatan'] === 'admin desa') {
-            $desa = $row['desa'];
+            $_SESSION['desa'] = $row['desa'];
+            $_SESSION['kecamatan'] = $row['kecamatan'];
+           var_dump($_SESSION['kecamatan']);
             header("Location: desa.php");
             exit();
         }
