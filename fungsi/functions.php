@@ -1,3 +1,3 @@
 <?php
 
-$conn = mysqli_connect("localhost", "root", "", "db_e_gede");
+$conn = mysqli_connect("localhost", "root", "root", "db_e_gede");

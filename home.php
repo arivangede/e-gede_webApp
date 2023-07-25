@@ -3,10 +3,10 @@
 require 'fungsi/functions.php';
 
 session_start();
-if(isset($_SESSION['kecamatan'])){
+if (isset($_SESSION['kecamatan'])) {
 
-$id_kecamatan = $_SESSION['kecamatan'];
-$query_kecamatan = "SELECT nama_kecamatan FROM kecamatan WHERE id_kecamatan = $id_kecamatan";
+    $id_kecamatan = $_SESSION['kecamatan'];
+    $query_kecamatan = "SELECT nama_kecamatan FROM kecamatan WHERE id_kecamatan = $id_kecamatan";
     $result_kecamatan = mysqli_query($conn, $query_kecamatan);
     if ($result_kecamatan && mysqli_num_rows($result_kecamatan) > 0) {
         // Ambil nama kecamatan dari hasil query
@@ -28,7 +28,6 @@ $kabupaten = "Denpasar";
 if (isset($_SESSION['desa'])) {
     $desa = $_SESSION['desa'];
     $imagePath = "img/$desa/desa.png";
-    
 }
 
 
