@@ -76,9 +76,9 @@ if (isset($_SESSION['desa'])) {
                 <img src="img/assets/asset-menu-1.png" alt="icon">
                 <p>E-News</p>
             </div>
-            <div class="menu 2">
+            <div class="menu profil-desa">
                 <img src="img/assets/asset-menu-2.png" alt="icon">
-                <p>Peta Desa</p>
+                <p>Profil Desa</p>
             </div>
             <div class="menu 3">
                 <img src="img/assets/asset-menu-3.png" alt="icon">
@@ -211,6 +211,8 @@ if (isset($_SESSION['desa'])) {
 
     </div>
 
+
+    <script src="fungsi/app.js"></script>
 </body>
 
 </html>
