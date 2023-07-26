@@ -43,6 +43,7 @@ if (isset($_SESSION['desa'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <title>e-GeDe | <?= $desa; ?></title>
 </head>
 
@@ -56,6 +57,30 @@ if (isset($_SESSION['desa'])) {
             </div>
         </div>
     </header>
+
+    <div class="navbar">
+        <nav>
+            <div class="nav-btn berandaBtn active">
+                <i class='bx bx-home'></i>
+                <p>Beranda</p>
+            </div>
+            <div class="nav-btn aktivitasBtn">
+                <i class='bx bx-collection bx-rotate-270'></i>
+                <p>Aktivitas</p>
+            </div>
+            <div class="nav-btn menuBtn">
+                <img src="img/assets/logo-tengah.png" alt="">
+            </div>
+            <div class="nav-btn notifikasiBtn">
+                <i class='bx bx-bell'></i>
+                <p>Notifikasi</p>
+            </div>
+            <div class="nav-btn profilBtn">
+                <i class='bx bx-user-circle'></i>
+                <p>Profil</p>
+            </div>
+        </nav>
+    </div>
 
     <div class="body">
         <div class="carrousel-card">
@@ -79,7 +104,7 @@ if (isset($_SESSION['desa'])) {
             </div>
             <div class="menu 3">
                 <img src="img/assets/asset-menu-3.png" alt="icon">
-                <p>Produk Hukum</p>
+                <p>Regulasi</p>
             </div>
             <div class="menu 4">
                 <img src="img/assets/asset-menu-4.png" alt="icon">
@@ -87,23 +112,23 @@ if (isset($_SESSION['desa'])) {
             </div>
             <div class="menu 5">
                 <img src="img/assets/asset-menu-5.png" alt="icon">
-                <p>Informasi Publik</p>
+                <p>Data Desa</p>
             </div>
             <div class="menu 6">
                 <img src="img/assets/asset-menu-6.png" alt="icon">
-                <p>Satu Data</p>
+                <p>Layanan Publik/p>
             </div>
             <div class="menu 7">
                 <img src="img/assets/asset-menu-7.png" alt="icon">
-                <p>Layanan Kependudukan</p>
+                <p>Keuangan Desa</p>
             </div>
             <div class="menu 8">
                 <img src="img/assets/asset-menu-8.png" alt="icon">
-                <p>Keuangan Desa</p>
+                <p>Wisata Budaya</p>
             </div>
             <div class="menu 9">
                 <img src="img/assets/asset-menu-9.png" alt="icon">
-                <p>Inovasi Desa</p>
+                <p>lainnya</p>
             </div>
         </div>
 
@@ -159,32 +184,6 @@ if (isset($_SESSION['desa'])) {
                         <h1 class="headline">Penyerahan Sertifikat PTSL</h1>
                         <h5 class="tanggal-waktu">Senin, 09 maret 2021</h5>
                         <p class="ringkasan">Penyerahan Sertifikat hasil ...</p>
-                        <div class="card-btn">
-                            <button class="enews-button">More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-e-news">
-                    <div class="card-pict">
-                        <img src="img/assets/asset-enews-5.png" alt="e-news">
-                    </div>
-                    <div class="card-body">
-                        <h1 class="headline">Kegiatan PROKASIH</h1>
-                        <h5 class="tanggal-waktu">Selasa, 24 Oktober 2017</h5>
-                        <p class="ringkasan">Kegiatan PROKASIH (Program ...</p>
-                        <div class="card-btn">
-                            <button class="enews-button">More</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-e-news">
-                    <div class="card-pict">
-                        <img src="img/assets/asset-enews-5.png" alt="e-news">
-                    </div>
-                    <div class="card-body">
-                        <h1 class="headline">Kegiatan PROKASIH</h1>
-                        <h5 class="tanggal-waktu">Selasa, 24 Oktober 2017</h5>
-                        <p class="ringkasan">Kegiatan PROKASIH (Program ...</p>
                         <div class="card-btn">
                             <button class="enews-button">More</button>
                         </div>

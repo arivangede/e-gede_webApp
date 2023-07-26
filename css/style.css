@@ -306,6 +306,71 @@ body {
     text-transform: capitalize;
   }
 
+  /* Navbar */
+
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  .navbar nav {
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+
+    position: relative;
+  }
+
+  nav .nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav .nav-btn i {
+    font-size: 2rem;
+  }
+
+  nav .nav-btn p {
+    font-size: 0.6rem;
+  }
+
+  nav .nav-btn img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .menuBtn {
+    margin-top: -2rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  }
+
+  .berandaBtn.active,
+  .aktivitasBtn.active,
+  .notifikasiBtn.active,
+  .profilBtn.active {
+    color: red;
+  }
+
+  /* navbar end */
+
   /* BODY */
   .body {
     position: relative;
