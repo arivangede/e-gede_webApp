@@ -15,9 +15,6 @@ if (isset($_POST['submit']) && isset($_POST['pilihdesa'])) {
     $selected_desa = $_POST['pilihdesa'];
     $selected_kecamatan = $_POST['pilihkecamatan'];
 
-    // Lakukan validasi jika diperlukan sebelum menyimpan ke session
-    // Contoh: pastikan nilai $selected_desa valid dan aman untuk disimpan dalam session
-
     // Simpan nilai $selected_desa ke dalam session
     $_SESSION['kecamatan'] = $selected_kecamatan;
     $_SESSION['desa'] = $selected_desa;

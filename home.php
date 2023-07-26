@@ -58,9 +58,6 @@ if (isset($_SESSION['desa'])) {
     </header>
 
     <div class="body">
-        <div class="logout">
-            <a href="fungsi/logout.php">logout</a>
-        </div>
         <div class="carrousel-card">
             <section class="card-carrousel 1">
                 <img src="img/assets/asset-2-carrousel-homepage.png" alt="iklan">
