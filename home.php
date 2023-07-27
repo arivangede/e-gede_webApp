@@ -72,7 +72,7 @@ if (isset($_SESSION['desa'])) {
 
 
         <div class="menu-grid">
-            <div class="menu 1">
+            <div class="menu e-newsBtn">
                 <img src="img/assets/asset-menu-1.png" alt="icon">
                 <p>E-News</p>
             </div>
