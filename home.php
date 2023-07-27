@@ -64,7 +64,7 @@ if (isset($_SESSION['desa'])) {
                 <i class='bx bx-home'></i>
                 <p>Beranda</p>
             </div>
-            <div class="nav-btn aktivitasBtn">
+            <div class="nav-btn aktivitasBtn" onclick="pindahAktivitas()">
                 <i class='bx bx-collection bx-rotate-270'></i>
                 <p>Aktivitas</p>
             </div>
@@ -141,7 +141,7 @@ if (isset($_SESSION['desa'])) {
 
 
         <div class="menu-grid">
-            <div class="menu 1">
+            <div class="menu e-newsBtn">
                 <img src="img/assets/asset-menu-1.png" alt="icon">
                 <p>E-News</p>
             </div>
