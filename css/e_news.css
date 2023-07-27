@@ -1,0 +1,163 @@
+.container-logo {
+  max-width: 100rem;
+  margin: 0 auto;
+  display: flex; /* Menggunakan flexbox */
+  align-items: center; /* Pusatkan elemen secara vertikal */
+  /* border: 2px solid black; */
+  margin-left: 0.1rem;
+  height: 5rem;
+  padding: 5px; /* Berikan sedikit padding agar teks tidak terlalu dekat dengan tepi */
+}
+
+/* Gaya untuk gambar dalam .logo-e-news */
+.logo-e-news img {
+  max-width: 5rem;
+  height: auto;
+  /* border: 2px solid #000000; */
+}
+
+/* Gaya untuk teks di samping gambar */
+.text-desa {
+  /* border: 2px solid red; */
+  font-size: 1rem;
+  margin-left: 5px; /* Beri jarak antara teks dengan gambar */
+}
+/* Gaya untuk container .e-news_container */
+.e-news_container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto;
+  border: 1px solid #ccc; /* Tambahkan garis pembatas */
+  display: flex; /* Menggunakan Flexbox untuk mengatur tata letak */
+  align-items: center; /* Elemen berada di tengah secara vertikal */
+}
+
+/* Gaya untuk gambar dalam .e-news_container */
+.e-news_container img {
+  width: 3rem; /* Lebar gambar diatur menjadi 3 rem */
+  height: auto; /* Tinggi gambar akan menyesuaikan agar tidak terdistorsi */
+  margin-right: 20px; /* Jarak antara gambar dengan teks */
+}
+
+/* Gaya untuk judul "E - NEWS" */
+.e-news_container h2 {
+  color: #007bff;
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0; /* Hapus margin bawaan untuk h2 */
+}
+
+/* Gaya untuk container .pengumuman */
+.pengumuman {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center; /* Untuk memusatkan isi pada tengah */
+  position: relative; /* Membuat container .pengumuman menjadi konteks posisi */
+  border: 1px solid #ccc; /* Tambahkan garis pembatas */
+  padding: 20px; /* Jarak antara isi dan garis pembatas */
+  display: flex; /* Menggunakan Flexbox untuk mengatur tata letak */
+  flex-direction: column; /* Atur tata letak elemen secara vertikal */
+}
+
+/* Gaya untuk container .title-container dan .title2-container */
+.title-container,
+.title2-container {
+  margin-bottom: 10px; /* Jarak antara tulisan dan garis pemisah */
+  text-align: left; /* Meletakkan tulisan di kiri */
+}
+
+/* Gaya untuk elemen h3 dalam .title-container dan .title2-container */
+.title-container h3,
+.title2-container h3 {
+  margin: 0; /* Hapus margin bawaan h3 agar tidak ada jarak di atas dan bawah */
+  font-size: 1rem;
+}
+
+/* Gaya untuk gambar dalam .pengumuman */
+.pengumuman img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px; /* Jarak antara gambar dengan konten sebelumnya */
+}
+
+/* Gaya untuk gambar pada pojok kanan atas */
+.title2-container img {
+  position: absolute;
+  top: 1rem;
+  right: 5rem;
+  width: 6rem; /* Lebar gambar diatur menjadi 3 rem */
+  height: auto; /* Tinggi gambar akan menyesuaikan agar tidak terdistorsi */
+  transform: translate(
+    50%,
+    -50%
+  ); /* Menggeser gambar 50% dari kanan dan 50% dari atas */
+}
+
+/* container utuk berita dan gambar */
+/* Gaya untuk container .berita-dan-gambar */
+.berita-dan-gambar {
+  height: 5rem;
+  width: 100%;
+  margin: 0;
+  position: relative;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+/* Gaya untuk elemen h3 dalam .berita-dan-gambar */
+.berita-dan-gambar h3 {
+  font-size: 1rem;
+  margin: 0;
+  flex: 1; /* Memberi elemen h3 fleksibilitas untuk memanjang dan mengisi ruang yang tersedia */
+}
+
+/* Gaya untuk container .btnfilter */
+.btnfilter {
+  display: flex; /* Menggunakan flexbox */
+  align-items: center; /* Pusatkan elemen secara vertikal */
+  margin-left: 12rem;
+}
+
+/* Gaya untuk tautan a dalam .btnfilter */
+.btnfilter a {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  background-color: rgb(166, 3, 3);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.berita1 {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 0.3rem;
+}
+.berita1 img {
+  max-width: 100%;
+  height: auto;
+
+  border-radius: 0.3rem;
+}
+
+.btn-kembali-pengumuman {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.a {
+  text-decoration: none;
+  font-weight: 400;
+  color: #d80000;
+}
