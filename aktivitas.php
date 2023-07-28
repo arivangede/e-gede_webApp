@@ -10,20 +10,6 @@
 </head>
 
 <body>
-    <header>
-        <div class="title">
-            <h2>Aktivitas</h2>
-        </div>
-        <div class="pilihan">
-            <div class="laporan-saya active">
-                <h3>Laporan Saya</h3>
-            </div>
-            <div class="disimpan">
-                <h3>Disimpan</h3>
-            </div>
-        </div>
-    </header>
-
     <div class="navbar">
         <nav>
             <div class="nav-btn berandaBtn" onclick="pindahHome()">
@@ -94,19 +80,36 @@
         </div>
     </div>
 
-    <div class="outer-container">
-        <div class="body laporan-saya">
-            <section id="laporan-saya">
+    <section class="aktivitas">
+        <header>
+            <div class="title">
+                <h2>Aktivitas</h2>
+            </div>
+            <div class="pilihan">
+                <div class="laporan-saya active">
+                    <h3>Laporan Saya</h3>
+                </div>
+                <div class="disimpan">
+                    <h3>Disimpan</h3>
+                </div>
+            </div>
+        </header>
 
-            </section>
-            <section id="disimpan">
-
-            </section>
+        <div class="outer-container">
+            <div class="body laporan-saya">
+                <section id="laporan-saya">
+                    <img src="img/assets/asset-laporan-saya-1.png" alt="">
+                    <div class="text">
+                        <h1>Kamu Belum Punya Aktivitas</h1>
+                        <p>Ayo eksplor semua fitur e-GeDe biar gak ketinggalan informasi terbaru serta ragam manfaat dan keunggulan yang ada di dalamnya.</p>
+                    </div>
+                </section>
+                <section id="disimpan">
+                    <h2>Kamu belum menyimpan apapun</h2>
+                </section>
+            </div>
         </div>
-    </div>
-
-
-
+    </section>
 
     <script src="fungsi/app.js"></script>
 </body>
