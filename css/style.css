@@ -306,6 +306,171 @@ body {
     text-transform: capitalize;
   }
 
+  /* Navbar */
+
+  .navbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .navbar nav {
+    height: 100%;
+    width: 100%;
+    padding: 0.5rem 1rem 1.3rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    box-shadow: 0 0 10px black;
+
+    position: relative;
+  }
+
+  nav .nav-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #909090;
+  }
+
+  nav .nav-btn i {
+    font-size: 2rem;
+  }
+
+  nav .nav-btn p {
+    font-size: 0.6rem;
+  }
+
+  nav .nav-btn img {
+    width: 5rem;
+    height: 5rem;
+  }
+
+  .menuBtn {
+    margin-top: -2rem;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  }
+
+  .berandaBtn.active,
+  .aktivitasBtn.active,
+  .notifikasiBtn.active,
+  .profilBtn.active {
+    color: red;
+  }
+
+  /* navbar end */
+
+  /* menu popup */
+  .menu-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform-origin: bottom;
+    transform: scale(0);
+    opacity: 0;
+
+    transition: all 0.4s ease-in-out;
+  }
+
+  .menu-popup.active {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .menu-popup .menu-wrapper {
+    position: relative;
+    width: 80%;
+    height: 60%;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px black;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: start;
+    padding: 0.5rem;
+
+    transform-origin: bottom;
+  }
+
+  .menu-popup .menu-wrapper .closeBtn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    z-index: 1;
+  }
+
+  .menu-popup .menu-wrapper .closeBtn i {
+    font-size: 2rem;
+  }
+
+  .menu-popup .menu-wrapper .title h2 {
+    font-size: 1rem;
+  }
+
+  .menu-popup .menu-wrapper .menu-content {
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+  }
+
+  .menu-popup .menu-wrapper .menu-content .menu {
+    width: 5rem;
+    height: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+    margin: 0.5rem;
+  }
+
+  .menu-popup .menu-wrapper .menu-content .menu img {
+    height: 3rem;
+  }
+
+  .menu-popup .menu-wrapper .menu-content .menu p {
+    font-size: 0.6rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* menu popup end */
+
   /* BODY */
   .body {
     position: relative;
@@ -314,6 +479,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: start;
+
     z-index: 2;
   }
 
@@ -348,12 +514,14 @@ body {
 
   /* MENU GRID */
   .menu-grid {
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    flex-wrap: wrap;
-    background-color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1.2fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+    width: 100%;
+    background-color: #c0c0c0;
     padding-top: 0.7rem;
+    padding-bottom: 1rem;
   }
 
   .menu-grid .menu {
@@ -361,14 +529,14 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 8rem;
-    width: 7rem;
+    height: 90%;
+    width: 95%;
     padding: 1rem 0 0 0;
     overflow: hidden;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     border: none;
     background-color: white;
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     margin: 0.3rem;
   }
 
@@ -382,8 +550,18 @@ body {
     background-color: firebrick;
   }
 
+  .menu-grid .menu.lainnya p {
+    margin-top: 0;
+    background-color: white;
+    color: black;
+  }
+
+  .menu-grid .menu.lainnya img {
+    height: 40px;
+  }
+
   .menu-grid .menu img {
-    width: 60px;
+    height: 35px;
   }
 
   .e-news {
@@ -412,12 +590,12 @@ body {
   .e-news-content {
     max-height: 100vh;
     width: 100%;
-    overflow: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     padding-top: 1rem;
+    padding-bottom: 4rem;
   }
 
   .e-news-content::-webkit-scrollbar {
