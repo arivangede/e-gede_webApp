@@ -61,7 +61,7 @@ if (!$result) {
       <img src="../../img_e_news/Asset 1.png" alt="" />
     </div>
 
-    <div class="berita-dan-gambar">
+    <!-- <div class="berita-dan-gambar">
     <div class="berita">
       <h3>Berita</h3>
       </div>
@@ -69,7 +69,6 @@ if (!$result) {
       <a href="">Filter</a>
       </div>
       <div class="gambar-berita">
-        <!-- <img src="../../img_e_news/Asset 5.png" alt=""> -->
       </div>
     
     </div>
@@ -79,7 +78,7 @@ if (!$result) {
 
     <div class="berita1">
       <img src="../../img_e_news/Asset 4.png" alt="" />
-    </div>
+    </div> -->
 
 
 

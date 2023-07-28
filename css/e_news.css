@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+html {
+  font-family: "poppins", sans-serif;
+}
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 .container-logo {
   max-width: 100rem;
   margin: 0 auto;
@@ -114,13 +126,13 @@
 .berita-dan-gambar h3 {
   font-size: 1rem;
   margin: 0;
-  flex: 1; /* Memberi elemen h3 fleksibilitas untuk memanjang dan mengisi ruang yang tersedia */
+  flex: 1;
 }
 
 /* Gaya untuk container .btnfilter */
 .btnfilter {
-  display: flex; /* Menggunakan flexbox */
-  align-items: center; /* Pusatkan elemen secara vertikal */
+  display: flex;
+  align-items: center;
   margin-left: 12rem;
 }
 
@@ -147,17 +159,88 @@
 .berita1 img {
   max-width: 100%;
   height: auto;
-
   border-radius: 0.3rem;
 }
+/*------------------------------ pengumuman-------------------- */
+.Pengumuman-wraper {
+  position: relative;
+  overflow-x: hidden;
+}
 
-.btn-kembali-pengumuman {
+.pengumuman-head {
+  width: 100%;
+  box-shadow: 0 2px 2px rgb(135, 135, 135);
+  padding-bottom: 0.5rem;
+  z-index: 2;
+  position: fixed;
+  background-color: white;
+}
+.pengumuman-head a {
+  text-decoration: none;
+  font-weight: 600;
+  color: red;
+}
+.text-pengumuman {
+  width: 90%;
+  height: 6rem;
+  box-shadow: 0 2px 2px rgb(56, 56, 56);
+  padding: 1rem;
+  position: absolute;
+  left: 1.3rem;
+  top: 1.5rem;
+  z-index: 3;
+  border-radius: 0.3rem;
+  background-color: white;
+  font-weight: 700;
+}
+.text-pengumuman h1 {
+  color: rgb(3, 3, 3);
+  font-weight: 900;
+  font-size: medium;
+  top: 3rem;
+}
+.text-pengumuman p {
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  font-size: small;
+  top: 3rem;
+}
+.sosial_media {
+  width: 3rem;
+  position: fixed;
+  right: 0;
+  top: 10rem;
+  box-shadow: 0 0 5px black;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  z-index: 1;
+  background-color: whitesmoke;
+}
+.pengumuman-body {
+  width: 100%;
+  height: auto;
+  position: relative;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  display: flex;
+  z-index: -1;
+  padding-top: 7rem;
 }
-.a {
-  text-decoration: none;
-  font-weight: 400;
-  color: #d80000;
+.gambar_isi img {
+  width: 100%;
+  height: auto;
+  top: 7rem;
+}
+
+.isi-pengumuman {
+  top: -2rem;
+  height: 100%;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 2px black;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  position: relative;
+  background-color: white;
 }
