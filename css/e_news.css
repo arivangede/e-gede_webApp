@@ -161,7 +161,7 @@ body {
   height: auto;
   border-radius: 0.3rem;
 }
-/*------------------------------ pengumuman-------------------- */
+/*------------------------------detile pengumuman-------------------- */
 .Pengumuman-wraper {
   position: relative;
   overflow-x: hidden;
@@ -243,4 +243,69 @@ body {
   border-top-right-radius: 1rem;
   position: relative;
   background-color: white;
+}
+/*----------------------- detile berita ----------------*/
+.berita-wraper {
+  position: relative;
+  overflow-x: hidden;
+}
+.head-berita {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 2px 2px rgb(135, 135, 135);
+  padding-bottom: 0.5rem;
+  position: fixed;
+  background-color: whitesmoke;
+}
+.head-berita a {
+  text-decoration: none;
+  font-weight: 600;
+  color: red;
+  /* z-index: 1; */
+}
+
+.judul-berita {
+  width: 90%;
+  height: 6rem;
+  box-shadow: 0 2px 2px rgb(56, 56, 56);
+  padding: 1rem;
+  position: absolute;
+  left: 1.3rem;
+  top: 1.5rem;
+  z-index: 3;
+  border-radius: 0.3rem;
+  background-color: white;
+  font-weight: 700;
+}
+.judul-berita h2 {
+  color: rgb(3, 3, 3);
+  font-weight: 900;
+  font-size: medium;
+  top: 3rem;
+}
+.judul-berita p {
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  font-size: small;
+  top: 3rem;
+}
+
+.sosial-media {
+  position: fixed;
+  top: 55%;
+  right: 1rem;
+  transform: translateY(-50%);
+  box-shadow: 0 0 2px black;
+  background-color: whitesmoke;
+  border-top-left-radius: 0.3rem;
+  border-bottom-left-radius: 0.3rem;
+  width: 2.5rem;
+  padding: 1rem;
+}
+
+.sosial-media a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #000;
 }
