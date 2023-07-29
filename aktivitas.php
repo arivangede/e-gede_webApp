@@ -23,11 +23,11 @@
             <div class="nav-btn menuBtn" id="menuBtn">
                 <img src="img/assets/logo-tengah.png" alt="">
             </div>
-            <div class="nav-btn notifikasiBtn">
+            <div class="nav-btn notifikasiBtn" onclick="pindahNotifikasi()">
                 <i class='bx bx-bell'></i>
                 <p>Notifikasi</p>
             </div>
-            <div class="nav-btn profilBtn">
+            <div class="nav-btn profilBtn" onclick="pindahProfil()">
                 <i class='bx bx-user-circle'></i>
                 <p>Profil</p>
             </div>

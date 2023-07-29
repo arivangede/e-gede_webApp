@@ -24,6 +24,16 @@ function pindahAktivitas() {
 function pindahHome() {
   window.location.href = "home.php";
 }
+function pindahNotifikasi() {
+  window.location.href = "notifikasi.php";
+}
+function masukNotifikasi() {
+  window.location.href = "isi-notifikasi.php";
+}
+function pindahProfil() {
+  window.location.href = "profil.php";
+}
+
 function pindahFiturProfilDesa() {
   window.location.href = "fitur/profil-desa/index.php";
 }

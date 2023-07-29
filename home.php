@@ -44,7 +44,7 @@ if (isset($_SESSION['desa'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <title>e-GeDe | <?= $desa; ?></title>
+    <title>e-GeDe | Home</title>
 </head>
 
 <body>
@@ -61,11 +61,11 @@ if (isset($_SESSION['desa'])) {
             <div class="nav-btn menuBtn" id="menuBtn">
                 <img src="img/assets/logo-tengah.png" alt="">
             </div>
-            <div class="nav-btn notifikasiBtn">
+            <div class="nav-btn notifikasiBtn" onclick="pindahNotifikasi()">
                 <i class='bx bx-bell'></i>
                 <p>Notifikasi</p>
             </div>
-            <div class="nav-btn profilBtn">
+            <div class="nav-btn profilBtn" onclick="pindahProfil()">
                 <i class='bx bx-user-circle'></i>
                 <p>Profil</p>
             </div>

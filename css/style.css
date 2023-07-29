@@ -10,7 +10,7 @@
 }
 
 :root {
-  --text: #c0c0c0;
+  --text: #3a3a3a;
 }
 
 body {
@@ -563,7 +563,7 @@ nav .nav-btn img {
 .menu-grid .menu.lainnya p {
   margin-top: 0;
   background-color: white;
-  color: black;
+  color: var(--text);
 }
 
 .menu-grid .menu.lainnya img {
