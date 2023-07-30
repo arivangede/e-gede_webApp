@@ -21,9 +21,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Redirect ke halaman yang sesuai berdasarkan jabatan
         if ($row['jabatan'] === 'admin kota') {
+            $_SESSION['login'] = true;
             header("Location: pilihdesa.php");
             exit();
         } elseif ($row['jabatan'] === 'admin desa') {
+            $_SESSION['login'] = true;
             $_SESSION['desa'] = $row['desa'];
             $_SESSION['kecamatan'] = $row['kecamatan'];
             var_dump($_SESSION['kecamatan']);

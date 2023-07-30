@@ -1,29 +1,20 @@
 <?php
 require 'fungsi/functions.php';
-
-$query_kecamatan = "SELECT id_kecamatan, nama_kecamatan FROM kecamatan";
-$resul_kecamatan = mysqli_query($conn, $query_kecamatan);
-
-
-$query_desa = "SELECT id_desa, nama_desa FROM desa";
-$resul_desa = mysqli_query($conn, $query_desa);
-
-session_start(); // Pastikan memanggil session_start() di awal halaman
-
-// Cek apakah ada data yang dikirim melalui POST
-if (isset($_POST['submit']) && isset($_POST['pilihdesa'])) {
-    $selected_desa = $_POST['pilihdesa'];
-    $selected_kecamatan = $_POST['pilihkecamatan'];
-
-    // Simpan nilai $selected_desa ke dalam session
-    $_SESSION['kecamatan'] = $selected_kecamatan;
-    $_SESSION['desa'] = $selected_desa;
-    header("Location: home.php");
-    // Pastikan session sudah disimpan
-    session_write_close();
+session_start();
+if (!$_SESSION['login']) {
+    header('Location: login.php');
 }
 
+$query_kabupaten = "SELECT * FROM kabupaten";
+$result_kabupaten = $conn->query($query_kabupaten);
 
+$conn->close();
+
+if (isset($_POST['submit'])) {
+    $_SESSION['kecamatan'] = $_POST['pilih-kecamatan'];
+    $_SESSION['desa'] = $_POST['pilih-desa'];
+    header("Location: home.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -32,76 +23,113 @@ if (isset($_POST['submit']) && isset($_POST['pilihdesa'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>e-GeDe | Pilih Desa</title>
 </head>
 
 <body>
-    <h1>Halaman Pilih Desa</h1>
+    <div class="card-pilihdesa">
+        <div class="card-pilihdesa-title">
+            <h1>Pilih Desa</h1>
+        </div>
 
-    <form action="" method="post">
-        <label for="kabupaten">Pilih Kabupaten</label><br>
-        <select name="pilihkabupaten" id="kabupaten">
-            <option value="">--Pilih--</option>
-            <option value="denpasar">Denpasar</option>
-        </select><br>
-
-        <label for="kecamatan">Pilih Kecamatan</label><br>
-        <select name="pilihkecamatan" id="kecamatan">
-            <option value="">--Pilih--</option>
-            <?php
-            while ($row = mysqli_fetch_assoc($resul_kecamatan)) {
-                $id_kecamatan = $row['id_kecamatan'];
-                $nama_kecamatan = $row['nama_kecamatan'];
-                $selected = ($nama_kecamatan == $selected_kecamatan) ? 'selected' : "";
-                echo "<option value= '$id_kecamatan'>$nama_kecamatan</option>";
-            }
-            ?>
-
-        </select><br>
-
-        <label for="desa">Pilih Desa</label><br>
-        <select name="pilihdesa" id="desa">
-            <option value="">--Pilih--</option>
-            <?php
-            //tampilkan opsi desa pada element select 
-            while ($row = mysqli_fetch_assoc($resul_desa)) {
-                $id_desa = $row['id_desa'];
-                $nama_desa = $row['nama_desa'];
-                $selected = ($nama_desa == $selected_desa) ? 'selected' : "";
-                echo "<option value ='$id_desa' $selected >$nama_desa</option>";
-            }
-            ?>
-        </select><br><br>
-
-
-        <button type="submit" name="submit">Submit</button>
-    </form>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        function getDesa() {
-            var kecamatanId = $('#kecamatan').val();
-            $.ajax({
-                url: 'get_desa.php',
-                method: 'POST',
-                data: {
-                    kecamatan: kecamatanId
-                },
-                success: function(response) {
-                    // Memperbarui elemen desa dengan opsi yang dipilih
-                    $('#desa').html(response);
-                },
-                error: function() {
-                    alert('Terjadi kesalahan');
+        <form action="" method="post">
+            <select name="pilih-kabupaten" id="pilih-kabupaten" required>
+                <option value="">Kabupaten / Kota</option>
+                <?php
+                if ($result_kabupaten->num_rows > 0) {
+                    while ($row = $result_kabupaten->fetch_assoc()) {
+                        $idkabupaten = $row['id_kabupaten'];
+                        $namakabupaten = $row['nama_kabupaten'];
+                        echo "<option value='$idkabupaten'>$namakabupaten</option>";
+                    }
                 }
-            });
-        }
+                ?>
+            </select>
+            <select name="pilih-kecamatan" id="pilih-kecamatan" disabled required>
+                <option value="">Kecamatan</option>
+            </select>
+            <select name="pilih-desa" id="pilih-desa" disabled required>
+                <option value="">Desa / Kelurahan</option>
+            </select>
 
-        // Menjalankan fungsi getDesa saat ada perubahan pada select kecamatan
-        $('#kecamatan').on('change', getDesa);
+            <button name="submit" id="next-btn" disabled>
+                <i class='bx bxs-chevron-right'></i>
+            </button>
+
+        </form>
+
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $("#pilih-kabupaten").on("change", function() {
+                var idkabupaten = $(this).val();
+
+                $.ajax({
+                    url: "get_kecamatan.php",
+                    type: "POST",
+                    data: {
+                        kabupaten: idkabupaten,
+                    },
+                    success: function(response) {
+                        $('#pilih-kecamatan').prop("disabled", false);
+                        $('#pilih-kecamatan').html(response);
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("AJAX Error:");
+                        console.log("Status: " + status);
+                        console.log("Error: " + error);
+                    }
+                })
+            })
+
+            $("#pilih-kecamatan").on("change", function() {
+                var idkecamatan = $(this).val();
+
+                $.ajax({
+                    url: "get_desa.php",
+                    type: "POST",
+                    data: {
+                        kecamatan: idkecamatan,
+                    },
+                    success: function(response) {
+                        $('#pilih-desa').html('');
+                        $('#pilih-desa').prop("disabled", false);
+                        $('#pilih-desa').html(response);
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("AJAX Error:");
+                        console.log("Status: " + status);
+                        console.log("Error: " + error);
+                    }
+                })
+            })
+
+            $("#pilih-desa").on("change", function() {
+                var iddesa = $(this).val();
+
+                $.ajax({
+                    type: "POST",
+                    data: {
+                        desa: iddesa,
+                    },
+                    success: function() {
+
+                        $('#next-btn').prop("disabled", false);
+
+                    },
+                    error: function(xhr, status, error) {
+                        console.log("AJAX Error:");
+                        console.log("Status: " + status);
+                        console.log("Error: " + error);
+                    }
+                })
+            })
+        })
     </script>
-
-
 </body>
 
 </html>
