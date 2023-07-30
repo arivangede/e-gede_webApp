@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Jul 22, 2023 at 07:34 AM
--- Server version: 10.4.28-MariaDB
--- PHP Version: 8.2.4
+-- Host: localhost:8889
+-- Generation Time: Jul 30, 2023 at 09:04 AM
+-- Server version: 5.7.39
+-- PHP Version: 7.4.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -34,16 +34,16 @@ CREATE TABLE `admin` (
   `jabatan` varchar(255) NOT NULL,
   `desa` varchar(255) NOT NULL,
   `kecamatan` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `admin`
 --
 
 INSERT INTO `admin` (`id`, `username`, `password`, `jabatan`, `desa`, `kecamatan`) VALUES
-(1, 'tuedi', 'tuedi1234', 'admin desa', 'tegal kertha', '2\r\n'),
-(2, 'arivan', 'arivan1234', 'admin desa', 'dauh puri kaja', '1'),
-(3, 'rama', 'rama1234', 'admin desa', 'sanur kauh', '3'),
+(1, 'tuedi', 'tuedi1234', 'admin desa', '2', '2\r\n'),
+(2, 'arivan', 'arivan1234', 'admin desa', '1', '1'),
+(3, 'rama', 'rama1234', 'admin desa', '4', '3'),
 (4, 'gede', 'gede1234', 'admin kota', '', '3');
 
 -- --------------------------------------------------------
@@ -58,7 +58,7 @@ CREATE TABLE `berita` (
   `ringkasan` varchar(255) NOT NULL,
   `isi` varchar(255) NOT NULL,
   `foto` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `berita`
@@ -79,7 +79,7 @@ CREATE TABLE `desa` (
   `id_desa` varchar(255) NOT NULL,
   `nama_desa` varchar(255) NOT NULL,
   `id_kecamatan` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `desa`
@@ -100,7 +100,7 @@ CREATE TABLE `kabupaten` (
   `id` int(255) NOT NULL,
   `id_kabupaten` varchar(255) NOT NULL,
   `nama_kabupaten` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `kabupaten`
@@ -127,7 +127,7 @@ CREATE TABLE `kecamatan` (
   `id_kecamatan` varchar(255) NOT NULL,
   `nama_kecamatan` varchar(255) NOT NULL,
   `id_kabupaten` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `kecamatan`

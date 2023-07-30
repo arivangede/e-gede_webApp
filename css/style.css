@@ -709,7 +709,7 @@ nav .nav-btn img {
     opacity: 0;
     transform: scale(0) translate(0, 2rem);
   }
-  90% {
+  80% {
     opacity: 1;
     transform: scale(1.05) translate(0, 0);
   }
@@ -876,4 +876,3 @@ nav .nav-btn img {
   color: white;
   font-size: 4rem;
 }
-
