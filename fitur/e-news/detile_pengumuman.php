@@ -33,7 +33,12 @@ if (isset($_SESSION['desa'])) {
                     </div>
                         
         </div>
-        <img class="sosial_media" src="../../img_e_news/img_pengumuman/Asset 19.png" alt="">
+            <div class="sosial-media">
+                    <a href=""><i class='bx bxl-facebook-circle' ></i></a>
+                    <a href=""><i class='bx bxl-twitter' ></i></a>
+                    <a href=""><i class='bx bxs-envelope' ></i></a>
+                    <a href=""><i class='bx bx-link-alt' ></i></a>
+                </div>
         <div class ="pengumuman-body">
              <div class="gambar_isi">
              <img src="../../img_e_news/img_pengumuman/Asset 18.png" alt="">

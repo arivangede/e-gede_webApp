@@ -11,156 +11,115 @@ body {
   box-sizing: border-box;
 }
 .container-logo {
-  max-width: 100rem;
-  margin: 0 auto;
-  display: flex; /* Menggunakan flexbox */
-  align-items: center; /* Pusatkan elemen secara vertikal */
-  /* border: 2px solid black; */
-  margin-left: 0.1rem;
-  height: 5rem;
-  padding: 5px; /* Berikan sedikit padding agar teks tidak terlalu dekat dengan tepi */
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  /* top: 1rem; */
+  border-left: none;
+  border-right: none;
+  z-index: 3;
+  background-color: whitesmoke;
+  box-shadow: 0 2px 2px black;
+  position: fixed;
 }
-
-/* Gaya untuk gambar dalam .logo-e-news */
-.logo-e-news img {
-  max-width: 5rem;
+.container-logo img {
+  width: 20%;
   height: auto;
-  /* border: 2px solid #000000; */
-}
-
-/* Gaya untuk teks di samping gambar */
-.text-desa {
-  /* border: 2px solid red; */
-  font-size: 1rem;
-  margin-left: 5px; /* Beri jarak antara teks dengan gambar */
-}
-/* Gaya untuk container .e-news_container */
-.e-news_container {
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 20px auto;
-  border: 1px solid #ccc; /* Tambahkan garis pembatas */
-  display: flex; /* Menggunakan Flexbox untuk mengatur tata letak */
-  align-items: center; /* Elemen berada di tengah secara vertikal */
-}
-
-/* Gaya untuk gambar dalam .e-news_container */
-.e-news_container img {
-  width: 3rem; /* Lebar gambar diatur menjadi 3 rem */
-  height: auto; /* Tinggi gambar akan menyesuaikan agar tidak terdistorsi */
-  margin-right: 20px; /* Jarak antara gambar dengan teks */
-}
-
-/* Gaya untuk judul "E - NEWS" */
-.e-news_container h2 {
-  color: #007bff;
-  font-size: 18px;
-  font-weight: normal;
-  margin: 0; /* Hapus margin bawaan untuk h2 */
-}
-
-/* Gaya untuk container .pengumuman */
-.pengumuman {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center; /* Untuk memusatkan isi pada tengah */
-  position: relative; /* Membuat container .pengumuman menjadi konteks posisi */
-  border: 1px solid #ccc; /* Tambahkan garis pembatas */
-  padding: 20px; /* Jarak antara isi dan garis pembatas */
-  display: flex; /* Menggunakan Flexbox untuk mengatur tata letak */
-  flex-direction: column; /* Atur tata letak elemen secara vertikal */
-}
-
-/* Gaya untuk container .title-container dan .title2-container */
-.title-container,
-.title2-container {
-  margin-bottom: 10px; /* Jarak antara tulisan dan garis pemisah */
-  text-align: left; /* Meletakkan tulisan di kiri */
-}
-
-/* Gaya untuk elemen h3 dalam .title-container dan .title2-container */
-.title-container h3,
-.title2-container h3 {
-  margin: 0; /* Hapus margin bawaan h3 agar tidak ada jarak di atas dan bawah */
-  font-size: 1rem;
-}
-
-/* Gaya untuk gambar dalam .pengumuman */
-.pengumuman img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  margin-top: 20px; /* Jarak antara gambar dengan konten sebelumnya */
-}
-
-/* Gaya untuk gambar pada pojok kanan atas */
-.title2-container img {
-  position: absolute;
-  top: 1rem;
-  right: 5rem;
-  width: 6rem; /* Lebar gambar diatur menjadi 3 rem */
-  height: auto; /* Tinggi gambar akan menyesuaikan agar tidak terdistorsi */
-  transform: translate(
-    50%,
-    -50%
-  ); /* Menggeser gambar 50% dari kanan dan 50% dari atas */
-}
-
-/* container utuk berita dan gambar */
-/* Gaya untuk container .berita-dan-gambar */
-.berita-dan-gambar {
-  height: 5rem;
-  width: 100%;
-  margin: 0;
-  position: relative;
   padding: 0.5rem;
-  display: flex;
-  align-items: center;
+  margin-left: 1rem;
 }
-
-/* Gaya untuk elemen h3 dalam .berita-dan-gambar */
-.berita-dan-gambar h3 {
-  font-size: 1rem;
-  margin: 0;
-  flex: 1;
-}
-
-/* Gaya untuk container .btnfilter */
-.btnfilter {
-  display: flex;
-  align-items: center;
-  margin-left: 12rem;
-}
-
-/* Gaya untuk tautan a dalam .btnfilter */
-.btnfilter a {
-  text-decoration: none;
-  color: #ffffff;
-  padding: 0.3rem 0.5rem;
-  border-radius: 0.3rem;
-  background-color: rgb(166, 3, 3);
-  font-size: 1rem;
+.container-logo h1 {
   font-weight: 600;
+  font-size: large;
+  margin-left: 0.8rem;
+  width: 100%;
+}
+.container-logo h2 {
+  color: red;
+  font-size: small;
+  position: absolute;
+  top: 3.5rem;
+  left: 6.5rem;
+}
+.container-logo h3 {
+  color: rgb(0, 0, 0);
+  font-size: small;
+  position: absolute;
+  top: 3.5rem;
+  left: 13rem;
+}
+.head-pengumuman {
+  width: 100%;
+  height: auto;
+  border: 1px solid black;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  box-shadow: 0 2px 2px black;
+  border-left: none;
+  border-right: none;
+  margin-right: auto;
+  position: fixed;
+  margin-top: 6.5rem;
+  background-color: whitesmoke;
+}
+p {
+  margin-right: 10px;
+  position: absolute;
+  left: 1rem;
 }
 
-.berita1 {
-  max-width: 600px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 0.3rem;
+a {
+  color: #ff0000;
+  text-decoration: none;
+  z-index: 2;
+  margin-left: 15rem;
 }
-.berita1 img {
-  max-width: 100%;
+.select-pengumuman img {
+  width: 100%;
   height: auto;
+  z-index: 1;
+  border-radius: 0.3rem;
+  box-shadow: 0 2px 2px black;
+  background-color: whitesmoke;
+}
+.neck-pengumuman {
+  border: 1px solid black;
+  width: 100%;
+  height: 4rem;
+  padding: 0.5rem;
+  box-shadow: 0 2px 2px black;
+  position: fixed;
+  background-color: whitesmoke;
+  margin-top: 18rem;
+}
+.neck-pengumuman a {
+  color: whitesmoke;
+  text-decoration: none;
+  z-index: 2;
+  margin-left: 18rem;
+  border: 1px solid red;
+  background-color: red;
   border-radius: 0.3rem;
 }
+.body-berita {
+  width: 100%;
+  height: auto;
+  padding: 0.5rem;
+  box-shadow: 0 2px 2px black;
+  /* margin-top: 10rem; */
+}
+.body-berita1 img {
+  width: 100%;
+  height: auto;
+  margin-top: 5rem;
+  margin-top: 22rem;
+}
+.body-berita2 img {
+  width: 100%;
+  height: auto;
+  margin-top: 0.2rem;
+}
+
 /*------------------------------detile pengumuman-------------------- */
 .Pengumuman-wraper {
   position: relative;
@@ -205,16 +164,23 @@ body {
   font-size: small;
   top: 3rem;
 }
-.sosial_media {
-  width: 3rem;
+.sosial-media {
   position: fixed;
-  right: 0;
-  top: 10rem;
-  box-shadow: 0 0 5px black;
+  top: 55%;
+  right: 0.1rem;
+  transform: translateY(-50%);
+  box-shadow: 0 0 2px black;
+  background-color: whitesmoke;
   border-top-left-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem;
-  z-index: 1;
-  background-color: whitesmoke;
+  width: 2.5rem;
+  padding: 0.3rem;
+}
+.sosial-media a {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 30px;
+  color: #000;
 }
 .pengumuman-body {
   width: 100%;
@@ -233,7 +199,6 @@ body {
   height: auto;
   top: 7rem;
 }
-
 .isi-pengumuman {
   top: -2rem;
   height: 100%;
@@ -293,19 +258,46 @@ body {
 .sosial-media {
   position: fixed;
   top: 55%;
-  right: 1rem;
+  right: 0.1rem;
   transform: translateY(-50%);
   box-shadow: 0 0 2px black;
   background-color: whitesmoke;
   border-top-left-radius: 0.3rem;
   border-bottom-left-radius: 0.3rem;
   width: 2.5rem;
-  padding: 1rem;
+  padding: 0.3rem;
 }
 
 .sosial-media a {
   display: block;
-  margin-bottom: 10px;
-  font-size: 24px;
+  margin-bottom: 5px;
+  font-size: 30px;
   color: #000;
+}
+.isi-berita {
+  width: 100%;
+  height: auto;
+  position: relative;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+  padding-top: 7rem;
+}
+.gambar-berita img {
+  width: 100%;
+  height: auto;
+  top: 7rem;
+}
+.text-berita {
+  top: -2rem;
+  height: 100%;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 2px black;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  position: relative;
+  background-color: white;
 }
