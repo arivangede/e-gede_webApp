@@ -30,38 +30,56 @@ if (isset($_POST['submit'])) {
 </head>
 
 <body>
-    <div class="card-pilihdesa">
-        <div class="card-pilihdesa-title">
-            <h1>Pilih Desa</h1>
-        </div>
+    <header class="header-pilihdesa">
+        <img src="img/assets/asset-pilihdesa-atas.png" alt="">
+    </header>
 
-        <form action="" method="post">
-            <select name="pilih-kabupaten" id="pilih-kabupaten" required>
-                <option value="">Kabupaten / Kota</option>
-                <?php
-                if ($result_kabupaten->num_rows > 0) {
-                    while ($row = $result_kabupaten->fetch_assoc()) {
-                        $idkabupaten = $row['id_kabupaten'];
-                        $namakabupaten = $row['nama_kabupaten'];
-                        echo "<option value='$idkabupaten'>$namakabupaten</option>";
+
+    <section id="pilihdesa">
+        <div class="card-pilihdesa">
+            <div class="logo-pilihdesa">
+                <span>Gerbang Desa Digital</span>
+                <img src="img/assets/logo-egede.png" alt="">
+            </div>
+            <div class="card-pilihdesa-title">
+                <h1>Pilih Desa</h1>
+            </div>
+
+            <form action="" method="post">
+                <select name="pilih-kabupaten" id="pilih-kabupaten" required>
+                    <option value="">Kabupaten / Kota</option>
+                    <?php
+                    if ($result_kabupaten->num_rows > 0) {
+                        while ($row = $result_kabupaten->fetch_assoc()) {
+                            $idkabupaten = $row['id_kabupaten'];
+                            $namakabupaten = $row['nama_kabupaten'];
+                            echo "<option value='$idkabupaten'>$namakabupaten</option>";
+                        }
                     }
-                }
-                ?>
-            </select>
-            <select name="pilih-kecamatan" id="pilih-kecamatan" disabled required>
-                <option value="">Kecamatan</option>
-            </select>
-            <select name="pilih-desa" id="pilih-desa" disabled required>
-                <option value="">Desa / Kelurahan</option>
-            </select>
+                    ?>
+                </select>
+                <select name="pilih-kecamatan" id="pilih-kecamatan" disabled required>
+                    <option value="">Kecamatan</option>
+                </select>
+                <select name="pilih-desa" id="pilih-desa" disabled required>
+                    <option value="">Desa / Kelurahan</option>
+                </select>
 
-            <button name="submit" id="next-btn" disabled>
-                <i class='bx bxs-chevron-right'></i>
-            </button>
+                <button class="next-btn" name="submit" id="next-btn" disabled>
+                    <i class='bx bxs-chevron-right'></i>
+                </button>
+            </form>
 
-        </form>
+            <div class="back-btn-pilihdesa">
+                <a href="fungsi/logout.php">Keluar</a>
+            </div>
+        </div>
+    </section>
 
-    </div>
+    <footer class="footer-pilihdesa">
+        <img src="img/assets/asset-pilihdesa-bawah.png" alt="">
+    </footer>
+
 
     <script>
         $(document).ready(function() {
@@ -116,10 +134,14 @@ if (isset($_POST['submit'])) {
                     data: {
                         desa: iddesa,
                     },
-                    success: function() {
-
-                        $('#next-btn').prop("disabled", false);
-
+                    success: function(response) {
+                        if (iddesa !== "") {
+                            $("#next-btn").prop("disabled", false);
+                            $("#next-btn").addClass("active");
+                        } else {
+                            $("#next-btn").prop("disabled", true);
+                            $("#next-btn").removeClass("active");
+                        }
                     },
                     error: function(xhr, status, error) {
                         console.log("AJAX Error:");

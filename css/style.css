@@ -680,3 +680,159 @@ nav .nav-btn img {
   border-radius: 0.3rem;
 }
 /* =================================== DESA END */
+
+/* =================================== PILIH DESA */
+.header-pilihdesa {
+  position: fixed;
+  top: -3rem;
+  width: 100%;
+}
+
+.header-pilihdesa img {
+  width: 100%;
+}
+
+.footer-pilihdesa {
+  position: fixed;
+  bottom: -1rem;
+  width: 100%;
+}
+
+.footer-pilihdesa img {
+  width: 100%;
+}
+
+#pilihdesa {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-pilihdesa {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0.9);
+
+  position: relative;
+  bottom: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.logo-pilihdesa {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.logo-pilihdesa span {
+  font-size: 0.6rem;
+  font-style: italic;
+  font-weight: 600;
+  width: 5rem;
+  text-align: end;
+  color: #3a3a3a;
+
+  padding-right: 0.5rem;
+  position: relative;
+}
+
+.logo-pilihdesa span::after {
+  content: "";
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background-color: #909090;
+}
+
+.logo-pilihdesa img {
+  margin-left: 0.5rem;
+  width: 4rem;
+}
+
+.card-pilihdesa-title {
+  margin: 2.5rem 0 1.5rem 0;
+}
+
+.card-pilihdesa-title h1 {
+  font-size: 2.2rem;
+  font-weight: 400;
+  color: #3a3a3a;
+}
+
+.card-pilihdesa form {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  position: relative;
+}
+
+.card-pilihdesa form select {
+  width: 70%;
+  height: 2rem;
+  margin-bottom: 1rem;
+  padding: 0 1.5rem 0 0.5rem;
+
+  border: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  color: #3a3a3a;
+}
+
+.card-pilihdesa .back-btn-pilihdesa {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 1rem;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.card-pilihdesa .back-btn-pilihdesa a {
+  text-decoration: none;
+  color: cornflowerblue;
+}
+
+.card-pilihdesa form .next-btn {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+
+  position: absolute;
+  bottom: -2rem;
+
+  border: none;
+  background-color: #adadad;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+
+  transition: 0.4s ease-in;
+}
+
+.card-pilihdesa form .next-btn.active {
+  background-color: firebrick;
+  box-shadow: 0 0 20px rgb(255, 57, 57);
+}
+
+.card-pilihdesa form .next-btn i {
+  color: white;
+  font-size: 4rem;
+}
+
+/* =================================== PILIH DESA END */
