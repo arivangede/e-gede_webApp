@@ -16,5 +16,7 @@ if (isset($_POST["kecamatan"])) {
 
             echo "<option value='$id_desa'>$nama_desa</option>";
         }
+    } else {
+        echo "<option value=''>Desa / Kelurahan</option>";
     }
 }

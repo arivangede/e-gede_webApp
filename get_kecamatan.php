@@ -14,5 +14,7 @@ if (isset($_POST["kabupaten"])) {
             $nama_kecamatan = $row['nama_kecamatan'];
             echo "<option value='$id_kecamatan'>$nama_kecamatan</option>";
         }
+    } else {
+        echo "<option value=''>Kecamatan</option>";
     }
 }
