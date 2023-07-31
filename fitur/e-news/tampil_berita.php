@@ -45,13 +45,13 @@ if (!$result) {
       <h2><?=$desa?>,</h2> <h3>kec.<?=$kecamatan?></h3>
     </div>
     <div class="head-pengumuman">
-    <div class="select-pengumuman">
+    <div class="select-pengumuman-berita">
       <p>Pengumuman</p>
-      <a href=""> Lihat Semua <i class='bx bx-chevron-right'></i></a>
+      <a href="detile_pengumuman.php"> Lihat Semua <i class='bx bx-chevron-right'></i></a>
       <img src="../../img_e_news/Asset 1.png" alt="">
     </div>
     </div>
-    <div class="neck-pengumuman">
+    <div class="neck-pengumumanc">
       <p>Berita</p>
       <a href=""><i class='bx bx-filter-alt'></i>Filter</a>
     </div>

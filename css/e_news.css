@@ -14,7 +14,6 @@ body {
   display: flex;
   align-items: center;
   border: 1px solid black;
-  /* top: 1rem; */
   border-left: none;
   border-right: none;
   z-index: 3;
@@ -62,13 +61,13 @@ body {
   margin-top: 6.5rem;
   background-color: whitesmoke;
 }
-p {
+.select-pengumuman p {
   margin-right: 10px;
   position: absolute;
   left: 1rem;
 }
 
-a {
+.select-pengumuman a {
   color: #ff0000;
   text-decoration: none;
   z-index: 2;
@@ -106,7 +105,6 @@ a {
   height: auto;
   padding: 0.5rem;
   box-shadow: 0 2px 2px black;
-  /* margin-top: 10rem; */
 }
 .body-berita1 img {
   width: 100%;
