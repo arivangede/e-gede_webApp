@@ -10,97 +10,96 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
-.container-logo {
+.container-tampil-berita {
+  position: fixed;
+  background-color: whitesmoke;
+}
+.container-logo-pengumuman-berita {
   display: flex;
   align-items: center;
-  border: 1px solid black;
   border-left: none;
   border-right: none;
-  z-index: 3;
   background-color: whitesmoke;
-  box-shadow: 0 2px 2px black;
-  position: fixed;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 1rem 0.5rem;
 }
-.container-logo img {
+.container-logo-pengumuman-berita .title-fitur {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3rem;
+}
+.container-logo-pengumuman-berita img {
   width: 20%;
   height: auto;
-  padding: 0.5rem;
-  margin-left: 1rem;
+  margin-right: 0.5rem;
 }
-.container-logo h1 {
-  font-weight: 600;
-  font-size: large;
-  margin-left: 0.8rem;
+.container-logo-pengumuman-berita h1 {
+  font-weight: 400;
+  font-size: 1.5rem;
   width: 100%;
 }
-.container-logo h2 {
-  color: red;
-  font-size: small;
-  position: absolute;
-  top: 3.5rem;
-  left: 6.5rem;
+.container-logo-pengumuman-berita h2 {
+  color: #d80000;
+  font-size: 1rem;
+  left: 6.7rem;
+  font-weight: 300;
 }
-.container-logo h3 {
-  color: rgb(0, 0, 0);
-  font-size: small;
-  position: absolute;
-  top: 3.5rem;
-  left: 13rem;
-}
-.head-pengumuman {
+.head-pengumuman-berita {
   width: 100%;
   height: auto;
-  border: 1px solid black;
-  margin-top: 1rem;
   padding: 0.5rem;
-  box-shadow: 0 2px 2px black;
   border-left: none;
   border-right: none;
   margin-right: auto;
-  position: fixed;
-  margin-top: 6.5rem;
   background-color: whitesmoke;
+  margin-top: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
-.select-pengumuman p {
+.select-pengumuman-berita p {
   margin-right: 10px;
   position: absolute;
   left: 1rem;
 }
 
-.select-pengumuman a {
-  color: #ff0000;
+.select-pengumuman-berita a {
+  color: #d80000;
   text-decoration: none;
-  z-index: 2;
   margin-left: 15rem;
 }
-.select-pengumuman img {
+.select-pengumuman-berita img {
   width: 100%;
   height: auto;
-  z-index: 1;
   border-radius: 0.3rem;
   box-shadow: 0 2px 2px black;
   background-color: whitesmoke;
 }
-.neck-pengumuman {
-  border: 1px solid black;
+.neck-pengumuman-berita {
   width: 100%;
-  height: 4rem;
   padding: 0.5rem;
   box-shadow: 0 2px 2px black;
-  position: fixed;
   background-color: whitesmoke;
-  margin-top: 18rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  /* border: 1px solid black; */
 }
-.neck-pengumuman a {
+.neck-pengumuman-berita p {
+  width: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.neck-pengumuman-berita a {
   color: whitesmoke;
   text-decoration: none;
-  z-index: 2;
-  margin-left: 18rem;
-  border: 1px solid red;
-  background-color: red;
+  margin-left: 15rem;
+  border: 1px solid #d80000;
+  background-color: #d80000;
   border-radius: 0.3rem;
 }
-.body-berita {
+.body-berita-pengumuman {
   width: 100%;
   height: auto;
   padding: 0.5rem;
@@ -109,15 +108,15 @@ body {
 .body-berita1 img {
   width: 100%;
   height: auto;
-  margin-top: 5rem;
-  margin-top: 22rem;
+  margin-top: 21.5rem;
+  border-radius: 0.3rem;
 }
 .body-berita2 img {
   width: 100%;
   height: auto;
   margin-top: 0.2rem;
+  border-radius: 0.3rem;
 }
-
 /*------------------------------detile pengumuman-------------------- */
 .Pengumuman-wraper {
   position: relative;
@@ -135,7 +134,7 @@ body {
 .pengumuman-head a {
   text-decoration: none;
   font-weight: 600;
-  color: red;
+  color: #d80000;
 }
 .text-pengumuman {
   width: 90%;
@@ -223,7 +222,7 @@ body {
 .head-berita a {
   text-decoration: none;
   font-weight: 600;
-  color: red;
+  color: #d80000;
   /* z-index: 1; */
 }
 
@@ -255,22 +254,30 @@ body {
 
 .sosial-media {
   position: fixed;
-  top: 55%;
-  right: 0.1rem;
+  top: 31%;
   transform: translateY(-50%);
-  box-shadow: 0 0 2px black;
-  background-color: whitesmoke;
-  border-top-left-radius: 0.3rem;
-  border-bottom-left-radius: 0.3rem;
+  right: 0;
   width: 2.5rem;
-  padding: 0.3rem;
+  height: 9rem;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: white;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-.sosial-media a {
-  display: block;
-  margin-bottom: 5px;
-  font-size: 30px;
-  color: #000;
+.sosial-media i {
+  font-size: 1rem;
+}
+.sosial-media .share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
 }
 .isi-berita {
   width: 100%;

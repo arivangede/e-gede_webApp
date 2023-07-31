@@ -19,16 +19,27 @@ if(isset($_SESSION['desa'])){
 <body>
     <div class="berita-wraper">
         <div class="head-berita">
-                <a href="tampil_berita"> <i class='bx bx-chevron-left'> </i> Kembali</a>
+                <a href="tampil_berita.php"> <i class='bx bx-chevron-left'> </i> Kembali</a>
                 <div class="judul-berita">
                         <h2>Perayaan Hari Ulang Tahun Kota Denpasar Ke 234 Tahun</h2>
                         <p>Rabu, 09 Maret 2023</p>
                 </div>
-                <div class="sosial-media">
-                    <a href=""><i class='bx bxl-facebook-circle' ></i></a>
-                    <a href=""><i class='bx bxl-twitter' ></i></a>
-                    <a href=""><i class='bx bxs-envelope' ></i></a>
-                    <a href=""><i class='bx bx-link-alt' ></i></a>
+    
+                    <div class="sosial-media">
+                   
+        <div class="facebook share">
+            <i class='bx bxl-facebook-circle'></i>
+        </div>
+        <div class="twitter share">
+            <i class='bx bxl-twitter'></i>
+        </div>
+        <div class="gmail share">
+            <i class='bx bxs-envelope'></i>
+        </div>
+        <div class="link share">
+            <i class='bx bx-link-alt'></i>
+        </div>
+        
                 </div>
             </div>
             <div class="isi-berita">
