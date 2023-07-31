@@ -6,7 +6,6 @@ if (!$_SESSION['login']) {
     header('Location: login.php');
 }
 
-session_start();
 if (isset($_SESSION['kecamatan'])) {
 
     $id_kecamatan = $_SESSION['kecamatan'];
