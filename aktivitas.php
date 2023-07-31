@@ -52,27 +52,27 @@
                     <img src="img/assets/asset-menu-2.png" alt="icon">
                     <p>Profil Desa</p>
                 </div>
-                <div class="menu 3">
+                <div class="menu 3" onclick="underConstruction()">
                     <img src="img/assets/asset-menu-3.png" alt="icon">
                     <p>Regulasi</p>
                 </div>
-                <div class="menu 4">
+                <div class="menu 4" onclick="underConstruction()">
                     <img src="img/assets/asset-menu-4.png" alt="icon">
                     <p>Pengaduan</p>
                 </div>
-                <div class="menu 5">
+                <div class="menu 5" onclick="underConstruction()">
                     <img src="img/assets/asset-menu-5.png" alt="icon">
                     <p>Data Desa</p>
                 </div>
-                <div class="menu 6">
+                <div class="menu 6" onclick="underConstruction()">
                     <img src="img/assets/asset-menu-6.png" alt="icon">
                     <p>Layanan Publik</p>
                 </div>
-                <div class="menu 7">
+                <div class="menu 7" onclick="underConstruction()">
                     <img src="img/assets/asset-menu-7.png" alt="icon">
                     <p>Keuangan Desa</p>
                 </div>
-                <div class="menu 8">
+                <div class="menu 8" onclick="underConstruction()">
                     <img src="img/assets/asset-menu-8.png" alt="icon">
                     <p>Wisata Budaya</p>
                 </div>
