@@ -95,7 +95,43 @@
 
         <div class="first-card">
             <div class="card-display">
-
+                <img class="idcard-bg" src="img/assets/asset-profil-cardid.png" alt="">
+                <div class="card-content">
+                    <div class="upper-card">
+                        <div class="user">
+                            <h1>Penduduk 1</h1>
+                            <span>Masyarakat</span>
+                        </div>
+                        <div class="user-info">
+                            <div class="desa info-card">
+                                <span>Dauh Puri Kaja</span>
+                                <div class="icon">
+                                    <i class='bx bxs-map'></i>
+                                </div>
+                            </div>
+                            <div class="telepon info-card">
+                                <span>+62 8123 4567 891</span>
+                                <div class="icon">
+                                    <i class='bx bxs-phone'></i>
+                                </div>
+                            </div>
+                            <div class="mail info-card">
+                                <span>Penduduk1@gmail.com</span>
+                                <div class="icon">
+                                    <i class='bx bxs-envelope'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-card">
+                        <div class="idcard-logo">
+                            <img src="img/assets/logo-egede.png" alt="">
+                        </div>
+                        <div class="idcard-number">
+                            <span>51710420111603700001</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="profile">
                 <div class="image-place">
