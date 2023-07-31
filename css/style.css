@@ -637,7 +637,6 @@ nav .nav-btn img {
 
 .e-news .card-e-news .card-pict img {
   width: 100%;
-  box-shadow: 0 0 5px black;
 }
 
 .e-news .card-e-news .card-body {
@@ -678,6 +677,7 @@ nav .nav-btn img {
   background-color: firebrick;
   color: white;
   border-radius: 0.3rem;
+  border: none;
 }
 /* =================================== DESA END */
 

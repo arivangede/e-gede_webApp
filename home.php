@@ -138,10 +138,15 @@ if (isset($nama_desa)) {
         <div class="body">
             <div class="carrousel-card">
                 <section class="card-carrousel 1">
-                    <img src="img/assets/asset-2-carrousel-homepage.png" alt="iklan">
+                    <img src="img/assets/asset-banner-<?= $desa; ?>.png" alt="iklan">
                 </section>
-                <section class="card-carrousel 2">
-                    <img src="img/assets/asset-3-carrousel-homepage.png" alt="iklan">
+                <?php if ($desa !== "Tegal Kertha") : ?>
+                    <section class="card-carrousel 2">
+                        <img src="img/assets/asset-visimisi-<?= $desa; ?>.png" alt="iklan">
+                    </section>
+                <?php endif; ?>
+                <section class="card-carrousel 3">
+                    <img src="img/assets/asset-banner-inovasi.png" alt="iklan">
                 </section>
             </div>
 
