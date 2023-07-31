@@ -261,6 +261,47 @@ body::after {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  animation: fade-in-top 0.4s ease-in;
+}
+
+/* card id display */
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  70% {
+    opacity: 0;
+    transform: translate(2rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-right {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fade-in-top {
+  0% {
+    opacity: 0;
+    transform: translateY(20rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .card-display {
@@ -269,7 +310,9 @@ body::after {
 
   background: linear-gradient(to right, maroon, rgb(209, 0, 0));
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  border-radius: 1rem;
+  border-radius: 1.4rem;
+
+  overflow: hidden;
 
   position: relative;
 }
@@ -280,6 +323,9 @@ body::after {
   bottom: 0;
   left: 0;
   z-index: 0;
+
+  animation-delay: 1.5s;
+  animation: fade-in-top 1s ease-in;
 
   filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
 }
@@ -316,6 +362,9 @@ body::after {
 
 .card-display .card-content .upper-card .user span {
   font-size: 0.7rem;
+
+  animation-delay: 0.5s;
+  animation: fade-in-right 0.5s ease-in;
 }
 
 .card-display .card-content .upper-card .user-info {
@@ -339,6 +388,9 @@ body::after {
 .card-display .card-content .upper-card .user-info .info-card span {
   font-size: 0.5rem;
   margin-right: 0.3rem;
+
+  animation-delay: 1s;
+  animation: fade-in-left 1s ease;
 }
 
 .card-display .card-content .upper-card .user-info .info-card .icon {
@@ -363,6 +415,9 @@ body::after {
   width: 100%;
   height: 100%;
   color: rgb(209, 0, 0);
+
+  animation-delay: 1.5s;
+  animation: fade-in-top 1s ease-in;
 }
 
 .card-display .card-content .bottom-card .idcard-logo {
