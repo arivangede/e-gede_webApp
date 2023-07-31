@@ -1,3 +1,31 @@
+<?php
+require "fungsi/functions.php";
+session_start();
+if (!isset($_SESSION['login'])) {
+    header("Location: login.php");
+}
+
+if (isset($_SESSION['desa'])) {
+    $id_desa = $_SESSION['desa'];
+    $querydesa = "SELECT nama_desa FROM desa WHERE id_desa = $id_desa";
+    $result = mysqli_query($conn, $querydesa);
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $desa = $row['nama_desa'];
+    }
+}
+if (isset($_SESSION['kecamatan'])) {
+    $id_kecamatan = $_SESSION['kecamatan'];
+    $querykecamatan = "SELECT nama_kecamatan FROM kecamatan WHERE id_kecamatan = $id_kecamatan";
+    $result = mysqli_query($conn, $querykecamatan);
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $kecamatan = $row['nama_kecamatan'];
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -95,7 +123,43 @@
 
         <div class="first-card">
             <div class="card-display">
-
+                <img class="idcard-bg" src="img/assets/asset-profil-cardid.png" alt="">
+                <div class="card-content">
+                    <div class="upper-card">
+                        <div class="user">
+                            <h1>Penduduk 1</h1>
+                            <span>Masyarakat</span>
+                        </div>
+                        <div class="user-info">
+                            <div class="desa info-card">
+                                <span><?= $desa; ?></span>
+                                <div class="icon">
+                                    <i class='bx bxs-map'></i>
+                                </div>
+                            </div>
+                            <div class="telepon info-card">
+                                <span>+62 8123 4567 891</span>
+                                <div class="icon">
+                                    <i class='bx bxs-phone'></i>
+                                </div>
+                            </div>
+                            <div class="mail info-card">
+                                <span>Penduduk1@gmail.com</span>
+                                <div class="icon">
+                                    <i class='bx bxs-envelope'></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom-card">
+                        <div class="idcard-logo">
+                            <img src="img/assets/logo-egede.png" alt="">
+                        </div>
+                        <div class="idcard-number">
+                            <span>51710420111603700001</span>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="profile">
                 <div class="image-place">
@@ -107,7 +171,8 @@
                     <h2>Penduduk 1</h2>
                 </div>
                 <div class="place">
-                    <span id="desa">Desa Dauh Puri Kaja</span>
+                    <span id="desa"><?= $desa ?></span>
+                    <span id="kecamatan"><?= $kecamatan ?></span>
                     <span id="kota">Denpasar</span>
                     <span id="provinsi">Bali</span>
                 </div>
@@ -159,7 +224,7 @@
                                 <p>Alamat</p>
                             </div>
                             <div class="content">
-                                <p>Jl.jalan, Dauh Puri Kaja, Denpasar Utara</p>
+                                <p>Jl.jalan, <?= $desa ?>, <?= $kecamatan ?></p>
                             </div>
                         </div>
                         <div class="lihat-btn">
