@@ -18,6 +18,9 @@ html {
   --text: #3a3a3a;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
 /* Navbar */
 
 .navbar {
