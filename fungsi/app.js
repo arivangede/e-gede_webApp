@@ -7,22 +7,27 @@ document.addEventListener("click", function (e) {
 
 // fitur e-news
 const enewsBtn = document.querySelector(".e-newsBtn");
-enewsBtn.addEventListener("click", function () {
+if(enewsBtn){
+  enewsBtn.addEventListener("click", function () {
   window.location.href = "fitur/e-news/tampil_berita.php";
 });
+}
+
 
 // menu popup
 const menuBtn = document.querySelector("#menuBtn");
 const menuPopup = document.querySelector(".menu-popup");
 const closeMenuBtn = document.querySelector(".closeBtn");
 const menuCard = document.querySelector(".menu-wrapper");
+if(menuBtn){
 menuBtn.addEventListener("click", function () {
   menuPopup.classList.add("active");
 });
 closeMenuBtn.addEventListener("click", function () {
   menuPopup.classList.remove("active");
 });
-
+}
+  
 // pindah halaman
 function pindahAktivitas() {
   window.location.href = "aktivitas.php";
@@ -66,3 +71,4 @@ if (laporanSaya) {
     pilihanAktivitas.classList.add("disimpan");
   });
 }
+
