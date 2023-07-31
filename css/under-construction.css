@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  font-family: "poppins", sans-serif;
+  color: var(--text);
+}
+
+:root {
+  --text: #3a3a3a;
+}
+
+@keyframes fade-in-top {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* header */
+header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  background: white;
+  width: 100%;
+  padding: 1rem;
+
+  color: rgb(208, 0, 0);
+}
+
+header .back-btn {
+  display: flex;
+  align-items: center;
+}
+
+header .back-btn i {
+  font-size: 1.5rem;
+}
+/* header end */
+
+/* image */
+.image-container {
+  position: relative;
+  z-index: -1;
+
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  width: 100%;
+
+  animation: fade-in-top 0.5s ease-in;
+}
+
+.image-container img {
+  width: 100%;
+}
+
+.image-container .content {
+  position: absolute;
+
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0 1rem;
+}
+
+.image-container .content .title-content {
+  position: relative;
+  top: 10rem;
+  text-transform: uppercase;
+  color: firebrick;
+
+  line-height: 1.5rem;
+  animation-delay: 2.5s;
+  animation: fade-in-left 1s ease-in;
+}
+
+.image-container .content .title-content span {
+  font-size: 1.5rem;
+}
+
+.image-container .content .title-content h1 {
+  font-size: 1.5rem;
+  letter-spacing: 0.2rem;
+}
+
+.image-container .content .isi-content {
+  position: relative;
+  top: 31rem;
+  text-transform: uppercase;
+
+  text-align: center;
+  animation: fade-in-bottom 3s;
+}
+
+.image-container .content .isi-content span {
+  font-size: 1rem;
+  white-space: nowrap;
+}
+
+/* image end */

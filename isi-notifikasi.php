@@ -32,7 +32,6 @@
         <div class="link share">
             <i class='bx bx-link-alt'></i>
         </div>
-
     </div>
     <div class="isi-content">
         <div class="image-isi">

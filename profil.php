@@ -228,7 +228,7 @@ if (isset($_SESSION['kecamatan'])) {
                             </div>
                         </div>
                         <div class="lihat-btn">
-                            <button>Lihat Semua</button>
+                            <button onclick="underConstruction()">Lihat Semua</button>
                         </div>
                     </section>
                     <section id="e-pasar">
