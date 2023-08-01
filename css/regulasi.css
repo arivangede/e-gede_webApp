@@ -16,8 +16,26 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   padding: 0.5rem 0.5rem;
 }
+.head-regulasi i {
+  height: auto;
+  font-size: 2rem;
+  color: #d80000;
+
+  position: relative;
+}
+.head-regulasi i::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 2px;
+  height: 100%;
+  background-color: #d80000;
+}
 .head-regulasi-img img {
-  width: 5rem;
+  width: 3.5rem;
   height: auto;
 }
 .head-regulasi-tittle {
@@ -28,6 +46,7 @@ body {
 .judul-regulasi {
   margin-left: 0.3rem;
   line-height: 1.6rem;
+  white-space: nowrap;
 }
 .head-regulasi-tittle p {
   font-weight: 400;
@@ -35,9 +54,11 @@ body {
   width: 100%;
 }
 .head-regulasi-tittle1 p {
-  color: #d80000;
   font-size: 0.7rem;
   font-weight: 300;
+}
+.head-regulasi-tittle1 p span {
+  color: #d80000;
 }
 .kategori-regulasi {
   color: aliceblue;
@@ -53,6 +74,7 @@ body {
   font-weight: 400;
   margin-left: 1.5rem;
 }
+
 .body-regulasi {
   width: 100%;
   height: auto;
@@ -75,7 +97,6 @@ body {
 .head-produk-hukum {
   width: 100%;
   height: auto;
-  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); */
   display: block;
   justify-content: center;
   align-items: center;
@@ -95,9 +116,9 @@ body {
 }
 .judul-produk-hukum {
   width: 95%;
-  height: 4rem;
+  height: 5rem;
   z-index: 1;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
   margin-top: -0.5rem;
   margin-left: 0.6rem;
   background-color: whitesmoke;
@@ -107,7 +128,6 @@ body {
 }
 .pembungkus-judul {
   margin-left: 1rem;
-  /* margin-top: 1rem; */
 }
 .judul1 h1 {
   font-size: 1.5rem;
@@ -117,4 +137,249 @@ body {
 .judul2 h2 {
   font-size: 0.7rem;
   font-weight: 400;
+}
+.sosial-media {
+  position: fixed;
+  top: 31%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 2.5rem;
+  height: 9rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sosial-media i {
+  font-size: 1rem;
+}
+.sosial-media .share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+.pembungkus-tabel {
+  width: 100%;
+  height: auto;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); */
+  padding-top: 1rem;
+  /* border-radius: 1rem; */
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-top: 3px solid rgba(0, 0, 0, 0.5);
+  margin-top: -0.5rem;
+  background-color: whitesmoke;
+  position: absolute;
+  z-index: -1;
+}
+.table-produk-hukum {
+  width: 100%;
+  height: auto;
+  display: contents;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-produk-hukum table {
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  margin-left: 0.2rem;
+}
+.table-produk-hukum th {
+  color: white;
+  background-color: black;
+}
+.table-produk-hukum th,
+td {
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 0.5rem;
+  width: 4rem;
+}
+.lihat-dokumen {
+  border: 1px solid #1585bc;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  color: white;
+  background-color: #1585bc;
+}
+.row-table {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 0.7rem;
+}
+.pilih-table {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  position: left;
+  font-size: 0.5rem;
+  margin-right: 0.5rem;
+}
+.pilih-table-sebelumnya {
+  margin-left: 1rem;
+}
+.pilih-table-selanjutnya {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 2rem;
+  height: auto;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1585bc;
+  color: white;
+}
+/* -------------------------------------------------------Informasu Public------------------------------------------------------ */
+.head-informasi-public {
+  width: 100%;
+  height: auto;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+.btnkembali-informasi-public {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 3rem;
+  background-color: whitesmoke;
+  display: flex;
+  align-items: center;
+}
+.btnkembali-informasi-public a {
+  color: #d80000;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+.judul-informasi-public {
+  width: 95%;
+  height: 5rem;
+  z-index: 1;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  margin-top: -0.5rem;
+  margin-left: 0.6rem;
+  background-color: whitesmoke;
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+  padding-top: 1rem;
+}
+.pembungkus-judul {
+  margin-left: 1rem;
+}
+.judul1 h1 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+.judul2 h2 {
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+.sosial-media {
+  position: fixed;
+  top: 31%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 2.5rem;
+  height: 9rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sosial-media i {
+  font-size: 1rem;
+}
+.sosial-media .share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+.pembungkus-tabel {
+  width: 100%;
+  height: auto;
+  /* box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); */
+  padding-top: 1rem;
+  /* border-radius: 1rem; */
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  border-top: 3px solid rgba(0, 0, 0, 0.5);
+  margin-top: -0.5rem;
+  background-color: whitesmoke;
+  position: absolute;
+  z-index: -1;
+}
+.table-informasi-public {
+  width: 100%;
+  height: auto;
+  display: contents;
+  justify-content: center;
+  align-items: center;
+}
+
+.table-informasi-public table {
+  border-collapse: collapse;
+  margin-top: 0.5rem;
+  margin-left: 0.2rem;
+}
+.table-informasi-public th {
+  color: white;
+  background-color: black;
+}
+.table-informasi-public th,
+td {
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 0.5rem;
+  width: 4rem;
+}
+.lihat-dokumen {
+  border: 1px solid #1585bc;
+  padding: 0.2rem;
+  border-radius: 0.3rem;
+  color: white;
+  background-color: #1585bc;
+}
+.row-table {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 0.7rem;
+}
+.pilih-table {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  position: left;
+  font-size: 0.5rem;
+  margin-right: 0.5rem;
+}
+.pilih-table-sebelumnya {
+  margin-left: 1rem;
+}
+.pilih-table-selanjutnya {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  width: 2rem;
+  height: auto;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1585bc;
+  color: white;
 }

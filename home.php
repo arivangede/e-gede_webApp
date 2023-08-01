@@ -155,11 +155,11 @@ if (isset($nama_desa)) {
                     <img src="img/assets/asset-menu-1.png" alt="icon">
                     <p>E-News</p>
                 </div>
-                <div class="menu 2" onclick="pindahFiturProfilDesa()">
+                <div class="menu 2 " onclick="pindahFiturProfilDesa()">
                     <img src="img/assets/asset-menu-2.png" alt="icon">
                     <p>Profil Desa</p>
                 </div>
-                <div class="menu 3" onclick="underConstruction()">
+                <div class="menu 3 " onclick="regulasi()">
                     <img src="img/assets/asset-menu-3.png" alt="icon">
                     <p>Regulasi</p>
                 </div>

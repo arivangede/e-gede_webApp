@@ -53,6 +53,9 @@ function pindahFiturProfilDesa() {
 function underConstruction() {
   window.location.href = "under-construction.php";
 }
+function regulasi() {
+  window.location.href = "fitur/regulasi/regulasi.php";
+}
 
 // aktivitas
 const laporanSaya = document.querySelector(".laporan-saya");
