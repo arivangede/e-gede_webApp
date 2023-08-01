@@ -1,32 +1,9 @@
 <?php
 
 use LDAP\Result;
+$desa = 'Tegal Kertha';
+$kecamatan = 'Denpasar Barat';
 
-require '../../fungsi/functions.php';
-
-session_start();
-if (isset($_SESSION['kecamatan'])) {
-    $kecamatan = $_SESSION['kecamatan'];
-}
-
-
-if (isset($_SESSION['desa'])) {
-    $desa = $_SESSION['desa'];
-    $imagePath = "../../img/$desa/desa.png";
-}
-
-// Memastikan koneksi sudah dibuat pada functions.php
-if (!$conn) {
-    die("Koneksi gagal: " . mysqli_connect_error());
-}
-
-$query = "SELECT judul, ringkasan, isi FROM e_news";
-$result = mysqli_query($conn, $query);
-
-// Periksa apakah query gagal
-if (!$result) {
-    die("Query gagal: " . mysqli_error($conn));
-}
 ?>
 
 <!DOCTYPE html>
@@ -39,30 +16,45 @@ if (!$result) {
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="container-logo">
+  <div class="container-tampil-berita">
+    <div class="container-logo-pengumuman-berita">
       <img src="../../img_e_news/Asset 7.png" alt="">
-      <h1>E-NEWS</h1>
-      <h2><?=$desa?>,</h2> <h3>kec.<?=$kecamatan?></h3>
+      <div class="title-fitur">
+         <h1>E-NEWS</h1>
+         <h2><?=$desa?> kec.<?=$kecamatan?></h2>
+      </div>
     </div>
-    <div class="head-pengumuman">
+    <div class="head-pengumuman-berita">
     <div class="select-pengumuman-berita">
       <p>Pengumuman</p>
       <a href="detile_pengumuman.php"> Lihat Semua <i class='bx bx-chevron-right'></i></a>
-      <img src="../../img_e_news/Asset 1.png" alt="">
+      <div class="pengumumanBtn">
+      <img  src="../../img_e_news/Asset 1.png" alt="">
+      </div>
     </div>
     </div>
-    <div class="neck-pengumumanc">
+    <div class="neck-pengumuman-berita">
       <p>Berita</p>
       <a href=""><i class='bx bx-filter-alt'></i>Filter</a>
     </div>
-    <div class="body-berita">
-      <div class="body-berita1">
+    </div>
+    <div class="body-berita-pengumuman">
+    <div class ="Btnberita">  
+    <div class="body-berita1">
+      <img src="../../img_e_news/Asset 3.png" alt="">
+      </div>
+      </div>
+      <div class="body-berita2">
+      <img src="../../img_e_news/Asset 4.png" alt="">
+      </div>
+      <div class="body-berita2">
       <img src="../../img_e_news/Asset 3.png" alt="">
       </div>
       <div class="body-berita2">
       <img src="../../img_e_news/Asset 4.png" alt="">
       </div>
     </div>
+  
    
 
     <script src="e-news.js"></script>

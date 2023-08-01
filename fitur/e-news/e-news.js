@@ -1,5 +1,11 @@
 //fitur e-news>>>pengumuman//
-const pengumuman_contentBtn = document.querySelector(".pengumuman_contentBtn");
-pengumuman_contentBtn.addEventListener("click", function () {
-  window.location.href = "detile_pengumuman.php";
+const pengumumanBtn = document.querySelector(".pengumumanBtn");
+pengumumanBtn.addEventListener("click", function () {
+  window.location.href = "detail_pengumuman.php";
+});
+
+//fitur e-news>>>pengumuman//
+const Btnberita = document.querySelector(".Btnberita");
+Btnberita.addEventListener("click", function () {
+  window.location.href = "detail_berita.php";
 });
