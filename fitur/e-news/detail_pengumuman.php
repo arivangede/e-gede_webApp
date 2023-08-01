@@ -16,6 +16,7 @@ if (isset($_SESSION['desa'])) {
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,18 +24,20 @@ if (isset($_SESSION['desa'])) {
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../../css/e_news.css">
 </head>
+
 <body>
-    <div class="Pengumuman-wraper">
-        <div class ="pengumuman-head">
-                <a  href="tampil_berita.php"> <i class='bx bx-chevron-left'></i> Kembali</a>
-                    <div class="text-pengumuman">
-                        <h1>Jadwal Perekaman E-KTP di Kantor Desa <?= $desa?> </h1>
-                         <p>Rabu, 25 april 2023</p>
-                    </div>
-                        
+
+    <div class="pengumuman-head">
+        <div class="header-halaman">
+            <a href="tampil_berita.php"> <i class='bx bx-chevron-left'></i> Kembali</a>
         </div>
-            <div class="sosial-media">
-                   
+        <div class="text-pengumuman">
+            <h1>Jadwal Perekaman E-KTP di Kantor Desa <?= $desa ?> </h1>
+            <p>Rabu, 25 april 2023</p>
+        </div>
+    </div>
+
+    <div class="sosial-media">
         <div class="facebook share">
             <i class='bx bxl-facebook-circle'></i>
         </div>
@@ -47,34 +50,23 @@ if (isset($_SESSION['desa'])) {
         <div class="link share">
             <i class='bx bx-link-alt'></i>
         </div>
-            </div>
+    </div>
 
-                
-        <div class ="pengumuman-body">
-             <div class="gambar_isi">
-             <img src="../../img_e_news/img_pengumuman/Asset 18.png" alt="">
-             </div>
-         <div class="isi-pengumuman"> 
+    <div class="pengumuman-body">
+        <div class="gambar-isi">
+            <img src="../../img_e_news/img_pengumuman/Asset 18.png" alt="">
+        </div>
+        <div class="isi-pengumuman">
             <p>
                 Diberitahukan kepada warga Desa Dauh Puri Kaja, bahwasannya hari Ini Rabu, 25 April 2018 pukul 18.00 s/d
-                22.00 WITA akan diadakan Perekaman E-KTP di Kantor Desa, dengan persyaratan membawa fhotocopy Kartu Keluarga..... terima kasih.
-                Diberitahukan kepada warga Desa Dauh Puri Kaja, bahwasannya hari Ini Rabu, 25 April 2018 pukul 18.00 s/d
-                22.00 WITA akan diadakan Perekaman E-KTP di Kantor Desa, dengan persyaratan membawa fhotocopy Kartu Keluarga..... terima kasih.
-                Diberitahukan kepada warga Desa Dauh Puri Kaja, bahwasannya hari Ini Rabu, 25 April 2018 pukul 18.00 s/d
-                22.00 WITA akan diadakan Perekaman E-KTP di Kantor Desa, dengan persyaratan membawa fhotocopy Kartu Keluarga..... terima kasih.
-                Diberitahukan kepada warga Desa Dauh Puri Kaja, bahwasannya hari Ini Rabu, 25 April 2018 pukul 18.00 s/d
-                22.00 WITA akan diadakan Perekaman E-KTP di Kantor Desa, dengan persyaratan membawa fhotocopy Kartu Keluarga..... terima kasih.
-                Diberitahukan kepada warga Desa Dauh Puri Kaja, bahwasannya hari Ini Rabu, 25 April 2018 pukul 18.00 s/d
-                22.00 WITA akan diadakan Perekaman E-KTP di Kantor Desa, dengan persyaratan membawa fhotocopy Kartu Keluarga..... terima kasih.
-                Diberitahukan kepada warga Desa Dauh Puri Kaja, bahwasannya hari Ini Rabu, 25 April 2018 pukul 18.00 s/d
-                22.00 WITA akan diadakan Perekaman E-KTP di Kantor Desa, dengan persyaratan membawa fhotocopy Kartu Keluarga..... terima kasih.
-                Diberitahukan kepada warga Desa Dauh Puri Kaja, bahwasannya hari Ini Rabu, 25 April 2018 pukul 18.00 s/d
-                22.00 WITA akan diadakan Perekaman E-KTP di Kantor Desa, dengan persyaratan membawa fhotocopy Kartu Keluarga..... terima kasih.
-             </p>
+                22.00 WITA akan diadakan Perekaman E-KTP di Kantor Desa, dengan persyaratan membawa photocopy Kartu Keluarga..... terima kasih.
+            </p>
         </div>
-           
-         </div>
-         
     </div>
+
+
+
+
 </body>
+
 </html>
