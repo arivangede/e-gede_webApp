@@ -25,12 +25,22 @@
       <p>kategori</p>
     </div>
     <div class="body-regulasi">
+      <div class="Btnhukum">
       <div class="hukum-regulasi">
         <img src="../../img_regulasi/regulasi/Assets 4.png" alt="">
       </div>
+      </div>
+      <div class="Btnpublic">
       <div class="public-regulasi">
         <img src="../../img_regulasi/regulasi/Assets 5.png" alt="">
       </div>
+      </div>
     </div>
+
+
+
+
+    <script src="regulasi.js"></script>
   </body>
 </html>
+

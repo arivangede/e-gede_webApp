@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Produk Hukum</title>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Informasi Public</title>
     <link rel="stylesheet" href="../../css/regulasi.css">
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-    <div class="head-produk-hukum">
-        <div class="btnkembali-produk-hukum">
+    <div class="head-informasi-public">
+        <div class="btnkembali-informasi-public">
             <a href="regulasi.php"><i class='bx bx-chevron-left'></i> Kembali</a>
         </div>
-        <div class="judul-produk-hukum">
+        <div class="judul-informasi-public">
             <div class="pembungkus-judul">
             <div class="judul1">
                 <h1>Produk Hukum</h1>
@@ -54,7 +54,7 @@
                     </select>
                     <label for="select-table">Entri</label>
                 </div>
-           <div class="table-produk-hukum">
+           <div class="table-informasi-public">
             <table>
                 <tr>
                     <th class="no">No</th>
