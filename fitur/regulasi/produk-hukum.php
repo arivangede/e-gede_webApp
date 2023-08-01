@@ -1,3 +1,34 @@
+<?php
+require '../../fungsi/functions.php';
+session_start();
+
+if (!$_SESSION['login']) {
+    header('Location: login.php');
+}
+
+if (isset($_SESSION['kecamatan'])) {
+
+    $id_kecamatan = $_SESSION['kecamatan'];
+    $query_kecamatan = "SELECT nama_kecamatan FROM kecamatan WHERE id_kecamatan = $id_kecamatan";
+    $result_kecamatan = mysqli_query($conn, $query_kecamatan);
+    if (mysqli_num_rows($result_kecamatan) > 0) {
+        $row_kecamatan = mysqli_fetch_assoc($result_kecamatan);
+        $nama_kecamatan = $row_kecamatan['nama_kecamatan'];
+        $kecamatan = $nama_kecamatan;
+    }
+}
+
+if (isset($_SESSION['desa'])) {
+    $id_desa = $_SESSION['desa'];
+    $query_desa = "SELECT nama_desa FROM desa WHERE id_desa = $id_desa";
+    $result_desa = mysqli_query($conn, $query_desa);
+    if (mysqli_num_rows($result_desa) > 0) {
+        $row_desa = mysqli_fetch_assoc($result_desa);
+        $nama_desa = $row_desa['nama_desa'];
+        $desa = $nama_desa;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +49,7 @@
                 <h1>Produk Hukum</h1>
             </div>
             <div class="judul2">
-                <h2>Dauh Puri Kaja</h2>
+                <h2><?=$desa?></h2>
             </div>
             </div>
         </div>

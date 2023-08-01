@@ -16,8 +16,26 @@ body {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   padding: 0.5rem 0.5rem;
 }
+.head-regulasi i {
+  height: auto;
+  font-size: 2rem;
+  color: #d80000;
+
+  position: relative;
+}
+.head-regulasi i::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 2px;
+  height: 100%;
+  background-color: #d80000;
+}
 .head-regulasi-img img {
-  width: 5rem;
+  width: 3.5rem;
   height: auto;
 }
 .head-regulasi-tittle {
@@ -28,6 +46,7 @@ body {
 .judul-regulasi {
   margin-left: 0.3rem;
   line-height: 1.6rem;
+  white-space: nowrap;
 }
 .head-regulasi-tittle p {
   font-weight: 400;
@@ -35,9 +54,11 @@ body {
   width: 100%;
 }
 .head-regulasi-tittle1 p {
-  color: #d80000;
   font-size: 0.7rem;
   font-weight: 300;
+}
+.head-regulasi-tittle1 p span {
+  color: #d80000;
 }
 .kategori-regulasi {
   color: aliceblue;
@@ -53,6 +74,7 @@ body {
   font-weight: 400;
   margin-left: 1.5rem;
 }
+
 .body-regulasi {
   width: 100%;
   height: auto;
