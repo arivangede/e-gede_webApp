@@ -87,7 +87,7 @@ if (isset($nama_desa)) {
             </div>
 
             <div class="menu-content">
-                <div class="menu 1">
+                <div class="menu 1" onclick="fiturENews()">
                     <img src="img/assets/asset-menu-1.png" alt="icon">
                     <p>E-News</p>
                 </div>
@@ -151,7 +151,7 @@ if (isset($nama_desa)) {
 
 
             <div class="menu-grid">
-                <div class="menu e-newsBtn">
+                <div class="menu 1" onclick="fiturENews()">
                     <img src="img/assets/asset-menu-1.png" alt="icon">
                     <p>E-News</p>
                 </div>

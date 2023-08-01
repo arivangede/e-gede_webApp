@@ -5,15 +5,6 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// fitur e-news
-const enewsBtn = document.querySelector(".e-newsBtn");
-
-if (enewsBtn) {
-  enewsBtn.addEventListener("click", function () {
-    window.location.href = "fitur/e-news/tampil_berita.php";
-  });
-}
-
 // menu popup
 const menuBtn = document.querySelector("#menuBtn");
 const menuPopup = document.querySelector(".menu-popup");
@@ -52,6 +43,10 @@ function pindahFiturProfilDesa() {
 
 function underConstruction() {
   window.location.href = "under-construction.php";
+}
+
+function fiturENews(){
+  window.location.href = "fitur/e-news/";
 }
 
 // aktivitas
