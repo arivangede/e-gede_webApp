@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+
 html {
   font-family: "poppins", sans-serif;
 }
@@ -10,19 +11,21 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 .head-regulasi {
   display: flex;
   align-items: center;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   padding: 0.5rem 0.5rem;
 }
+
 .head-regulasi i {
-  height: auto;
   font-size: 2rem;
   color: #d80000;
 
   position: relative;
 }
+
 .head-regulasi i::after {
   content: "";
   display: block;
@@ -34,32 +37,39 @@ body {
   height: 100%;
   background-color: #d80000;
 }
+
 .head-regulasi-img img {
   width: 3.5rem;
   height: auto;
 }
+
 .head-regulasi-tittle {
   display: flex;
   flex-direction: column;
   width: 100%;
 }
+
 .judul-regulasi {
   margin-left: 0.3rem;
   line-height: 1.6rem;
   white-space: nowrap;
 }
+
 .head-regulasi-tittle p {
   font-weight: 400;
   font-size: 2rem;
   width: 100%;
 }
+
 .head-regulasi-tittle1 p {
   font-size: 0.7rem;
   font-weight: 300;
 }
+
 .head-regulasi-tittle1 p span {
   color: #d80000;
 }
+
 .kategori-regulasi {
   color: aliceblue;
   box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
@@ -69,6 +79,7 @@ body {
   align-items: center;
   display: flex;
 }
+
 .kategori-regulasi p {
   font-size: 1.3rem;
   font-weight: 400;
@@ -81,18 +92,21 @@ body {
   padding: 0.5rem;
   margin-top: 1rem;
 }
+
 .hukum-regulasi img {
   width: 100%;
   height: auto;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   margin-top: 0.5rem;
 }
+
 .public-regulasi img {
   width: 100%;
   height: auto;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   margin-top: 0.5rem;
 }
+
 /* --------------------------------------------produk hukum---------------------------------------------------------- */
 .head-produk-hukum {
   width: 100%;
@@ -101,43 +115,50 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .btnkembali-produk-hukum {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 3rem;
-  background-color: whitesmoke;
+  background-color: white;
   display: flex;
   align-items: center;
 }
+
 .btnkembali-produk-hukum a {
   color: #d80000;
   text-decoration: none;
   margin-left: 1rem;
 }
+
 .judul-produk-hukum {
   width: 95%;
   height: 5rem;
   z-index: 1;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   margin-top: -0.5rem;
   margin-left: 0.6rem;
-  background-color: whitesmoke;
+  background-color: white;
   border-bottom-left-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
   padding-top: 1rem;
 }
+
 .pembungkus-judul {
   margin-left: 1rem;
 }
+
 .judul1 h1 {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5rem;
 }
+
 .judul2 h2 {
   font-size: 0.7rem;
   font-weight: 400;
 }
+
 .sosial-media {
   position: fixed;
   top: 31%;
@@ -149,7 +170,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: whitesmoke;
+  background-color: white;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -158,12 +179,14 @@ body {
 .sosial-media i {
   font-size: 1rem;
 }
+
 .sosial-media .share {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
 }
+
 .pembungkus-tabel {
   width: 100%;
   height: auto;
@@ -172,12 +195,13 @@ body {
   /* border-radius: 1rem; */
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  border-top: 3px solid rgba(0, 0, 0, 0.5);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
   margin-top: -0.5rem;
-  background-color: whitesmoke;
+  background-color: white;
   position: absolute;
   z-index: -1;
 }
+
 .table-produk-hukum {
   width: 100%;
   height: auto;
@@ -191,10 +215,12 @@ body {
   margin-top: 0.5rem;
   margin-left: 0.2rem;
 }
+
 .table-produk-hukum th {
   color: white;
   background-color: black;
 }
+
 .table-produk-hukum th,
 td {
   border: 1px solid black;
@@ -202,6 +228,7 @@ td {
   font-size: 0.5rem;
   width: 4rem;
 }
+
 .lihat-dokumen {
   border: 1px solid #1585bc;
   padding: 0.2rem;
@@ -209,11 +236,13 @@ td {
   color: white;
   background-color: #1585bc;
 }
+
 .row-table {
   margin-top: 0.5rem;
   margin-left: 0.5rem;
   font-size: 0.7rem;
 }
+
 .pilih-table {
   margin-top: 0.5rem;
   display: flex;
@@ -223,9 +252,11 @@ td {
   font-size: 0.5rem;
   margin-right: 0.5rem;
 }
+
 .pilih-table-sebelumnya {
   margin-left: 1rem;
 }
+
 .pilih-table-selanjutnya {
   margin-left: 1rem;
   margin-right: 1rem;
@@ -238,6 +269,7 @@ td {
   background-color: #1585bc;
   color: white;
 }
+
 /* -------------------------------------------------------Informasu Public------------------------------------------------------ */
 .head-informasi-public {
   width: 100%;
@@ -246,43 +278,50 @@ td {
   justify-content: center;
   align-items: center;
 }
+
 .btnkembali-informasi-public {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   width: 100%;
   height: 3rem;
-  background-color: whitesmoke;
+  background-color: white;
   display: flex;
   align-items: center;
 }
+
 .btnkembali-informasi-public a {
   color: #d80000;
   text-decoration: none;
   margin-left: 1rem;
 }
+
 .judul-informasi-public {
   width: 95%;
   height: 5rem;
   z-index: 1;
-  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
   margin-top: -0.5rem;
   margin-left: 0.6rem;
-  background-color: whitesmoke;
+  background-color: white;
   border-bottom-left-radius: 0.3rem;
   border-bottom-right-radius: 0.3rem;
   padding-top: 1rem;
 }
+
 .pembungkus-judul {
   margin-left: 1rem;
 }
+
 .judul1 h1 {
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 1.5rem;
 }
+
 .judul2 h2 {
   font-size: 0.7rem;
   font-weight: 400;
 }
+
 .sosial-media {
   position: fixed;
   top: 31%;
@@ -294,7 +333,7 @@ td {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: whitesmoke;
+  background-color: white;
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -303,12 +342,14 @@ td {
 .sosial-media i {
   font-size: 1rem;
 }
+
 .sosial-media .share {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
 }
+
 .pembungkus-tabel {
   width: 100%;
   height: auto;
@@ -317,12 +358,13 @@ td {
   /* border-radius: 1rem; */
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  border-top: 3px solid rgba(0, 0, 0, 0.5);
+  border-top: 3px solid rgba(0, 0, 0, 0.1);
   margin-top: -0.5rem;
-  background-color: whitesmoke;
+  background-color: white;
   position: absolute;
   z-index: -1;
 }
+
 .table-informasi-public {
   width: 100%;
   height: auto;
@@ -336,10 +378,12 @@ td {
   margin-top: 0.5rem;
   margin-left: 0.2rem;
 }
+
 .table-informasi-public th {
   color: white;
   background-color: black;
 }
+
 .table-informasi-public th,
 td {
   border: 1px solid black;
@@ -347,6 +391,7 @@ td {
   font-size: 0.5rem;
   width: 4rem;
 }
+
 .lihat-dokumen {
   border: 1px solid #1585bc;
   padding: 0.2rem;
@@ -354,11 +399,13 @@ td {
   color: white;
   background-color: #1585bc;
 }
+
 .row-table {
   margin-top: 0.5rem;
   margin-left: 0.5rem;
   font-size: 0.7rem;
 }
+
 .pilih-table {
   margin-top: 0.5rem;
   display: flex;
@@ -368,9 +415,11 @@ td {
   font-size: 0.5rem;
   margin-right: 0.5rem;
 }
+
 .pilih-table-sebelumnya {
   margin-left: 1rem;
 }
+
 .pilih-table-selanjutnya {
   margin-left: 1rem;
   margin-right: 1rem;
