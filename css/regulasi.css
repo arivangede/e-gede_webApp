@@ -19,9 +19,18 @@ body {
   padding: 0.5rem 0.5rem;
 }
 
+.Btnbackhome {
+  display: flex;
+  align-items: center;
+
+  padding: 0;
+}
+
 .head-regulasi i {
   font-size: 2rem;
   color: #d80000;
+
+  margin-right: 0.5rem;
 
   position: relative;
 }
@@ -29,18 +38,18 @@ body {
 .head-regulasi i::after {
   content: "";
   display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  width: 2px;
   height: 100%;
+  width: 2px;
+
+  position: absolute;
+  right: 0;
+  top: 0;
+
   background-color: #d80000;
 }
 
 .head-regulasi-img img {
-  width: 3.5rem;
-  height: auto;
+  height: 3rem;
 }
 
 .head-regulasi-tittle {
