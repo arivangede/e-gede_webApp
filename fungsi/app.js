@@ -20,6 +20,15 @@ if (menuBtn) {
   });
 }
 
+// menu lainnya
+const menulainnyawrapper = document.querySelector(".menulainnya-wrapper");
+function menuLainnya() {
+  menulainnyawrapper.classList.add("active");
+}
+function closemenuLainnya() {
+  menulainnyawrapper.classList.remove("active");
+}
+
 // pindah halaman
 function pindahAktivitas() {
   window.location.href = "aktivitas.php";
@@ -48,7 +57,7 @@ function regulasi() {
   window.location.href = "fitur/regulasi/regulasi.php";
 }
 
-function fiturENews(){
+function fiturENews() {
   window.location.href = "fitur/e-news/";
 }
 
