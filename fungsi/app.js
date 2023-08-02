@@ -49,16 +49,17 @@ function pindahProfil() {
 function pindahFiturProfilDesa() {
   window.location.href = "fitur/profil-desa/index.php";
 }
-
 function underConstruction() {
   window.location.href = "under-construction.php";
 }
 function regulasi() {
   window.location.href = "fitur/regulasi/regulasi.php";
 }
-
 function fiturENews() {
   window.location.href = "fitur/e-news/";
+}
+function ePasar() {
+  window.location.href = "fitur/e-pasar/";
 }
 
 // aktivitas
