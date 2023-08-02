@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     } else {
         // Login gagal
-        echo "Username, password, atau jabatan salah.";
+        $error = true;
     }
 }
 
@@ -65,11 +65,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <div class="title">
                 <h1>Login</h1>
             </div>
-            <div class="error">
-                <?php if (isset($error)) : ?>
+            <?php if (isset($error)) : ?>
+                <div class="error">
                     <p>Username / Password Salah</p>
-                <?php endif; ?>
-            </div>
+                </div>
+            <?php endif; ?>
             <div class="form">
                 <form action="" method="post">
                     <div class="input">
