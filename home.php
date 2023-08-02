@@ -119,7 +119,31 @@ if (isset($nama_desa)) {
                     <img src="img/assets/asset-menu-8.png" alt="icon">
                     <p>Wisata Budaya</p>
                 </div>
+                <div class="menu 9" onclick="ePasar()">
+                    <img src="img/assets/asset-menu-10.png" alt="icon">
+                    <p>E-Pasar</p>
+                </div>
             </div>
+        </div>
+    </div>
+
+    <div class="menulainnya-wrapper">
+        <div class="menulainnya-card">
+
+            <div class="close-btn-menulainnya">
+                <span>Fitur Lainnya</span>
+                <i id="close-menulainnya" class='bx bx-x' onclick="closemenuLainnya()"></i>
+            </div>
+
+            <div class="menulainnya-content">
+                <div class="menu 9" onclick="ePasar()">
+                    <div class="icon-container">
+                        <img src="img/assets/asset-menu-10.png" alt="icon">
+                    </div>
+                    <p>E-Pasar</p>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -183,7 +207,7 @@ if (isset($nama_desa)) {
                     <img src="img/assets/asset-menu-8.png" alt="icon">
                     <p>Wisata Budaya</p>
                 </div>
-                <div class="menu lainnya">
+                <div class="menu lainnya" onclick="menuLainnya()">
                     <img src="img/assets/asset-menu-9.png" alt="icon">
                     <p>Lainnya</p>
                 </div>

@@ -1,0 +1,242 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html {
+    font-family: "poppins", sans-serif;
+    color: var(--text);
+}
+
+:root {
+    --text: #3a3a3a;
+}
+
+/* header */
+header {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding: 0.5rem;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+header i {
+    font-size: 2rem;
+    color: #d80000;
+
+    position: relative;
+    margin-right: 0.5rem;
+}
+
+header i::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    background-color: #d80000;
+}
+
+header img {
+    height: 3rem;
+    margin-right: 0.3rem;
+}
+
+header .title-fitur {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1rem;
+}
+
+header .title-fitur h1 {
+    font-size: 1.1rem;
+}
+
+header .title-fitur p {
+    font-size: 0.8rem;
+}
+
+header .title-fitur p span {
+    color: #d80000;
+}
+
+.search-kategori-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.search-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    padding: 1rem 0.5rem 0.5rem 0.5rem;
+}
+
+.search-wrapper input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.5rem 0.5rem 0.5rem 3rem;
+
+    outline: none;
+    border: none;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5rem;
+}
+
+.search-wrapper i {
+    position: absolute;
+    left: 1rem;
+
+    font-size: 2rem;
+    color: #d80000;
+}
+
+.kategori-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 0.5rem 0.5rem 0.5rem;
+}
+
+.kategori-wrapper h3 {
+    font-size: 1rem;
+    font-weight: 400;
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.kategori-wrapper h3 a {
+    color: #d80000;
+    text-decoration: none;
+}
+
+.kategori-wrapper .kategori-box {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.kategori-wrapper .kategori-box .kategori-card {
+    width: 5rem;
+    height: 5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0.5rem 0.5rem 0 0.5rem;
+
+    text-decoration: none;
+}
+
+.kategori-wrapper .kategori-box .kategori-card .icon-circle {
+    width: 3rem;
+    height: 3rem;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #d80000;
+    color: white;
+}
+
+.kategori-wrapper .kategori-box .kategori-card.not-selected .icon-circle {
+    background-color: #909090;
+}
+
+.kategori-wrapper .kategori-box .kategori-card .icon-circle i {
+    font-size: 2rem;
+}
+
+.kategori-wrapper .kategori-box .kategori-card span {
+    color: #3a3a3a;
+    font-size: 0.8rem;
+}
+
+.e-pasar-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 15rem);
+    gap: 20px;
+
+    width: 100%;
+    height: auto;
+    overflow-y: auto;
+    padding: 1rem 0.5rem 2rem 0.5rem;
+}
+
+.e-pasar-content .content-card {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.e-pasar-content .content-card img {
+    width: 100%;
+}
+
+.e-pasar-content .content-card .content-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 100%;
+    height: 40%;
+    padding: 0.5rem;
+
+    line-height: 1.5rem;
+}
+
+.e-pasar-content .content-card .content-desc h4 {
+    font-size: 1rem;
+    line-height: 1rem;
+}
+
+.e-pasar-content .content-card .content-desc span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: green;
+}
+
+.e-pasar-content .content-card .content-desc p {
+    font-size: 1rem;
+}
+
+/* header end */
