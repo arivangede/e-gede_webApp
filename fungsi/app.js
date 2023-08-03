@@ -61,6 +61,9 @@ function fiturENews() {
 function ePasar() {
   window.location.href = "fitur/e-pasar/";
 }
+function dataDesa() {
+  window.location.href = "fitur/data-desa/";
+}
 
 // aktivitas
 const laporanSaya = document.querySelector(".laporan-saya");
