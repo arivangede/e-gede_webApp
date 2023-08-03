@@ -96,7 +96,7 @@ if (isset($_SESSION['kecamatan'])) {
                     <img src="img/assets/asset-menu-6.png" alt="icon">
                     <p>Layanan Publik</p>
                 </div>
-                <div class="menu 7" onclick="underConstruction()">
+                <div class="menu 7" onclick="keuanganDesa()">
                     <img src="img/assets/asset-menu-7.png" alt="icon">
                     <p>Keuangan Desa</p>
                 </div>

@@ -64,6 +64,9 @@ function ePasar() {
 function dataDesa() {
   window.location.href = "fitur/data-desa/";
 }
+function keuanganDesa() {
+  window.location.href = "fitur/keuangan-desa/";
+}
 
 // aktivitas
 const laporanSaya = document.querySelector(".laporan-saya");
