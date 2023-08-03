@@ -57,21 +57,21 @@ $kecamatan = $nama_kecamatan;
             <h4>Kategori</h4>
         </div>
         <div class="card-container">
-            <div class="card-menu">
+            <div class="card-menu" onclick="underconstruction()">
                 <img class="logo" src="../../img/assets/logo-egede.png" alt="">
                 <div class="upper">
                     <h3>Wilayah Desa</h3>
                     <img src="../../img/fitur-profildesa/asset-icon-wilayahdesa.png" alt="">
                 </div>
             </div>
-            <div class="card-menu">
+            <div class="card-menu" onclick="underconstruction()">
                 <img class="logo" src="../../img/assets/logo-egede.png" alt="">
                 <div class="upper">
                     <h3>Sejarah Desa</h3>
                     <img src="../../img/fitur-profildesa/asset-icon-sejarahdesa.png" alt="">
                 </div>
             </div>
-            <div class="card-menu">
+            <div class="card-menu" onclick="visimisi()">
                 <img class="logo" src="../../img/assets/logo-egede.png" alt="">
                 <div class="upper">
                     <h3>Visi & Misi</h3>
@@ -95,7 +95,7 @@ $kecamatan = $nama_kecamatan;
         </div>
     </div>
 
-
+    <script src="profil-desa.js"></script>
 </body>
 
 </html>
