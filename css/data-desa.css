@@ -18,3 +18,269 @@ html {
     --text: #3a3a3a;
     --text2: #909090;
 }
+
+/* header */
+
+header {
+    display: flex;
+    align-items: center;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+
+    padding: 0.5rem;
+}
+
+header a i {
+    font-size: 2rem;
+    margin-right: 0.5rem;
+
+    color: #d80000;
+
+    position: relative;
+}
+
+header a i::after {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 100%;
+
+    background-color: #d80000;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+header img {
+    height: 3rem;
+    margin-right: 0.3rem;
+}
+
+header .title-fitur {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1rem;
+}
+
+header .title-fitur h1 {
+    font-size: 1.1rem;
+}
+
+header .title-fitur p {
+    font-size: 0.7rem;
+}
+
+header .title-fitur p span {
+    color: #d80000;
+}
+
+/* header end */
+
+/* kategori */
+
+.kategori-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    padding: 1rem;
+
+    width: 100%;
+}
+
+.kategori-wrapper .kategori-card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    background-color: #d80000;
+    border-radius: 1rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+
+    padding: 0.5rem;
+}
+
+.kategori-wrapper .kategori-card h3 {
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.kategori-wrapper .kategori-card .filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 0.5rem;
+
+    color: white;
+}
+
+.kategori-wrapper .kategori-card .filter .pilih {
+    display: flex;
+    flex-direction: column;
+
+    border-bottom: 1px solid white;
+}
+
+.kategori-wrapper .kategori-card .filter .pilih h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+}
+
+.kategori-wrapper .kategori-card .filter .pilih select {
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    font-size: 1rem;
+    color: white;
+}
+
+.kategori-wrapper .kategori-card .filter .pilih select option {
+    background-color: transparent;
+    color: white;
+}
+
+/* kategori end */
+
+/* content wrapper */
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+
+    background-color: white;
+    box-shadow: 0 -3px 5px rgba(0, 0, 0, 0.2);
+
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+
+
+/* content wrapper end */
+
+/* grafik */
+
+.grafik {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1rem;
+}
+
+.grafik .grafik-title {
+    display: flex;
+    margin: 0 0 0.5rem 0;
+
+    border-bottom: 1px solid #d80000;
+
+    width: 100%;
+}
+
+.grafik .grafik-display {
+    display: flex;
+
+    width: 100%;
+    overflow: hidden;
+}
+
+.grafik .grafik-display .grafik-screen {
+    display: flex;
+
+    width: 100%;
+
+    overflow: hidden;
+
+}
+
+.grafik .grafik-display .grafik-screen img {
+    width: 100%;
+    transition: .5s ease-out;
+    transform: translateX(0);
+}
+
+.grafik .grafik-display .grafik-screen.pie img {
+    transform: translateX(-100%);
+}
+
+.grafik .grafik-select {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.grafik .grafik-select .pilihan {
+    display: flex;
+    flex-direction: column;
+}
+
+.grafik .grafik-select .pilihan .pilihan-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 8rem;
+    padding: 0.5rem;
+
+    background-color: white;
+    color: #3a3a3a;
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: .3s ease-in;
+}
+
+.grafik .grafik-select .pilihan .pilihan-card h4 {
+    font-size: 0.7rem;
+    font-weight: 400;
+}
+
+.grafik .grafik-select .pilihan .bar.active,
+.grafik .grafik-select .pilihan .pie.active {
+    background-color: #d80000;
+    color: white;
+}
+
+/* grafik end */
+
+/* tabel */
+
+.tabel {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    border-top: 1px solid #d80000;
+
+    width: 100%;
+    padding: 1rem;
+}
+
+.tabel-title {
+    margin-bottom: 0.5rem;
+}
+
+.tabel-display {
+    width: 100%;
+}
+
+.tabel-display img {
+    width: 100%;
+}
+
+/* tabel end */
