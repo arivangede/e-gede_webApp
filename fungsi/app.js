@@ -65,7 +65,7 @@ function dataDesa() {
   window.location.href = "fitur/data-desa/";
 }
 function keuanganDesa() {
-  window.location.href = "fitur/keuangan-desa/";
+  window.location.href = "fitur/keuangan-desa/keuangan-desa.php";
 }
 
 // aktivitas

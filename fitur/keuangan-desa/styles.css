@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+
 html {
   font-family: "poppins", sans-serif;
 }
+
 *,
 html,
 body {
@@ -9,12 +11,14 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 /* CSS untuk tampilan halaman */
 .page {
   width: 100%;
   /* padding: 20px; */
   border: 1px solid #ccc;
-  display: none; /* Semua halaman disembunyikan secara default */
+  display: none;
+  /* Semua halaman disembunyikan secara default */
 }
 
 /* CSS untuk menampilkan halaman yang dipilih */
@@ -31,6 +35,7 @@ body {
   height: auto;
   width: 100%;
 }
+
 .Btnkembali {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   height: 2.5rem;
@@ -38,12 +43,14 @@ body {
   display: flex;
   align-items: center;
 }
+
 .Btnkembali a {
   color: #d00008;
   text-decoration: none;
   margin-left: 0.5rem;
   font-weight: 600;
 }
+
 .select-halaman {
   display: flex;
   justify-content: center;
@@ -53,22 +60,27 @@ body {
   margin-top: 3rem;
   position: absolute;
 }
+
 .selectpage-halaman {
   width: 95%;
   height: 2rem;
   background-color: #d00008;
   border-radius: 1rem;
   color: white;
-  font-size: 0.5rem;
+  font-size: 1rem;
   font-weight: 500;
   z-index: 1;
+
+  padding: 0 0.5rem;
 }
+
 .selectpage-halaman option {
   background-color: rgb(241, 241, 241);
   color: black;
   font-size: 1.5rem;
   font-weight: 400;
 }
+
 .judul-keuangan {
   width: 100%;
   height: auto;
@@ -77,6 +89,7 @@ body {
   align-items: center;
   margin-top: 2rem;
 }
+
 .pembungkus-judul {
   width: 95%;
   height: 4rem;
@@ -88,6 +101,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .text-judul p {
   width: 100%;
   height: auto;
@@ -96,6 +110,7 @@ body {
   color: black;
   margin-top: 0.3rem;
 }
+
 .text-judul1 p {
   font-size: 1rem;
   font-weight: 500;
@@ -105,6 +120,7 @@ body {
   height: auto;
   margin-top: -0.5rem;
 }
+
 .sosial-media {
   position: fixed;
   top: 31%;
@@ -125,12 +141,14 @@ body {
 .sosial-media i {
   font-size: 1rem;
 }
+
 .sosial-media .share {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
 }
+
 .pembungkus-isi {
   width: 100%;
   height: auto;
@@ -142,6 +160,7 @@ body {
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
 }
+
 .isi-keuangan-desa {
   display: flex;
   justify-content: center;
@@ -151,10 +170,12 @@ body {
   height: auto;
   margin-top: 1rem;
 }
+
 .isi-keuangan-desa p {
   font-size: 0.8rem;
   font-weight: 400;
 }
+
 .isi-table-keuangan img {
   height: auto;
   width: 100%;

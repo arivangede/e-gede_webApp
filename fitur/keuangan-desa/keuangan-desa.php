@@ -48,7 +48,7 @@ if (isset($_SESSION['desa'])) {
         <div class="v">
             <div class="head-keuangan-desa">
                 <div class="Btnbackhome">
-                    <i class='bx bx-left-arrow-alt'></i>
+                    <a href="../../home.php"><i class='bx bx-arrow-back'></i></a>
                 </div>
                 <div class="icon-keuangan">
                     <img src="../../img/img-keuangan-desa/Assets 1.png" alt="">
