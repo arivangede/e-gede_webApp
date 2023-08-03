@@ -43,7 +43,7 @@ if (isset($_SESSION['desa'])) {
 <body>
   <div class="head-regulasi">
     <div class="Btnbackhome">
-      <i class='bx bx-left-arrow-alt'></i>
+      <i class='bx bx-arrow-back'></i>
     </div>
     <div class="head-regulasi-img">
       <img src="../../img_regulasi/regulasi/Assets 1.png" alt="" />
@@ -72,10 +72,6 @@ if (isset($_SESSION['desa'])) {
       </div>
     </div>
   </div>
-  <DIv class="SDAH">
-    <P>SADAJKSDHAJK</P>
-    <P>SADJHASHDJA</P>
-  </DIv>
 
 
 

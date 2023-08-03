@@ -5,15 +5,6 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// fitur e-news
-const enewsBtn = document.querySelector(".e-newsBtn");
-
-if (enewsBtn) {
-  enewsBtn.addEventListener("click", function () {
-    window.location.href = "fitur/e-news/tampil_berita.php";
-  });
-}
-
 // menu popup
 const menuBtn = document.querySelector("#menuBtn");
 const menuPopup = document.querySelector(".menu-popup");
@@ -27,6 +18,15 @@ if (menuBtn) {
   closeMenuBtn.addEventListener("click", function () {
     menuPopup.classList.remove("active");
   });
+}
+
+// menu lainnya
+const menulainnyawrapper = document.querySelector(".menulainnya-wrapper");
+function menuLainnya() {
+  menulainnyawrapper.classList.add("active");
+}
+function closemenuLainnya() {
+  menulainnyawrapper.classList.remove("active");
 }
 
 // pindah halaman
@@ -49,12 +49,20 @@ function pindahProfil() {
 function pindahFiturProfilDesa() {
   window.location.href = "fitur/profil-desa/index.php";
 }
-
 function underConstruction() {
   window.location.href = "under-construction.php";
 }
 function regulasi() {
   window.location.href = "fitur/regulasi/regulasi.php";
+}
+function fiturENews() {
+  window.location.href = "fitur/e-news/";
+}
+function ePasar() {
+  window.location.href = "fitur/e-pasar/";
+}
+function dataDesa() {
+  window.location.href = "fitur/data-desa/";
 }
 
 // aktivitas

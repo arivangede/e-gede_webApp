@@ -10,7 +10,7 @@ body {
 
 html {
   font-family: "poppins", sans-serif;
-  color: var(--text);
+  color: #3a3a3a;
 }
 
 :root {
@@ -232,6 +232,7 @@ nav .nav-btn img {
   align-items: start;
   margin-right: 0.5rem;
 }
+
 .notifikasi .content .notifikasi-card .profile img {
   width: 4rem;
 }
@@ -242,14 +243,17 @@ nav .nav-btn img {
   justify-content: center;
   align-items: start;
 }
+
 .notifikasi .content .notifikasi-card .isi-pengumuman h3 {
   font-size: 1.2rem;
   font-weight: 600;
 }
+
 .notifikasi .content .notifikasi-card .isi-pengumuman span {
   font-size: 0.7rem;
   margin-bottom: 0.5rem;
 }
+
 .notifikasi .content .notifikasi-card .isi-pengumuman p {
   font-size: 1rem;
   display: -webkit-box;
@@ -257,6 +261,7 @@ nav .nav-btn img {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
 /* notifikasi end*/
 
 /* masuk-notifikasi */
@@ -328,11 +333,13 @@ nav .nav-btn img {
   justify-content: flex-start;
   align-items: center;
 }
+
 .isi-content .image-isi {
   padding-top: 6rem;
   width: 100%;
   height: 15rem;
 }
+
 .isi-content .image-isi img {
   width: 100%;
   object-fit: cover;

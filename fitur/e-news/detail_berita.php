@@ -21,7 +21,7 @@ if (isset($_SESSION['desa'])) {
 <body>
     <div class="berita-wraper">
         <div class="head-berita">
-            <a href="tampil_berita.php"> <i class='bx bxs-chevron-left'> </i> Kembali</a>
+            <a href="index.php"> <i class='bx bxs-chevron-left'> </i> Kembali</a>
             <div class="judul-berita">
                 <h2>Perayaan Hari Ulang Tahun Kota Denpasar Ke 234 Tahun</h2>
                 <p>Rabu, 09 Maret 2023</p>
@@ -45,7 +45,7 @@ if (isset($_SESSION['desa'])) {
         </div>
         <div class="isi-berita">
             <div class="gambar-berita">
-                <img src="../../img_e_news/img_berita/Asset 23.png" alt="">
+                <img src="../../img/fitur-enews/asset-gambar-berita.png" alt="">
             </div>
 
             <div class="text-berita">

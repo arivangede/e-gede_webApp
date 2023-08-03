@@ -48,7 +48,7 @@ if (isset($_SESSION['desa'])) {
         <div class="judul-informasi-public">
             <div class="pembungkus-judul">
                 <div class="judul1">
-                    <h1>Produk Hukum</h1>
+                    <h1>Informasi Publik</h1>
                 </div>
                 <div class="judul2">
                     <h2><?= $desa ?></h2>

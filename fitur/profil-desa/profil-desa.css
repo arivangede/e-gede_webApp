@@ -1,18 +1,261 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+
+*,
+html,
+body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 
+html {
+  font-family: "poppins", sans-serif;
+  color: var(--text);
+}
+
+:root {
+  --text: #3a3a3a;
+  --text2: #909090;
+}
+
+/* header */
 header {
-  width: 100%;
-  height: 4rem;
-  padding: 0.3rem 1rem;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
+
+  width: 100%;
+  padding: 0.5rem;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header a i {
+  font-size: 2rem;
+  margin-right: 0.5rem;
+
+  position: relative;
+
+  color: #d80000;
+}
+
+header a i::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 100%;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  background-color: #d80000;
 }
 
 header img {
-  width: 5rem;
+  height: 3rem;
+
+  margin-right: 0.3rem;
 }
+
+header .title-fitur {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1rem;
+}
+
+header .title-fitur h1 {
+  font-size: 1.1rem;
+}
+
+header .title-fitur p {
+  font-size: 0.7rem;
+}
+
+header .title-fitur p span {
+  color: #d80000;
+}
+
+/* header end */
+
+/* kategori */
+.kategori-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+
+  margin-top: 1rem;
+}
+
+.kategori-wrapper .title {
+  display: flex;
+  width: 100%;
+
+  padding: 0.5rem 1rem;
+  background-color: #d80000;
+  color: white;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 4;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0.5rem 1rem;
+}
+
+.card-container .card-menu {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+
+  position: relative;
+
+  border-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.card-menu .logo {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+
+  height: 1.5rem;
+}
+
+.card-menu .upper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-menu .upper img {
+  width: 40%;
+}
+
+/* kategori end */
+
+/* visi misi */
+.backbtn {
+  color: #d80000;
+}
+
+.selector-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 4;
+
+  width: 100%;
+}
+
+.selector-wrapper .select-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 5rem;
+
+  background-color: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+
+  padding: 0.5rem;
+
+  transition: 0.4s ease-in;
+}
+
+.selector-wrapper .visi.active,
+.selector-wrapper .misi.active {
+  background-color: #d80000;
+  color: white;
+}
+
+.selector-wrapper .select-card img {
+  height: 2rem;
+  margin-right: 1rem;
+}
+
+.selector-wrapper .select-card span {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.select-card:nth-child(1) {
+  margin-right: 0.5rem;
+
+  border-bottom-right-radius: 1rem;
+}
+
+.select-card:nth-child(2) {
+  border-bottom-left-radius: 1rem;
+}
+
+.section-wrapper {
+  width: 100vw;
+
+  display: flex;
+  overflow-x: hidden;
+}
+
+.section-screen {
+  width: 200vw;
+  display: flex;
+}
+
+.section-wrapper section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100vw;
+  transition: transform 0.4s ease-out;
+}
+
+.section-wrapper.misi section {
+  transform: translateX(-100vw);
+}
+
+.section-wrapper section img {
+  width: 100%;
+}
+
+section .content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.4);
+
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+section .content-wrapper .desc-misi {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+section .content-wrapper .desc-misi p {
+  margin-bottom: 0.5rem;
+}
+
+/* visi misi end */

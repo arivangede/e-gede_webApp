@@ -88,7 +88,7 @@ if (isset($_SESSION['kecamatan'])) {
                     <img src="img/assets/asset-menu-4.png" alt="icon">
                     <p>Pengaduan</p>
                 </div>
-                <div class="menu 5" onclick="underConstruction()">
+                <div class="menu 5" onclick="dataDesa()">
                     <img src="img/assets/asset-menu-5.png" alt="icon">
                     <p>Data Desa</p>
                 </div>
@@ -103,6 +103,10 @@ if (isset($_SESSION['kecamatan'])) {
                 <div class="menu 8" onclick="underConstruction()">
                     <img src="img/assets/asset-menu-8.png" alt="icon">
                     <p>Wisata Budaya</p>
+                </div>
+                <div class="menu 9" onclick="ePasar()">
+                    <img src="img/assets/asset-menu-10.png" alt="icon">
+                    <p>E-Pasar</p>
                 </div>
             </div>
         </div>
