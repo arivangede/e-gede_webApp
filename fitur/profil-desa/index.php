@@ -78,14 +78,14 @@ $kecamatan = $nama_kecamatan;
                     <img src="../../img/fitur-profildesa/asset-icon-visimisi.png" alt="">
                 </div>
             </div>
-            <div class="card-menu">
+            <div class="card-menu" onclick="underconstruction()">
                 <img class="logo" src="../../img/assets/logo-egede.png" alt="">
                 <div class="upper">
                     <h3>Struktur Pemerintahan Desa</h3>
                     <img src="../../img/fitur-profildesa/asset-icon-strukturpemerintahan.png" alt="">
                 </div>
             </div>
-            <div class="card-menu">
+            <div class="card-menu" onclick="underconstruction()">
                 <img class="logo" src="../../img/assets/logo-egede.png" alt="">
                 <div class="upper">
                     <h3>Lembaga Kemasyarakatan</h3>
