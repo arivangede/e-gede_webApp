@@ -1,0 +1,23 @@
+/* CSS untuk tampilan halaman */
+.page {
+  width: 100%;
+  /* padding: 20px; */
+  border: 1px solid #ccc;
+  display: none; /* Semua halaman disembunyikan secara default */
+}
+
+/* CSS untuk menampilkan halaman yang dipilih */
+.show {
+  display: block;
+}
+
+/* CSS untuk menampilkan konten halaman belanja secara default */
+#page1 {
+  display: block;
+}
+
+.container-halaman-index-keuangan-desa {
+  height: 2.5rem;
+  width: 100%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
