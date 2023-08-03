@@ -60,7 +60,7 @@
                     <img src="img/assets/asset-menu-4.png" alt="icon">
                     <p>Pengaduan</p>
                 </div>
-                <div class="menu 5" onclick="underConstruction()">
+                <div class="menu 5" onclick="dataDesa()">
                     <img src="img/assets/asset-menu-5.png" alt="icon">
                     <p>Data Desa</p>
                 </div>
