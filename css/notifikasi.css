@@ -369,6 +369,11 @@ nav .nav-btn img {
   font-size: 0.6rem;
 }
 
+.isi-content .teks-isi-wrapper .teks p {
+  text-indent: 20px;
+  text-align: justify;
+}
+
 .social-media {
   position: fixed;
   top: 31%;

@@ -63,9 +63,9 @@
                     8. Fitur E - Pasar
                     <br>
                     <br>
-
-                    Selain dari fitur-fitur tersebut masih banyak lagi inovasi yang terdapat di dalamnya.
-                    Mari ikuti terus program aplikasi e GeDe dan berikan saran maupun masukan Anda untuk memajukan serta mensukseskan Kota Denpasar ini melalui aplikasi e GeDe
+                </p>
+                <p>
+                    Selain dari fitur-fitur tersebut masih banyak lagi inovasi yang terdapat di dalamnya. Mari ikuti terus program aplikasi e-GeDe dan berikan saran maupun masukan Anda untuk memajukan serta mensukseskan Kota Denpasar ini melalui aplikasi e-GeDe
                 </p>
             </div>
         </div>
