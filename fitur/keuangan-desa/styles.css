@@ -1,3 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+html {
+  font-family: "poppins", sans-serif;
+}
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 /* CSS untuk tampilan halaman */
 .page {
   width: 100%;
@@ -17,7 +28,135 @@
 }
 
 .container-halaman-index-keuangan-desa {
+  height: auto;
+  width: 100%;
+}
+.Btnkembali {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   height: 2.5rem;
   width: 100%;
+  display: flex;
+  align-items: center;
+}
+.Btnkembali a {
+  color: #d00008;
+  text-decoration: none;
+  margin-left: 0.5rem;
+  font-weight: 600;
+}
+.select-halaman {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 3rem;
+  position: absolute;
+}
+.selectpage-halaman {
+  width: 95%;
+  height: 2rem;
+  background-color: #d00008;
+  border-radius: 1rem;
+  color: white;
+  font-size: 0.5rem;
+  font-weight: 500;
+  z-index: 1;
+}
+.selectpage-halaman option {
+  background-color: rgb(241, 241, 241);
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.judul-keuangan {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.pembungkus-judul {
+  width: 95%;
+  height: 4rem;
+  box-shadow: 0 0 5px rgb(0, 0, 5);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.text-judul p {
+  width: 100%;
+  height: auto;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: black;
+  margin-top: 0.3rem;
+}
+.text-judul1 p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: black;
+  margin-top: 0.3rem;
+  width: 100%;
+  height: auto;
+  margin-top: -0.5rem;
+}
+.sosial-media {
+  position: fixed;
+  top: 31%;
+  transform: translateY(-50%);
+  right: 0;
+  width: 2.5rem;
+  height: 9rem;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.sosial-media i {
+  font-size: 1rem;
+}
+.sosial-media .share {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+.pembungkus-isi {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.isi-keuangan-desa {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  margin-top: 1rem;
+}
+.isi-keuangan-desa p {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.isi-table-keuangan img {
+  height: auto;
+  width: 100%;
+  margin-top: 1rem;
 }

@@ -20,10 +20,20 @@ function showPage() {
     // Jika halaman yang dipilih adalah halaman belanja, kembalikan kontennya
     const pageBelanja = document.getElementById("page1");
     pageBelanja.innerHTML = `
-      <h2>Halaman Belanja</h2>
-      <p>Ini adalah halaman belanja.</p>
-      <!-- Tempatkan konten halaman belanja Anda di sini -->
-      <img src="../../img/icon/lock.png" alt="">
-    `;
+      <div class="pembungkus-isi">
+      <div class="isi-keuangan-desa">
+        <p>Laporan Realisasi Pelaksanaan</p>
+        <p>Anggaran Pendapatan dan Belanja Desa</p>
+        <p>Pemerintah Desa <?= $desa ?></p>
+        <p>Tahun Anggaran 2023</p>
+      </div>
+      <div class="isi-table-keuangan">
+        <img src="../../img/img-keuangan-desa/img-apbdes/Assets 3.png" alt="">
+      </div>`;
   }
 }
+//fiture -keuangan desa
+const Btnmasuk = document.querySelector(".Btnmasuk");
+Btnmasuk.addEventListener("click", function () {
+  window.location.href = "index.php";
+});

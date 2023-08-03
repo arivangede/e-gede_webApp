@@ -68,8 +68,10 @@ if (isset($_SESSION['desa'])) {
         </div>
 
         <div class="isi-keuangan-desa">
-            <div class="isi1-keuangan-desa">
-                <img src="../../img/img-keuangan-desa/Assets 3.png" alt="">
+            <div class="Btnmasuk">
+                <div class="isi1-keuangan-desa">
+                    <img src="../../img/img-keuangan-desa/Assets 3.png" alt="">
+                </div>
             </div>
             <div class="isi2-keuangan-desa">
                 <img src="../../img/img-keuangan-desa/Assets 4.png" alt="">
@@ -86,7 +88,7 @@ if (isset($_SESSION['desa'])) {
         </div>
     </div>
 
-
+    <script src="script.js"></script>
 </body>
 
 </html>
