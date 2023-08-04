@@ -67,7 +67,7 @@ if (isset($_SESSION['desa'])) {
             </div>
         </div>
 
-        <div class="isi-keuangan-desa">
+        <div class="isi-keuangan-desa" onclick="masukkeuangan()">
             <div class="Btnmasuk">
                 <div class="isi1-keuangan-desa">
                     <img src="../../img/img-keuangan-desa/Assets 3.png" alt="">
@@ -88,7 +88,7 @@ if (isset($_SESSION['desa'])) {
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="keuangan-desa.js"></script>
 </body>
 
 </html>

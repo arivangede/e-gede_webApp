@@ -1,6 +1,30 @@
 <?php
 require "../../fungsi/functions.php";
+session_start();
 
+if (isset($_SESSION['desa'])) {
+    $id = $_SESSION['desa'];
+    $query = "SELECT nama_desa FROM desa WHERE id_desa = $id";
+    $result = mysqli_query($conn, $query);
+
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $nama_desa = $row['nama_desa'];
+    }
+}
+if (isset($_SESSION['kecamatan'])) {
+    $id = $_SESSION['kecamatan'];
+    $query = "SELECT nama_kecamatan FROM kecamatan WHERE id_kecamatan = $id";
+    $result = mysqli_query($conn, $query);
+
+    if (mysqli_num_rows($result) > 0) {
+        $row = mysqli_fetch_assoc($result);
+        $nama_kecamatan = $row['nama_kecamatan'];
+    }
+}
+
+$desa = $nama_desa;
+$kecamatan = $nama_kecamatan;
 ?>
 <!DOCTYPE html>
 <html lang="en">

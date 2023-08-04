@@ -1,7 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
-html {
-  font-family: "poppins", sans-serif;
-}
 
 *,
 html,
@@ -9,18 +6,32 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
+
+html {
+  font-family: "poppins", sans-serif;
+  color: var(--text);
+}
+
+:root {
+  --text: #3a3a3a;
+}
+
+
 .continer-keuangan-desa {
   width: 100%;
   height: auto;
   display: contents;
 }
+
 .v {
   width: 100%;
   height: 6rem;
   background-color: white;
   position: fixed;
 }
+
 .head-keuangan-desa {
   width: 100%;
   height: auto;
@@ -31,12 +42,14 @@ body {
   background-color: white;
   position: fixed;
 }
+
 .head-keuangan-desa i {
   height: auto;
   font-size: 2rem;
   color: #d80000;
   position: relative;
 }
+
 .head-keuangan-desa i::after {
   content: "";
   display: block;
@@ -47,30 +60,36 @@ body {
   height: 100%;
   background-color: #d80000;
 }
+
 .icon-keuangan img {
   width: 3.5rem;
   height: auto;
   margin-left: 0.3rem;
 }
+
 .judul-keuangan-desa {
   width: 100%;
   height: auto;
   line-height: 1.6rem;
   white-space: nowrap;
 }
+
 .text-judul-keuangan-desa p {
   font-size: 1.5rem;
   font-weight: 400;
   color: black;
   position: relative;
 }
+
 .text2-judul-keuangan-desa p {
   font-weight: 300;
   font-size: 0.7rem;
 }
+
 .text2-judul-keuangan-desa p span {
   color: #d80000;
 }
+
 .text-keuangan-desa {
   display: flex;
   width: 100%;
@@ -81,17 +100,20 @@ body {
   position: fixed;
   margin-top: 6rem;
 }
+
 .text-keuangan-desa p {
   font-size: 1rem;
   font-weight: 500;
   color: white;
   margin-left: 0.5rem;
 }
+
 .isi-keuangan-desa {
   width: 100%;
   height: auto;
   display: contents;
 }
+
 .isi1-keuangan-desa img {
   width: 90%;
   height: auto;
@@ -100,6 +122,7 @@ body {
   border-radius: 0.3rem;
   margin-left: 1.2rem;
 }
+
 .isi2-keuangan-desa img {
   width: 90%;
   height: auto;
@@ -108,6 +131,7 @@ body {
   border-radius: 0.3rem;
   margin-left: 1.2rem;
 }
+
 .isi3-keuangan-desa img {
   width: 90%;
   height: auto;
@@ -116,6 +140,7 @@ body {
   border-radius: 0.3rem;
   margin-left: 1.2rem;
 }
+
 .isi4-keuangan-desa img {
   width: 90%;
   height: auto;
@@ -124,6 +149,7 @@ body {
   border-radius: 0.3rem;
   margin-left: 1.2rem;
 }
+
 .isi5-keuangan-desa img {
   width: 90%;
   height: auto;
@@ -132,4 +158,93 @@ body {
   border-radius: 0.3rem;
   margin-left: 1.2rem;
 }
+
 /*---------------------------------------- fiture---------------------------------------- */
+
+
+/* --------------------------------------- index --------------------------------------- */
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header .back-btn {
+  width: 100%;
+  color: #d80000;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0.5rem;
+
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+header .back-btn i {
+  font-size: 1rem;
+}
+
+header .back-btn a {
+  text-decoration: none;
+  color: #d80000;
+}
+
+header .back-btn a span {
+  font-size: 1rem;
+}
+
+header select {
+  width: 95%;
+  font-size: 1.2rem;
+  padding: 0.2rem 0.5rem;
+
+  background-color: #d80000;
+  color: white;
+
+  border: none;
+  border-radius: 1rem;
+}
+
+header .header-wrapper {
+  width: 90%;
+  line-height: 1.5rem;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.header-content-wrapper {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+section {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+section img {
+  width: 360px;
+}
