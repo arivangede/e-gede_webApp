@@ -12,6 +12,14 @@ body {
   box-sizing: border-box;
 }
 
+html {
+  color: var(--text);
+}
+
+:root {
+  --text: #3a3a3a;
+}
+
 .head-regulasi {
   display: flex;
   align-items: center;
