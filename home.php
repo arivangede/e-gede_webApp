@@ -33,7 +33,7 @@ $kabupaten = "Denpasar";
 
 if (isset($nama_desa)) {
     $desa = $nama_desa;
-    $imagePath = "img/$desa/desa.png";
+    $imagePath = "img/$id_desa/desa.png";
 }
 
 ?>
@@ -161,11 +161,11 @@ if (isset($nama_desa)) {
         <div class="body">
             <div class="carrousel-card">
                 <section class="card-carrousel 1">
-                    <img src="img/assets/asset-banner-<?= $desa; ?>.png" alt="iklan">
+                    <img src="img/assets/asset-banner-<?= $id_desa; ?>.png" alt="iklan">
                 </section>
                 <?php if ($desa !== "Tegal Kertha") : ?>
                     <section class="card-carrousel 2">
-                        <img src="img/assets/asset-visimisi-<?= $desa; ?>.png" alt="iklan">
+                        <img src="img/assets/asset-visimisi-<?= $id_desa; ?>.png" alt="iklan">
                     </section>
                 <?php endif; ?>
                 <section class="card-carrousel 3">
