@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Jul 30, 2023 at 09:04 AM
+-- Generation Time: Aug 07, 2023 at 07:15 AM
 -- Server version: 5.7.39
 -- PHP Version: 7.4.33
 
@@ -43,7 +43,7 @@ CREATE TABLE `admin` (
 INSERT INTO `admin` (`id`, `username`, `password`, `jabatan`, `desa`, `kecamatan`) VALUES
 (1, 'tuedi', 'tuedi1234', 'admin desa', '2', '2\r\n'),
 (2, 'arivan', 'arivan1234', 'admin desa', '1', '1'),
-(3, 'rama', 'rama1234', 'admin desa', '4', '3'),
+(3, 'rama', 'rama1234', 'admin desa', '3', '4'),
 (4, 'gede', 'gede1234', 'admin kota', '', '3');
 
 -- --------------------------------------------------------
@@ -89,6 +89,32 @@ INSERT INTO `desa` (`id`, `id_desa`, `nama_desa`, `id_kecamatan`) VALUES
 (1, '1', 'Dauh Puri Kaja', '1'),
 (2, '2', 'Tegal Kertha', '2'),
 (3, '3', 'Sanur Kauh', '4');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ePasar`
+--
+
+CREATE TABLE `ePasar` (
+  `id` int(11) NOT NULL,
+  `nama_barang` varchar(255) NOT NULL,
+  `kategori` varchar(50) NOT NULL,
+  `harga` varchar(50) NOT NULL,
+  `toko` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ePasar`
+--
+
+INSERT INTO `ePasar` (`id`, `nama_barang`, `kategori`, `harga`, `toko`) VALUES
+(1, 'Beras-25kg', 'sembako', '315.000', 'toko sukses'),
+(2, 'Ulmus x Variegata', 'lain-lain', '350.000', 'Janger Bonsai Bali'),
+(3, 'Kamen Pria & Wanita', 'pakaian', '80.000', 'Bali Classic'),
+(4, 'Salad Buah 400ml', 'makanan', '40.000', 'Bali Foodie'),
+(5, 'Aqua Gelas', 'minuman', '32.100', 'BUMDES'),
+(6, 'Telor-Krat', 'sembako', '48.000', 'BUMDES');
 
 -- --------------------------------------------------------
 
@@ -139,6 +165,52 @@ INSERT INTO `kecamatan` (`id`, `id_kecamatan`, `nama_kecamatan`, `id_kabupaten`)
 (3, '3', 'Denpasar Timur', '5'),
 (4, '4', 'Denpasar Selatan', '5');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `sub_topik`
+--
+
+CREATE TABLE `sub_topik` (
+  `id` int(11) NOT NULL,
+  `idtopik` int(11) NOT NULL,
+  `sub_topik` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `sub_topik`
+--
+
+INSERT INTO `sub_topik` (`id`, `idtopik`, `sub_topik`) VALUES
+(1, 1, 'Umur'),
+(2, 1, 'Agama'),
+(3, 1, 'Jenis Kelamin'),
+(4, 1, 'Usaha/UMKM'),
+(5, 1, 'Pekerjaan'),
+(6, 1, 'Penghasilan'),
+(7, 1, 'Pendidikan');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `topik`
+--
+
+CREATE TABLE `topik` (
+  `id` int(11) NOT NULL,
+  `topik` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `topik`
+--
+
+INSERT INTO `topik` (`id`, `topik`) VALUES
+(1, 'Statistik Penduduk'),
+(2, 'Statistik Keluarga'),
+(3, 'Statistik Bantuan'),
+(4, 'Statistik Lainnnya');
+
 --
 -- Indexes for dumped tables
 --
@@ -162,6 +234,12 @@ ALTER TABLE `desa`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `ePasar`
+--
+ALTER TABLE `ePasar`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `kabupaten`
 --
 ALTER TABLE `kabupaten`
@@ -171,6 +249,18 @@ ALTER TABLE `kabupaten`
 -- Indexes for table `kecamatan`
 --
 ALTER TABLE `kecamatan`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `sub_topik`
+--
+ALTER TABLE `sub_topik`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `topik`
+--
+ALTER TABLE `topik`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -196,6 +286,12 @@ ALTER TABLE `desa`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT for table `ePasar`
+--
+ALTER TABLE `ePasar`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT for table `kabupaten`
 --
 ALTER TABLE `kabupaten`
@@ -206,6 +302,18 @@ ALTER TABLE `kabupaten`
 --
 ALTER TABLE `kecamatan`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `sub_topik`
+--
+ALTER TABLE `sub_topik`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `topik`
+--
+ALTER TABLE `topik`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

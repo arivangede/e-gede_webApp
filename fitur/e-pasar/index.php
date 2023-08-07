@@ -82,7 +82,7 @@ if (isset($_GET['kategori'])) {
                 </a>
 
 
-                <a class="kategori-card 3 <?php if (isset($_GET['kategori']) && $kategori != "sembako") echo 'not-selected'; ?>"" href=" ?kategori=sembako">
+                <a class="kategori-card 3 <?php if (isset($_GET['kategori']) && $kategori != "sembako") echo 'not-selected'; ?>" href=" ?kategori=sembako">
                     <div class="icon-circle">
                         <i class='bx bxs-package'></i>
                     </div>
