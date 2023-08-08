@@ -25,6 +25,14 @@ if (isset($_SESSION['kecamatan'])) {
 
 $desa = $nama_desa;
 $kecamatan = $nama_kecamatan;
+
+// kategori pengaduan
+if (isset($_GET['kategori'])) {
+    $kategori = $_GET['kategori'];
+    $pengaduan = query("SELECT * FROM pengaduan WHERE id_kategori = '$kategori'");
+} else {
+    $pengaduan = query("SELECT * FROM pengaduan");
+}
 ?>
 
 <!DOCTYPE html>
@@ -49,92 +57,118 @@ $kecamatan = $nama_kecamatan;
     </header>
 
     <div class="kategori-wrapper">
-        <div class="pilihan">
-            <i class='bx bxs-help-circle'></i>
-            <span>help</span>
-        </div>
-        <div class="pilihan">
-            <i class='bx bxs-help-circle'></i>
-            <span>help</span>
-        </div>
-        <div class="pilihan">
-            <i class='bx bxs-help-circle'></i>
-            <span>help</span>
-        </div>
-        <div class="pilihan">
-            <i class='bx bxs-help-circle'></i>
-            <span>help</span>
-        </div>
-        <div class="pilihan">
-            <i class='bx bxs-help-circle'></i>
-            <span>help</span>
-        </div>
-        <div class="pilihan">
-            <i class='bx bxs-help-circle'></i>
-            <span>help</span>
-        </div>
+        <a class="pilihan <?php if (!isset($_GET['kategori'])) : ?> selected <?php endif; ?>" href="index.php">
+            <div class="circle">
+                <i class='bx bxs-grid-alt'></i>
+            </div>
+            <span>Semua</span>
+        </a>
+        <a class="pilihan <?php if (isset($_GET['kategori']) && $kategori == "1") echo "selected"; ?>" href="?kategori=1">
+            <div class="circle">
+                <i class='bx bxs-buildings'></i>
+            </div>
+            <span>Fasilitas Umum</span>
+        </a>
+        <a class="pilihan <?php if (isset($_GET['kategori']) && $kategori == "2") echo "selected"; ?>" href="?kategori=2">
+            <div class=" circle">
+                <i class='bx bxs-clinic'></i>
+            </div>
+            <span>Layanan Kesehatan</span>
+        </a>
+        <a class="pilihan <?php if (isset($_GET['kategori']) && $kategori == "3") echo "selected"; ?>" href="?kategori=3">
+            <div class="circle">
+                <i class='bx bxs-school'></i>
+            </div>
+            <span>Pendidikan</span>
+        </a>
+        <a class="pilihan <?php if (isset($_GET['kategori']) && $kategori == "4") echo "selected"; ?>" href="?kategori=4">
+            <div class="circle">
+                <i class='bx bxs-florist'></i>
+            </div>
+            <span>Pertanian Peternakan</span>
+        </a>
+        <a class="pilihan <?php if (isset($_GET['kategori']) && $kategori == "5") echo "selected"; ?>" href="?kategori=5">
+            <div class="circle">
+                <i class='bx bxs-trash'></i>
+            </div>
+            <span>Kebersihan</span>
+        </a>
+        <a class="pilihan <?php if (isset($_GET['kategori']) && $kategori == "6") echo "selected"; ?>" href="?kategori=6">
+            <div class="circle">
+                <i class='bx bxs-group'></i>
+            </div>
+            <span>Sosial</span>
+        </a>
+        <a class="pilihan <?php if (isset($_GET['kategori']) && $kategori == "7") echo "selected"; ?>" href="?kategori=7">
+            <div class="circle">
+                <i class='bx bxs-lock'></i>
+            </div>
+            <span>Keamanan Ketertiban</span>
+        </a>
     </div>
 
     <div class="pengaduan-wrapper">
+        <?php foreach ($pengaduan as $row) : ?>
+            <?php
+            // Menghitung jumlah foto pada kartu saat ini
+            $jumlah_foto = 0;
+            for ($i = 1; $i <= 3; $i++) {
+                $foto = "../../img/fitur-pengaduan/pengaduan/asset-" . $row['id'] . "-" . $i . ".png";
+                if (file_exists($foto)) {
+                    $jumlah_foto++;
+                }
+            }
 
-        <div class="pengaduan-card">
-            <div class="header-card">
-                <div class="profile-user">
-                    <img src="../../img/fitur-pengaduan/asset-user-1.png" alt="">
-                    <div class="profile-time">
-                        <h3>Nyoman Lanang</h3>
-                        <span><i class='bx bxs-time'></i> 2 hari yang lalu</span>
-                    </div>
-                </div>
-                <div class="status-wrapper">
-                    <div class="status">
-                        <h2>Selesai</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="body-card">
-                <div class="text">
-                    <p>Wilayah depan pertokoan A terdapat adanya jalan lubang yang menyebabkan banyak pengendara hampir terjatuh, kondisi bisa dilihat pada foto. Selanjutnya terdapat trotoar jalan yang sudah ambruk dimana material berserakan dimana-mana, lokasinya deket toko B. Beberapa ada got trotoar jalan yang mengalami jebol dan membuat jalan arus air menjadi tersumbat ini berada disekitaran lokasi, jadi mohon pihak berwajib untuk segera perbaiki agar tidak memburuk.</p>
-                </div>
-                <div class="foto">
-                    <img class="foto1" src="../../img/fitur-pengaduan/pengaduan/asset-nyoman-1.png" alt="">
-                    <img class="foto2" src="../../img/fitur-pengaduan/pengaduan/asset-nyoman-2.png" alt="">
-                    <img class="foto3" src="../../img/fitur-pengaduan/pengaduan/asset-nyoman-3.png" alt="">
-                </div>
-            </div>
-            <div class="footer-card"></div>
-        </div>
+            // Menentukan kelas foto berdasarkan jumlah foto
+            $kelas_foto = 'foto-' . $jumlah_foto;
+            ?>
 
-        <div class="pengaduan-card">
-            <div class="header-card">
-                <div class="profile-user">
-                    <img src="../../img/fitur-pengaduan/asset-user-1.png" alt="">
-                    <div class="profile-time">
-                        <h3>Nyoman Lanang</h3>
-                        <span><i class='bx bxs-time'></i> 2 hari yang lalu</span>
+            <div class="pengaduan-card">
+                <div class="header-card">
+                    <div class="profile-user">
+                        <img src="../../img/fitur-pengaduan/asset-user-<?= $row['user']; ?>.png" alt="">
+                        <div class="profile-time">
+                            <h3><?= $row['user']; ?></h3>
+                            <span><i class='bx bxs-time'></i><?= $row['waktu']; ?></span>
+                        </div>
+                    </div>
+                    <div class="status-wrapper">
+                        <div class="status <?= $row['status']; ?>">
+                            <h2><?= $row['status']; ?></h2>
+                        </div>
                     </div>
                 </div>
-                <div class="status-wrapper">
-                    <div class="status">
-                        <h2>Selesai</h2>
+                <div class="body-card">
+                    <div class="judul">
+                        <div class="judul-pengaduan">
+                            <h4><?= $row['judul_pengaduan'] ?></h4>
+                        </div>
+                        <div class="kategori-pengaduan">
+                            <span>Kategori : <?= $row['nama_kategori'] ?></span>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p><?= $row['isi_pengaduan']; ?></p>
+                    </div>
+                    <div class="foto <?= $kelas_foto; ?>">
+                        <?php for ($i = 1; $i <= 3; $i++) : ?>
+                            <?php $idpengaduan = $row['id']; ?>
+                            <?php $foto = "../../img/fitur-pengaduan/pengaduan/asset-$idpengaduan-" . $i . ".png"; ?>
+                            <?php if (file_exists($foto)) : ?>
+                                <img class="foto<?= $i ?>" src="<?= $foto ?>" alt="">
+                            <?php endif; ?>
+                        <?php endfor; ?>
                     </div>
                 </div>
-            </div>
-            <div class="body-card">
-                <div class="text">
-                    <p>Wilayah depan pertokoan A terdapat adanya jalan lubang yang menyebabkan banyak pengendara hampir terjatuh, kondisi bisa dilihat pada foto. Selanjutnya terdapat trotoar jalan yang sudah ambruk dimana material berserakan dimana-mana, lokasinya deket toko B. Beberapa ada got trotoar jalan yang mengalami jebol dan membuat jalan arus air menjadi tersumbat ini berada disekitaran lokasi, jadi mohon pihak berwajib untuk segera perbaiki agar tidak memburuk.</p>
-                </div>
-                <div class="foto">
-                    <img class="foto1" src="../../img/fitur-pengaduan/pengaduan/asset-nyoman-1.png" alt="">
-                    <img class="foto2" src="../../img/fitur-pengaduan/pengaduan/asset-nyoman-2.png" alt="">
-                    <img class="foto3" src="../../img/fitur-pengaduan/pengaduan/asset-nyoman-3.png" alt="">
+                <div class="footer-card">
+                    <i class='bx bx-message-rounded-dots'></i>
+                    <i class='bx bx-bookmark'></i>
                 </div>
             </div>
-            <div class="footer-card"></div>
-        </div>
-
+        <?php endforeach; ?>
     </div>
 
+    <script src="pengaduan.js"></script>
 </body>
 
 </html>

@@ -94,12 +94,11 @@ header .title-fitur p span {
     z-index: 4;
 
     display: flex;
-    justify-content: space-evenly;
+    overflow: auto;
 
     width: 100%;
     padding: 0.5rem;
-    background-color: #d80000;
-    color: white;
+    background-color: white;
 
 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
@@ -109,12 +108,45 @@ header .title-fitur p span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
 
-    line-height: 1rem;
+    line-height: 0.7rem;
+    margin-right: 0.5rem;
+    text-align: center;
+
+    text-decoration: none;
+    color: #3a3a3a;
+}
+
+.kategori-wrapper .pilihan .circle {
+    width: 3rem;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background-color: #909090;
+}
+
+.kategori-wrapper .pilihan.selected .circle {
+    background-color: #d80000;
 }
 
 .kategori-wrapper .pilihan i {
-    font-size: 3rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.kategori-wrapper .pilihan span {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 2rem;
+    width: 100%;
 }
 
 /* kategori end */
@@ -141,7 +173,6 @@ header .title-fitur p span {
     margin-bottom: 1.5rem;
 
     width: 100%;
-    height: 18rem;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -192,9 +223,19 @@ header .title-fitur p span {
     width: 4rem;
     height: 2rem;
     border-radius: 1rem;
-
-    background-color: green;
     color: white;
+}
+
+.pengaduan-card .header-card .status-wrapper .status.selesai {
+    background-color: green;
+}
+
+.pengaduan-card .header-card .status-wrapper .status.proses {
+    background-color: rgb(140, 140, 0);
+}
+
+.pengaduan-card .header-card .status-wrapper .status.menunggu {
+    background-color: rgb(188, 59, 45);
 }
 
 .pengaduan-card .header-card .status-wrapper .status h2 {
@@ -209,13 +250,35 @@ header .title-fitur p span {
     flex-direction: column;
 }
 
+.pengaduan-card .body-card .judul {
+    margin-top: 0.5rem;
+    line-height: 1rem;
+}
+
+.pengaduan-card .body-card .judul h4 {
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.pengaduan-card .body-card .judul span {
+    font-size: 0.7rem;
+}
+
 .pengaduan-card .body-card .text {
     display: flex;
 
     width: 100%;
+    max-height: 3em;
     margin-top: 0.5rem;
     padding: 0 0.5rem;
+    transition: max-height 0.5s ease-in;
+    overflow: hidden;
 }
+
+.pengaduan-card.active .body-card .text {
+    max-height: none;
+}
+
 
 .pengaduan-card .body-card .text p {
     display: -webkit-box;
@@ -228,33 +291,77 @@ header .title-fitur p span {
     font-size: 0.7rem;
 }
 
+.pengaduan-card.active .body-card .text p {
+    display: block;
+}
+
 .pengaduan-card .body-card .text span {
     font-size: 0.7rem;
 }
 
-.pengaduan-card .body-card .foto {
+.pengaduan-card .body-card .foto-1 {
+    margin-top: 0.5rem;
+    width: 100%;
     display: grid;
-    grid-template-columns: auto 40%;
-    grid-template-rows: 4rem 4rem;
+
+    grid-template-columns: 61% auto;
+    grid-area: 100%;
+    grid-template-areas:
+        "foto1 foto1"
+        "foto1 foto1";
+    gap: 5px;
+}
+
+.pengaduan-card .body-card .foto-2 {
+    margin-top: 0.5rem;
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: 61% auto;
+    grid-area: 100%;
+    grid-template-areas:
+        "foto1 foto2"
+        "foto1 foto2";
+    gap: 5px;
+}
+
+.pengaduan-card .body-card .foto-3 {
+    margin-top: 0.5rem;
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: 61% auto;
+    grid-area: 100%;
     grid-template-areas:
         "foto1 foto2"
         "foto1 foto3";
+    gap: 5px;
 }
 
-.foto .foto1 {
+.pengaduan-card .body-card .foto .foto1 {
     grid-area: foto1;
     width: 100%;
 }
 
-.foto .foto2 {
+.pengaduan-card .body-card .foto .foto2 {
     grid-area: foto2;
     width: 100%;
 }
 
-.foto .foto3 {
+.pengaduan-card .body-card .foto .foto3 {
     grid-area: foto3;
     width: 100%;
 }
 
+.pengaduan-card .footer-card {
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+
+    font-size: 1.5rem;
+}
 
 /* card-pengaduan end */
