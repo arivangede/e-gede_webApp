@@ -28,8 +28,8 @@ $kecamatan = $nama_kecamatan;
 
 // e-pasar content
 
-$kategori = $_GET['kategori'];
 if (isset($_GET['kategori'])) {
+    $kategori = $_GET['kategori'];
     $produk = query("SELECT * FROM ePasar WHERE kategori = '$kategori'");
 } else {
     $produk = query("SELECT * FROM ePasar");
