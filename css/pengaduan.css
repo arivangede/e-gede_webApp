@@ -93,11 +93,6 @@ header .title-fitur p span {
 /* kategori */
 
 .kategori-wrapper {
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 4;
-
     display: flex;
     overflow: auto;
 
@@ -175,10 +170,10 @@ header .title-fitur p span {
     padding: 0.5rem;
 
     border-radius: 1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
 
     width: 100%;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .pengaduan-card .header-card {
@@ -379,7 +374,7 @@ header .title-fitur p span {
     justify-content: center;
     align-items: center;
 
-    padding: 1rem 1rem 10rem 1rem;
+    padding: 1rem 1rem 3rem 1rem;
     width: 100%;
 
     z-index: 4;
@@ -552,8 +547,8 @@ header .title-fitur p span {
     justify-content: center;
     align-items: center;
 
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 1rem;
 
     background-color: #d80000;
@@ -561,7 +556,7 @@ header .title-fitur p span {
 }
 
 .add-pengaduan i {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 /* add-pengaduan end */

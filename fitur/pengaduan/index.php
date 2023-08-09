@@ -132,7 +132,6 @@ if (isset($_GET['kategori'])) {
                         <option value="5">Lingkungan & Kebersihan</option>
                         <option value="6">Sosial & Kesejahteraan</option>
                         <option value="7">Keamanan & Ketertiban</option>
-                        <option value="8">Lainnya</option>
                     </select>
                 </div>
                 <div class="input isi-pengaduan">
