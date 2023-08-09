@@ -107,7 +107,7 @@ if (isset($nama_desa)) {
                     <img src="img/assets/asset-menu-5.png" alt="icon">
                     <p>Data Desa</p>
                 </div>
-                <div class="menu 6" onclick="underConstruction()">
+                <div class="menu 6" onclick="layananPublik()">
                     <img src="img/assets/asset-menu-6.png" alt="icon">
                     <p>Layanan Publik</p>
                 </div>
@@ -195,7 +195,7 @@ if (isset($nama_desa)) {
                     <img src="img/assets/asset-menu-5.png" alt="icon">
                     <p>Data Desa</p>
                 </div>
-                <div class="menu 6" onclick="underConstruction()">
+                <div class="menu 6" onclick="layananPublik()">
                     <img src="img/assets/asset-menu-6.png" alt="icon">
                     <p>Layanan Publik</p>
                 </div>

@@ -28,8 +28,8 @@ $kecamatan = $nama_kecamatan;
 
 // e-pasar content
 
-$kategori = $_GET['kategori'];
 if (isset($_GET['kategori'])) {
+    $kategori = $_GET['kategori'];
     $produk = query("SELECT * FROM ePasar WHERE kategori = '$kategori'");
 } else {
     $produk = query("SELECT * FROM ePasar");
@@ -82,7 +82,7 @@ if (isset($_GET['kategori'])) {
                 </a>
 
 
-                <a class="kategori-card 3 <?php if (isset($_GET['kategori']) && $kategori != "sembako") echo 'not-selected'; ?>"" href=" ?kategori=sembako">
+                <a class="kategori-card 3 <?php if (isset($_GET['kategori']) && $kategori != "sembako") echo 'not-selected'; ?>" href=" ?kategori=sembako">
                     <div class="icon-circle">
                         <i class='bx bxs-package'></i>
                     </div>
@@ -90,7 +90,7 @@ if (isset($_GET['kategori'])) {
                 </a>
 
 
-                <a class="kategori-card 4 <?php if (isset($_GET['kategori']) && $kategori != "pakaian") echo 'not-selected'; ?>"" href=" ?kategori=pakaian">
+                <a class="kategori-card 4 <?php if (isset($_GET['kategori']) && $kategori != "pakaian") echo 'not-selected'; ?>" href=" ?kategori=pakaian">
                     <div class="icon-circle">
                         <i class='bx bx-closet'></i>
                     </div>
@@ -98,7 +98,7 @@ if (isset($_GET['kategori'])) {
                 </a>
 
 
-                <a class="kategori-card 5 <?php if (isset($_GET['kategori']) && $kategori != "lain-lain") echo 'not-selected'; ?>"" href=" ?kategori=lain-lain">
+                <a class="kategori-card 5 <?php if (isset($_GET['kategori']) && $kategori != "lain-lain") echo 'not-selected'; ?>" href=" ?kategori=lain-lain">
                     <div class="icon-circle">
                         <i class='bx bx-question-mark'></i>
                     </div>
