@@ -107,6 +107,53 @@ if (isset($_GET['kategori'])) {
         </a>
     </div>
 
+    <div class="add-pengaduan">
+        <i class='bx bx-edit'></i>
+    </div>
+
+    <div class="form-pengaduan-wrapper">
+        <div class="close-btn">
+            <i class='bx bx-x'></i>
+        </div>
+        <div class="form-card">
+            <h1>Form Pengaduan</h1>
+            <form action="" method="post">
+                <div class="input judul">
+                    <label for="">Judul</label>
+                    <input type="text" name="judul_pengaduan" id="judul_pengaduan" required>
+                </div>
+                <div class="input kategori">
+                    <label for="">Kategori</label>
+                    <select name="kategori_pengaduan" id="pilih-kategori" required>
+                        <option value="1">Fasilitas Umum</option>
+                        <option value="2">Layanan Kesehatan</option>
+                        <option value="3">Pendidikan</option>
+                        <option value="4">Pertanian & Peternakan</option>
+                        <option value="5">Lingkungan & Kebersihan</option>
+                        <option value="6">Sosial & Kesejahteraan</option>
+                        <option value="7">Keamanan & Ketertiban</option>
+                        <option value="8">Lainnya</option>
+                    </select>
+                </div>
+                <div class="input isi-pengaduan">
+                    <label for="">Isi Pengaduan</label>
+                    <textarea name="isi_pengaduan" id="isi_pengaduan" cols="30" rows="10"></textarea>
+                </div>
+                <div class="input unggah-file">
+                    <div class="input-wrapper">
+                        <i class='bx bx-image-add'></i>
+                        <input type="file" name="foto_pengaduan" id="foto_pengaduan">
+                    </div>
+                </div>
+                <div class="form-btn-wrapper">
+                    <button name="submit_pengaduan">UNGGAH</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
     <div class="pengaduan-wrapper">
         <?php foreach ($pengaduan as $row) : ?>
             <?php

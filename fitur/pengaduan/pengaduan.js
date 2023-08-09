@@ -14,3 +14,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+const addPengaduan = document.querySelector(".add-pengaduan");
+const formWrapper = document.querySelector(".form-pengaduan-wrapper");
+const closeForm = document.querySelector(".close-btn");
+addPengaduan.addEventListener("click", function () {
+  formWrapper.classList.add("active");
+});
+
+closeForm.addEventListener("click", function () {
+  formWrapper.classList.remove("active");
+});

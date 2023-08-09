@@ -29,6 +29,11 @@ header {
     padding: 0.5rem;
     width: 100%;
 
+    position: relative;
+    z-index: 2;
+
+    background-color: white;
+
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -101,7 +106,7 @@ header .title-fitur p span {
     background-color: white;
 
 
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .kategori-wrapper .pilihan {
@@ -239,7 +244,7 @@ header .title-fitur p span {
 }
 
 .pengaduan-card .header-card .status-wrapper .status h2 {
-    font-size: 0.7rem;
+    font-size: 0.5rem;
 }
 
 .pengaduan-card .body-card {
@@ -365,3 +370,198 @@ header .title-fitur p span {
 }
 
 /* card-pengaduan end */
+
+/* form-pengaduan */
+
+.form-pengaduan-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem 1rem 10rem 1rem;
+    width: 100%;
+
+    z-index: 4;
+    position: fixed;
+    bottom: 0;
+
+    background-color: white;
+
+    transform: translateY(100%);
+    transition: 0.4s ease-out;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.form-pengaduan-wrapper .close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.form-pengaduan-wrapper .close-btn i {
+    font-size: 2rem;
+}
+
+.form-pengaduan-wrapper.active {
+    transform: translateY(0);
+}
+
+.form-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.form-card h1 {
+    font-size: 1rem;
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.form-card form .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.form-card form .input.judul input {
+    width: 100%;
+    padding: 0.5rem;
+
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+
+    font-size: 1rem;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-card form .input.kategori select {
+    font-size: 1rem;
+
+    width: 100%;
+    padding: 0.5rem;
+
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-card form .input.isi-pengaduan textarea {
+    width: 100%;
+    height: 5rem;
+    padding: 0.5rem;
+
+    font-size: 1rem;
+    font-family: 'poppins', sans-serif;
+
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-card form .input.unggah-file {
+    margin-top: 0.5rem;
+    display: flex;
+
+    width: 100%;
+}
+
+.form-card form .input.unggah-file .input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    position: relative;
+}
+
+.form-card form .input.unggah-file .input-wrapper i {
+    font-size: 2rem;
+    color: #d80000;
+}
+
+.form-card form .input.unggah-file .input-wrapper input {
+    color: transparent;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.form-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.form-btn-wrapper button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70%;
+    padding: 0.5rem;
+
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+/* form-pengaduan end */
+
+/* add-pengaduan */
+.add-pengaduan {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 4rem;
+    height: 4rem;
+    border-radius: 1rem;
+
+    background-color: #d80000;
+    color: white;
+}
+
+.add-pengaduan i {
+    font-size: 3rem;
+}
+
+/* add-pengaduan end */
