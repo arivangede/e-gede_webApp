@@ -23,6 +23,7 @@ html {
     opacity: 0;
     transform: translateY(5rem);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -34,6 +35,7 @@ html {
     opacity: 0;
     transform: translateY(-5rem);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -45,6 +47,7 @@ html {
     opacity: 0;
     transform: translateX(5rem);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -75,6 +78,7 @@ header .back-btn {
 header .back-btn i {
   font-size: 1.5rem;
 }
+
 /* header end */
 
 /* image */
@@ -139,3 +143,44 @@ header .back-btn i {
 }
 
 /* image end */
+
+@media screen and (max-width: 765px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 85%;
+  }
+
+  .menu-popup .menu-wrapper .menu-box .menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 110px);
+  }
+}
+
+@media screen and (max-width: 365px) {
+  html {
+    font-size: 85%;
+  }
+
+  .menu-popup .menu-wrapper .menu-box .menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 90px);
+  }
+}

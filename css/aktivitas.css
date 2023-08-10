@@ -116,6 +116,7 @@ header .pilihan .active h3::after {
 .body.laporan-saya section {
   transform: translateX(0);
 }
+
 .body.disimpan section {
   transform: translateX(-100vw);
 }
@@ -130,6 +131,7 @@ header .pilihan .active h3::after {
 
   background-color: #e6f1f4;
 }
+
 #laporan-saya img {
   width: 100%;
 }
@@ -231,7 +233,7 @@ nav .nav-btn img {
   height: 100vh;
   width: 100vw;
   backdrop-filter: blur(10px);
-  z-index: 100;
+  z-index: 5;
 
   display: flex;
   justify-content: center;
@@ -255,7 +257,7 @@ nav .nav-btn img {
   height: 23rem;
   background-color: white;
   border-radius: 1rem;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
   display: flex;
   flex-direction: column;
@@ -281,31 +283,39 @@ nav .nav-btn img {
   font-size: 1rem;
 }
 
-.menu-popup .menu-wrapper .menu-content {
+.menu-popup .menu-wrapper .menu-box {
   margin-top: 0.5rem;
-  width: 100%;
-  height: 20rem;
   overflow-y: auto;
   overflow-x: hidden;
 
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  height: 100%;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.menu-popup .menu-wrapper .menu-box .menu-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 80px);
-  gap: 5px;
+  grid-template-columns: repeat(3, 90px);
+  grid-template-rows: repeat(3, 90px);
+  gap: 10px;
 }
 
 .menu-popup .menu-wrapper .menu-content .menu {
-  width: 5rem;
-  height: 5rem;
+  width: 100%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   background-color: white;
   border-radius: 0.5rem;
-  margin: 0.5rem;
+  padding: 0.5rem;
 }
 
 .menu-popup .menu-wrapper .menu-content .menu img {
@@ -319,3 +329,44 @@ nav .nav-btn img {
 }
 
 /* menu popup end */
+
+@media screen and (max-width: 765px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 85%;
+  }
+
+  .menu-popup .menu-wrapper .menu-box .menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 110px);
+  }
+}
+
+@media screen and (max-width: 365px) {
+  html {
+    font-size: 85%;
+  }
+
+  .menu-popup .menu-wrapper .menu-box .menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 90px);
+  }
+}
