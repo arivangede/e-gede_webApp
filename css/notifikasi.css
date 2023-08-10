@@ -18,12 +18,23 @@ html {
 }
 
 /* Navbar */
+@keyframes pop-in-navbar {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .navbar {
   position: fixed;
   bottom: 0;
   left: 0;
-  z-index: 99;
+  z-index: 4;
 
   height: 4rem;
   width: 100%;
@@ -42,7 +53,7 @@ html {
   background-color: white;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 
   position: relative;
 }
@@ -74,7 +85,7 @@ nav .nav-btn img {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .berandaBtn.active,

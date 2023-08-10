@@ -361,7 +361,7 @@ form .input img {
   background-color: white;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 
   position: relative;
 }
@@ -393,7 +393,7 @@ nav .nav-btn img {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .berandaBtn.active,
