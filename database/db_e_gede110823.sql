@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Aug 07, 2023 at 07:15 AM
+-- Generation Time: Aug 11, 2023 at 02:13 AM
 -- Server version: 5.7.39
 -- PHP Version: 7.4.33
 
@@ -44,7 +44,8 @@ INSERT INTO `admin` (`id`, `username`, `password`, `jabatan`, `desa`, `kecamatan
 (1, 'tuedi', 'tuedi1234', 'admin desa', '2', '2\r\n'),
 (2, 'arivan', 'arivan1234', 'admin desa', '1', '1'),
 (3, 'rama', 'rama1234', 'admin desa', '3', '4'),
-(4, 'gede', 'gede1234', 'admin kota', '', '3');
+(4, 'gede', 'gede1234', 'admin kota', '', '3'),
+(5, 'admin1', 'admin1234', 'admin kota', '', '');
 
 -- --------------------------------------------------------
 
@@ -88,7 +89,14 @@ CREATE TABLE `desa` (
 INSERT INTO `desa` (`id`, `id_desa`, `nama_desa`, `id_kecamatan`) VALUES
 (1, '1', 'Dauh Puri Kaja', '1'),
 (2, '2', 'Tegal Kertha', '2'),
-(3, '3', 'Sanur Kauh', '4');
+(3, '3', 'Sanur Kauh', '4'),
+(4, '4', 'Padang Sambian Kelod', '2'),
+(5, '5', 'Pemecutan Kelod', '2'),
+(6, '6', 'Peguyangan Kangin', '1'),
+(7, '7', 'Dangin Puri Kelod', '3'),
+(8, '8', 'Kesiman Kertalangu', '3'),
+(9, '9', 'Pemogan', '4'),
+(10, '10', 'Sidakarya', '4');
 
 -- --------------------------------------------------------
 
@@ -168,6 +176,32 @@ INSERT INTO `kecamatan` (`id`, `id_kecamatan`, `nama_kecamatan`, `id_kabupaten`)
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pengaduan`
+--
+
+CREATE TABLE `pengaduan` (
+  `id` int(11) NOT NULL,
+  `judul_pengaduan` varchar(255) NOT NULL,
+  `id_kategori` int(50) NOT NULL,
+  `nama_kategori` varchar(50) NOT NULL,
+  `isi_pengaduan` text NOT NULL,
+  `status` varchar(20) NOT NULL,
+  `user` varchar(20) NOT NULL,
+  `waktu` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `pengaduan`
+--
+
+INSERT INTO `pengaduan` (`id`, `judul_pengaduan`, `id_kategori`, `nama_kategori`, `isi_pengaduan`, `status`, `user`, `waktu`) VALUES
+(1, 'jalan rusak , trotoar jebol & hancur', 1, 'Infrastruktur & Fasilitas Umum', 'Wilayah depan pertokoan A terdapat adanya jalan lubang yang menyebabkan banyak pengendara hampir terjatuh, kondisi bisa dilihat pada foto. Selanjutnya terdapat trotoar jalan yang sudah ambruk dimana material berserakan dimana-mana, lokasinya deket toko B. Beberapa ada got trotoar jalan yang mengalami jebol dan membuat jalan arus air menjadi tersumbat ini berada disekitaran lokasi, jadi mohon pihak berwajib untuk segera perbaiki agar tidak memburuk.', 'menunggu', 'Nyoman Lanang', '2 hari yang lalu'),
+(2, 'sampah berserakan di area dekat persawahan', 5, 'Lingkungan & Kebersihan', 'Terdapat adanya sampah berserakan yang mengganggu pengguna jalan serta pejalan kaki yang lewat karena tidak enak dipandang dan bearoma busuk, hal ini membuat citra lingkungan persawahan menjadi rusak serta membuat reputasi nama kota kita menjadi turun di kalangan orang luas. Bagi pengendara ataupun masyarakat sekitar lokasi tolong kesadarannya untuk saling menjaga lingkungan agar tetap bersih, dan bagi pihak berwajib agar segera diatasi hal yang seperti ini.', 'proses', 'Putu Suliastini', '3 hari yang lalu'),
+(3, 'Kebakaran Rumah', 6, 'Sosial & Kesejahteraan', 'Kebakaran ini menyebabkan banyak sekali kerugian terhadap pihak yang terkena dampak, mulai dari kehilangan rumah, transportasi, makanan, dan lainnya. Dimohonkan untuk pihak yang berwenang supaya cepat diatasi terkait kasus yang terjadi, supaya temen2 kita segera mendapat perlakuan terhadap kejadian ini. ', 'selesai', 'Juanedi Alamsyah', '4 hari lalu');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `sub_topik`
 --
 
@@ -211,6 +245,26 @@ INSERT INTO `topik` (`id`, `topik`) VALUES
 (3, 'Statistik Bantuan'),
 (4, 'Statistik Lainnnya');
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `user` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `user`) VALUES
+(1, 'Nyoman Lanang'),
+(2, 'Putu Suliastini'),
+(3, 'Juanedi Alamsyah');
+
 --
 -- Indexes for dumped tables
 --
@@ -252,6 +306,12 @@ ALTER TABLE `kecamatan`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `pengaduan`
+--
+ALTER TABLE `pengaduan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `sub_topik`
 --
 ALTER TABLE `sub_topik`
@@ -264,6 +324,12 @@ ALTER TABLE `topik`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -271,7 +337,7 @@ ALTER TABLE `topik`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `berita`
@@ -283,7 +349,7 @@ ALTER TABLE `berita`
 -- AUTO_INCREMENT for table `desa`
 --
 ALTER TABLE `desa`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `ePasar`
@@ -304,6 +370,12 @@ ALTER TABLE `kecamatan`
   MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `pengaduan`
+--
+ALTER TABLE `pengaduan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
 -- AUTO_INCREMENT for table `sub_topik`
 --
 ALTER TABLE `sub_topik`
@@ -314,6 +386,12 @@ ALTER TABLE `sub_topik`
 --
 ALTER TABLE `topik`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
