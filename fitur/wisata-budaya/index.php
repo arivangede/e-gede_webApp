@@ -54,7 +54,7 @@ $kecamatan = $nama_kecamatan;
         </div>
 
         <div class="cards-container">
-            <div class="card">
+            <div class="card" onclick="wisata()">
                 <div class="card-hero">
                     <h2>Wisata</h2>
                     <img src="../../img/wisata-budaya/asset-wisata.png" alt="">
@@ -67,7 +67,7 @@ $kecamatan = $nama_kecamatan;
                     </button>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" onclick="budaya()">
                 <div class="card-hero">
                     <h2>Budaya</h2>
                     <img src="../../img/wisata-budaya/asset-budaya.png" alt="">
@@ -83,6 +83,8 @@ $kecamatan = $nama_kecamatan;
         </div>
     </div>
 
+
+    <script src="wisata-budaya.js"></script>
 </body>
 
 </html>

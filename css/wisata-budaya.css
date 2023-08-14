@@ -175,3 +175,126 @@ header .title-fitur p span {
 }
 
 /* content end */
+
+/* wisata */
+.header {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    padding: 0.5rem;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.header a {
+    text-decoration: none;
+    color: #d80000;
+}
+
+.header a i {
+    font-size: 2rem;
+}
+
+.header span {
+    font-size: 1rem;
+}
+
+/* content */
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    padding: 1rem;
+}
+
+.content-container .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 23rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    margin-bottom: 1rem;
+}
+
+.content-container .card img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.content-container .card span {
+    display: flex;
+    padding: 0.5rem 1rem;
+    width: 100%;
+
+    font-size: 0.5rem;
+    color: #909090;
+}
+
+.content-container .card .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    padding: 0 1.5rem 0.5rem 1.5rem;
+}
+
+.content-container .card .content .title h3 {
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+.content-container .card .content .desc {
+    display: -webkit-box;
+    padding: 0.5rem 0 0 0;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+
+    text-align: justify;
+    color: #909090;
+    line-height: 1rem;
+    font-size: 0.6rem;
+    text-indent: 20px;
+}
+
+.card-content-btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.content-container .card .content button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 0.5rem;
+
+    background-color: #d80000;
+    color: white;
+}
+
+.content-container .card .content button h4 {
+    font-size: 0.8rem;
+    font-weight: 400;
+    margin-right: 0.3rem;
+}
+
+
+/* wisata end */
