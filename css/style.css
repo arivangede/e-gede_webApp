@@ -312,6 +312,8 @@ form .input img {
   justify-content: center;
   align-items: start;
   padding: 0 0.5rem;
+
+  line-height: 1.5rem;
 }
 
 .logo-nama-desa .nama-desa h1 {
