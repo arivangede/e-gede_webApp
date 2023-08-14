@@ -31,13 +31,14 @@ if ($result) {
 </head>
 
 <body>
+
     <div class="container-esurat">
         <div class="head-esurat">
             <a href="layanan-publik.php"><i class='bx bx-chevron-left'></i>Kembali</a>
         </div>
         <div class="ketegori-esurat">
 
-            <div class="btn-pick">
+            <div class="btn-pick <?php if (isset($_GET['kategori']) && $kategori != 'semua') echo 'not-selected'; ?>">
                 <a href="e-surat.php">
                     <div class="pembungkus-head-esurat">
                         <div class="head-kategori-esurat">
@@ -50,7 +51,7 @@ if ($result) {
                 </a>
             </div>
 
-            <div class="btn-pick">
+            <div class="btn-pick <?php if (isset($_GET['kategori']) && $kategori != 'umum') echo 'not-selected'; ?>">
                 <a href="e-surat.php?kategori=umum">
                     <div class="pembungkus-head-esurat">
                         <div class="head-kategori-esurat">
@@ -63,7 +64,7 @@ if ($result) {
                 </a>
             </div>
 
-            <div class="btn-pick">
+            <div class="btn-pick <?php if (isset($_GET['kategori']) && $kategori != 'kependudukan') echo 'not-selected'; ?>">
                 <a href="e-surat.php?kategori=kependudukan">
                     <div class="pembungkus-head-esurat">
                         <div class="head-kategori-esurat">
@@ -75,7 +76,7 @@ if ($result) {
                     </div>
                 </a>
             </div>
-            <div class="btn-pick">
+            <div class="btn-pick <?php if (isset($_GET['kategori']) && $kategori != 'nikah') echo 'not-selected'; ?>">
                 <a href="e-surat.php?kategori=nikah">
                     <div class="pembungkus-head-esurat">
                         <div class="head-kategori-esurat">
@@ -88,7 +89,7 @@ if ($result) {
                 </a>
             </div>
 
-            <div class="btn-pick">
+            <div class="btn-pick <?php if (isset($_GET['kategori']) && $kategori != 'pertanahan') echo 'not-selected'; ?>">
                 <a href="e-surat.php?kategori=pertanahan">
                     <div class="pembungkus-head-esurat">
                         <div class="head-kategori-esurat">
@@ -104,16 +105,18 @@ if ($result) {
         </div>
     </div>
 
-    <div class="jenis-surat">
+    <div class="jenis-surat-wrapper">
+        <div class="jenis-surat">
 
-        <?php foreach ($jenis_surat as $nama_surat) : ?>
+            <?php foreach ($jenis_surat as $nama_surat) : ?>
 
-            <div class="pembungkus-surat">
-                <img src="../../img/layanan-publik/<?= $nama_surat ?>.png" alt="">
-                <p><?= $nama_surat ?></p>
-            </div>
+                <div class="pembungkus-surat">
+                    <img src="../../img/layanan-publik/<?= $nama_surat ?>.png" alt="">
+                    <p><?= $nama_surat ?></p>
+                </div>
 
-        <?php endforeach; ?>
+            <?php endforeach; ?>
+        </div>
     </div>
 
 

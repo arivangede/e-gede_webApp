@@ -77,7 +77,7 @@ if (mysqli_num_rows($result_desa) > 0) {
                     <div class="text-content2">
                         <p>Ayo klik menu berikut ini untuk melihat lebih lengkap mengenai bantuan sosial individu ataupun keluarga</p>
                     </div>
-                    <div class="btnmore">
+                    <div class="btnmore" onclick="pindahkeEbansos()">
                         <p>Lebih Banyak<i class='bx bxs-right-arrow'></i></p>
                     </div>
                 </div>

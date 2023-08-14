@@ -218,6 +218,8 @@ html {
   height: auto;
   position: fixed;
   background-color: white;
+  width: 100%;
+  height: auto;
 }
 .head-esurat {
   width: 100%;
@@ -231,6 +233,7 @@ html {
   color: #d80000;
   font-size: 1rem;
   font-weight: 400;
+  padding-left: 0.5rem;
 }
 .ketegori-esurat {
   width: 100%;
@@ -261,6 +264,9 @@ html {
   height: 2.8rem;
   width: 2.8rem;
   background-color: #d80000;
+}
+.btn-pick.not-selected a .pembungkus-head-esurat .head-kategori-esurat {
+  background-color: #909090;
 }
 .head-kategori-esurat i {
   font-size: 2rem;
@@ -332,4 +338,250 @@ html {
   font-size: 0.8rem;
   font-weight: 600;
   text-align: center;
+}
+.jenis-surat-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+/* ------------------------------E Bansos---------------------------------- */
+.container-ebansos {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.head-ebansos {
+  width: 100%;
+  height: 3rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  /* position: relative; */
+}
+.btn-ebansos a {
+  color: #d80000;
+  font-size: 1rem;
+  text-decoration: none;
+  padding-left: 0.5rem;
+}
+.ebansos-card {
+  width: 91%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  padding-top: 0.5rem;
+  margin-top: 1rem;
+  background-color: #d80000;
+  border-radius: 1rem;
+}
+.e-bansos-box {
+  width: 100%;
+  height: auto;
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto;
+
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+
+  padding: 0.5rem;
+}
+.e-bansos-box img {
+  width: 100%;
+  height: auto;
+}
+
+.btnmore-card-ebansos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.btnmore-card-ebansos p {
+  width: auto;
+  height: 4rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+
+  text-align: center;
+}
+.btnmore-card-ebansos a {
+  text-decoration: none;
+  font-size: 0.5rem;
+  font-weight: 400;
+  border-radius: 0.3rem;
+  background-color: #d80000;
+  color: white;
+  padding: 0.2rem;
+  margin-left: 6.5rem;
+}
+.container-body {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  margin-top: 1rem;
+}
+.ebansos-card-sum {
+  width: 100%;
+  height: auto;
+  box-shadow: 0 0 4rem rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.wrapper-card-sum {
+  width: 80%;
+  height: auto;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+
+  border-radius: 1rem;
+}
+.wrapper-card-sum h4 {
+  border-top-left-radius: 0.7rem;
+  border-top-right-radius: 0.7rem;
+  background-color: #0eddc4;
+  color: white;
+  width: 100%;
+  height: auto;
+  font-weight: 400;
+  font-size: 0.8rem;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card-sum {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: auto;
+}
+.grafik-sum {
+  width: 100%;
+  height: auto;
+  margin-left: 0.5rem;
+}
+.card-sum p {
+  display: flex;
+  align-items: center;
+}
+.card-sum img {
+  width: 5rem;
+  height: auto;
+}
+.jenis-sum {
+  width: 100%;
+  height: auto;
+}
+.jenis-sum p {
+  margin-bottom: 1.5rem;
+}
+.jenis-sum h5 {
+  font-size: 0.7rem;
+  font-weight: 550;
+}
+.bxs-checkbox.kuning {
+  color: yellow;
+}
+.bxs-checkbox.birumuda {
+  color: #00acc1;
+}
+.jumlah-sum {
+  width: 100%;
+  height: auto;
+  margin-left: 0.5rem;
+}
+.judul-jumlah {
+  margin-bottom: 1.5rem;
+}
+.hasil-penerima-aktif {
+  font-size: 0.7rem;
+  font-weight: 550;
+}
+/* ------------------------konten ebansos----------------------------- */
+
+.ebansos-cards {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: 50% 50%;
+
+  padding: 0.5rem;
+
+  justify-content: center;
+  align-items: center;
+}
+.pembungkus-card-ebansos {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.penerima-bansos {
+  width: 8rem;
+  height: 7.5rem;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  border-radius: 1rem;
+}
+
+.color-cards {
+  background-color: #d80000;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  height: 1rem;
+  width: 100%;
+}
+.style-penerima-bansos {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.angka-penerima-bansos {
+  width: 100%;
+  height: 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.2rem;
+  margin-left: 0.3rem;
+}
+.penerima-bansos img {
+  width: auto;
+  height: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+.text-penerima-bansos {
+  width: 6rem;
+  height: auto;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
 }
