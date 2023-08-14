@@ -101,7 +101,7 @@ if (isset($_SESSION['kecamatan'])) {
                         <img src="img/assets/asset-menu-7.png" alt="icon">
                         <p>Keuangan Desa</p>
                     </div>
-                    <div class="menu 8" onclick="underConstruction()">
+                    <div class="menu 8" onclick="wisataBudaya()">
                         <img src="img/assets/asset-menu-8.png" alt="icon">
                         <p>Wisata Budaya</p>
                     </div>
