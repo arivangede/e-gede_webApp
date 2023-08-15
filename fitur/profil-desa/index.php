@@ -26,7 +26,19 @@ if (isset($_SESSION['kecamatan'])) {
 $desa = $nama_desa;
 $kecamatan = $nama_kecamatan;
 
-
+if ($desa == "Dauh Puri Kaja") {
+    $linksejarah = "https://dauhpurikaja.desa.id/sejarah.html";
+} else if ($desa == "Padang Sambian Kelod") {
+    $linksejarah = "https://padangsambianklod.id/sejarah";
+} else if ($desa == "Pemecutan Kelod") {
+    $linksejarah = "https://desapemecutankelod.blogspot.com/p/profil.html";
+} else if ($desa == "Peguyangan Kangin") {
+    $linksejarah = "https://peguyangankangin.id/artikel/desa/12";
+} else if ($desa == "Kesiman Kertalangu") {
+    $linksejarah = "https://kesimankertalangu.desa.id/profil-desa/sejarah-desa-kesiman-kertalangu";
+} else {
+    $linksejarah = "tidakada.php";
+}
 
 ?>
 
@@ -64,13 +76,15 @@ $kecamatan = $nama_kecamatan;
                     <img src="../../img/fitur-profildesa/asset-icon-wilayahdesa.png" alt="">
                 </div>
             </div>
-            <div class="card-menu" onclick="underconstruction()">
-                <img class="logo" src="../../img/assets/logo-egede.png" alt="">
-                <div class="upper">
-                    <h3>Sejarah Desa</h3>
-                    <img src="../../img/fitur-profildesa/asset-icon-sejarahdesa.png" alt="">
+            <a href="<?= $linksejarah; ?>">
+                <div class="card-menu">
+                    <img class="logo" src="../../img/assets/logo-egede.png" alt="">
+                    <div class="upper">
+                        <h3>Sejarah Desa</h3>
+                        <img src="../../img/fitur-profildesa/asset-icon-sejarahdesa.png" alt="">
+                    </div>
                 </div>
-            </div>
+            </a>
             <div class="card-menu" onclick="visimisi()">
                 <img class="logo" src="../../img/assets/logo-egede.png" alt="">
                 <div class="upper">

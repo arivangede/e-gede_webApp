@@ -1,0 +1,603 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+
+html {
+    font-family: "poppins", sans-serif;
+}
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: var(--text);
+}
+
+:root {
+    --text: #3a3a3a;
+}
+
+/* header */
+
+header {
+    display: flex;
+    align-items: center;
+
+    padding: 0.5rem;
+    width: 100%;
+
+    position: relative;
+    z-index: 2;
+
+    background-color: white;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+header img {
+    height: 2.5rem;
+
+    margin-right: 0.3rem;
+}
+
+header a {
+    text-decoration: none;
+
+    color: #d80000;
+}
+
+header a i {
+    font-size: 2rem;
+    position: relative;
+
+    margin-right: 0.5rem;
+}
+
+header a i::after {
+    content: "";
+    display: block;
+    right: 0;
+    top: 0;
+
+    width: 2px;
+    height: 100%;
+
+    background-color: #d80000;
+
+    position: absolute;
+}
+
+header .title-fitur {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5rem;
+}
+
+header .title-fitur h1 {
+    font-size: 1.5rem;
+}
+
+header .title-fitur p {
+    font-size: 0.7rem;
+}
+
+header .title-fitur p span {
+    color: #d80000;
+}
+
+/* header end */
+
+/* kategori */
+
+.kategori-wrapper {
+    display: flex;
+    overflow: auto;
+
+    width: 100%;
+    padding: 0.5rem;
+    background-color: white;
+
+
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.kategori-wrapper .pilihan {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    line-height: 0.7rem;
+    margin-right: 0.5rem;
+    text-align: center;
+
+    text-decoration: none;
+    color: #3a3a3a;
+}
+
+.kategori-wrapper .pilihan .circle {
+    width: 3rem;
+    height: 3rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background-color: #909090;
+}
+
+.kategori-wrapper .pilihan.selected .circle {
+    background-color: #d80000;
+}
+
+.kategori-wrapper .pilihan i {
+    font-size: 2rem;
+    color: white;
+}
+
+.kategori-wrapper .pilihan span {
+    font-size: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 2rem;
+    width: 100%;
+}
+
+/* kategori end */
+
+/* card-pengaduan */
+
+.pengaduan-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: auto;
+
+    padding: 1rem;
+}
+
+.pengaduan-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+
+    border-radius: 1rem;
+    margin-bottom: 0.5rem;
+
+    width: 100%;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.pengaduan-card .header-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pengaduan-card .header-card .profile-user {
+    display: flex;
+    align-items: center;
+}
+
+.pengaduan-card .header-card .profile-user .profile-time {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1rem;
+}
+
+.pengaduan-card .header-card .profile-user .profile-time h3 {
+    font-size: 1rem;
+}
+
+.pengaduan-card .header-card .profile-user .profile-time span {
+    font-size: 0.5rem;
+}
+
+.pengaduan-card .header-card .profile-user img {
+    width: 3rem;
+    margin-right: 0.3rem;
+}
+
+.pengaduan-card .header-card .status-wrapper {
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+}
+
+.pengaduan-card .header-card .status-wrapper .status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 4rem;
+    height: 2rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+.pengaduan-card .header-card .status-wrapper .status.selesai {
+    background-color: green;
+}
+
+.pengaduan-card .header-card .status-wrapper .status.proses {
+    background-color: rgb(140, 140, 0);
+}
+
+.pengaduan-card .header-card .status-wrapper .status.menunggu {
+    background-color: rgb(188, 59, 45);
+}
+
+.pengaduan-card .header-card .status-wrapper .status h2 {
+    font-size: 0.5rem;
+}
+
+.pengaduan-card .body-card {
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.pengaduan-card .body-card .judul {
+    margin-top: 0.5rem;
+    line-height: 1rem;
+}
+
+.pengaduan-card .body-card .judul h4 {
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+.pengaduan-card .body-card .judul span {
+    font-size: 0.7rem;
+}
+
+.pengaduan-card .body-card .text {
+    display: flex;
+
+    width: 100%;
+    max-height: 3em;
+    margin-top: 0.5rem;
+    padding: 0 0.5rem;
+    transition: max-height 0.5s ease-in;
+    overflow: hidden;
+}
+
+.pengaduan-card.active .body-card .text {
+    max-height: none;
+}
+
+
+.pengaduan-card .body-card .text p {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: justify;
+    text-indent: 20px;
+
+    font-size: 0.7rem;
+}
+
+.pengaduan-card.active .body-card .text p {
+    display: block;
+}
+
+.pengaduan-card .body-card .text span {
+    font-size: 0.7rem;
+}
+
+.pengaduan-card .body-card .foto-1 {
+    margin-top: 0.5rem;
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: 61% auto;
+    grid-area: 100%;
+    grid-template-areas:
+        "foto1 foto1"
+        "foto1 foto1";
+    gap: 5px;
+}
+
+.pengaduan-card .body-card .foto-2 {
+    margin-top: 0.5rem;
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: 61% auto;
+    grid-area: 100%;
+    grid-template-areas:
+        "foto1 foto2"
+        "foto1 foto2";
+    gap: 5px;
+}
+
+.pengaduan-card .body-card .foto-3 {
+    margin-top: 0.5rem;
+    width: 100%;
+    display: grid;
+
+    grid-template-columns: 61% auto;
+    grid-area: 100%;
+    grid-template-areas:
+        "foto1 foto2"
+        "foto1 foto3";
+    gap: 5px;
+}
+
+.pengaduan-card .body-card .foto .foto1 {
+    grid-area: foto1;
+    width: 100%;
+}
+
+.pengaduan-card .body-card .foto .foto2 {
+    grid-area: foto2;
+    width: 100%;
+}
+
+.pengaduan-card .body-card .foto .foto3 {
+    grid-area: foto3;
+    width: 100%;
+}
+
+.pengaduan-card .footer-card {
+    margin-top: 0.5rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: flex-end;
+
+    font-size: 1.5rem;
+}
+
+/* card-pengaduan end */
+
+/* form-pengaduan */
+
+.form-pengaduan-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1rem 1rem 3rem 1rem;
+    width: 100%;
+
+    z-index: 4;
+    position: fixed;
+    bottom: 0;
+
+    background-color: white;
+
+    transform: translateY(100%);
+    transition: 0.4s ease-out;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.form-pengaduan-wrapper .close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+}
+
+.form-pengaduan-wrapper .close-btn i {
+    font-size: 2rem;
+}
+
+.form-pengaduan-wrapper.active {
+    transform: translateY(0);
+}
+
+.form-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.form-card h1 {
+    font-size: 1rem;
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.form-card form .input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.form-card form .input.judul input {
+    width: 100%;
+    padding: 0.5rem;
+
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+
+    font-size: 1rem;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-card form .input.kategori select {
+    font-size: 1rem;
+
+    width: 100%;
+    padding: 0.5rem;
+
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-card form .input.isi-pengaduan textarea {
+    width: 100%;
+    height: 5rem;
+    padding: 0.5rem;
+
+    font-size: 1rem;
+    font-family: 'poppins', sans-serif;
+
+    border: none;
+    outline: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.form-card form .input.unggah-file {
+    margin-top: 0.5rem;
+    display: flex;
+
+    width: 100%;
+}
+
+.form-card form .input.unggah-file .input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    position: relative;
+}
+
+.form-card form .input.unggah-file .input-wrapper i {
+    font-size: 2rem;
+    color: #d80000;
+}
+
+.form-card form .input.unggah-file .input-wrapper input {
+    color: transparent;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.form-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+}
+
+.form-btn-wrapper button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 70%;
+    padding: 0.5rem;
+
+    border-radius: 0.5rem;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+/* form-pengaduan end */
+
+/* add-pengaduan */
+.add-pengaduan {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
+
+    background-color: #d80000;
+    color: white;
+}
+
+.add-pengaduan i {
+    font-size: 2rem;
+}
+
+/* add-pengaduan end */
+
+@media screen and (max-width: 765px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    html {
+        font-size: 85%;
+    }
+
+    .menu-popup .menu-wrapper .menu-box .menu-content {
+        display: grid;
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        gap: 8px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(3, 110px);
+    }
+}
+
+@media screen and (max-width: 365px) {
+    html {
+        font-size: 85%;
+    }
+
+    .menu-popup .menu-wrapper .menu-box .menu-content {
+        display: grid;
+        grid-template-columns: repeat(3, 80px);
+        grid-template-rows: repeat(3, 80px);
+        gap: 8px;
+    }
+
+    .menu-grid {
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(3, 90px);
+    }
+}

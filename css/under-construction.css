@@ -16,6 +16,7 @@ html {
 
 :root {
   --text: #3a3a3a;
+  --bg: #e6f1f4;
 }
 
 @keyframes fade-in-top {
@@ -23,6 +24,7 @@ html {
     opacity: 0;
     transform: translateY(5rem);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -34,6 +36,7 @@ html {
     opacity: 0;
     transform: translateY(-5rem);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
@@ -45,6 +48,7 @@ html {
     opacity: 0;
     transform: translateX(5rem);
   }
+
   100% {
     opacity: 1;
     transform: translateX(0);
@@ -59,12 +63,18 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
 
   background: white;
   width: 100%;
   padding: 1rem;
 
   color: rgb(208, 0, 0);
+}
+
+header a {
+  color: #d80000;
+  text-decoration: none;
 }
 
 header .back-btn {
@@ -75,6 +85,7 @@ header .back-btn {
 header .back-btn i {
   font-size: 1.5rem;
 }
+
 /* header end */
 
 /* image */
@@ -139,3 +150,81 @@ header .back-btn i {
 }
 
 /* image end */
+
+@media screen and (max-width: 765px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 85%;
+  }
+
+  .menu-popup .menu-wrapper .menu-box .menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 110px);
+  }
+}
+
+@media screen and (max-width: 365px) {
+  html {
+    font-size: 85%;
+  }
+
+  .menu-popup .menu-wrapper .menu-box .menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 90px);
+  }
+}
+
+/* sejarah not found */
+.tidakada-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 100%;
+  height: 100vh;
+
+  position: relative;
+}
+
+.tidakada-container img {
+  padding: 3rem 0 0 0;
+  width: 100%;
+  object-fit: cover;
+}
+
+.tidakada-container .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+  color: rgb(255, 200, 0);
+  text-align: center;
+
+  padding: 0.5rem;
+  background-color: #6811a7;
+
+  height: 100%;
+  width: 100%;
+}
+
+/* sejarah not found end */
