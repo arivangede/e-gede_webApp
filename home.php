@@ -85,7 +85,6 @@ if (isset($nama_desa)) {
             <div class="title">
                 <h2>Menu e-GeDe</h2>
             </div>
-
             <div class="menu-box">
                 <div class="menu-content">
                     <div class="menu 1" onclick="fiturENews()">
@@ -96,7 +95,7 @@ if (isset($nama_desa)) {
                         <img src="img/assets/asset-menu-2.png" alt="icon">
                         <p>Profil Desa</p>
                     </div>
-                    <div class="menu 3" onclick="underConstruction()">
+                    <div class="menu 3" onclick="regulasi()">
                         <img src="img/assets/asset-menu-3.png" alt="icon">
                         <p>Regulasi</p>
                     </div>
@@ -108,7 +107,7 @@ if (isset($nama_desa)) {
                         <img src="img/assets/asset-menu-5.png" alt="icon">
                         <p>Data Desa</p>
                     </div>
-                    <div class="menu 6" onclick="underConstruction()">
+                    <div class="menu 6" onclick="layananPublik()">
                         <img src="img/assets/asset-menu-6.png" alt="icon">
                         <p>Layanan Publik</p>
                     </div>
@@ -175,7 +174,7 @@ if (isset($nama_desa)) {
                         </section>
                     </div>
                 <?php endif; ?>
-
+              
                 <div class="carrousel-wrapper">
                     <section class="card-carrousel 3">
                         <img src="img/assets/asset-banner-inovasi.png" alt="iklan">
@@ -205,7 +204,7 @@ if (isset($nama_desa)) {
                         <img src="img/assets/asset-menu-5.png" alt="icon">
                         <p>Data Desa</p>
                     </div>
-                    <div class="menu 6" onclick="underConstruction()">
+                    <div class="menu 6" onclick="layananPublik()">
                         <img src="img/assets/asset-menu-6.png" alt="icon">
                         <p>Layanan Publik</p>
                     </div>
@@ -229,20 +228,7 @@ if (isset($nama_desa)) {
                 <div class="title-e-news">
                     <h1>E-News</h1>
                 </div>
-                <div class="e-news-content">
-                    <div class="card-e-news">
-                        <div class="card-pict">
-                            <img src="img/assets/asset-enews-1.png" alt="e-news">
-                        </div>
-                        <div class="card-body">
-                            <h1 class="headline">Laporan Realisasi Anggaran Pendapatan Desa Tahun 2020</h1>
-                            <h5 class="tanggal-waktu">Selasa, 09 Maret 2021</h5>
-                            <p class="ringkasan">Laporan Realisasi Anggaran ...</p>
-                            <div class="card-btn">
-                                <button class="enews-button">More</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="e-news-content" onclick="detailBerita()">
                     <div class="card-e-news">
                         <div class="card-pict">
                             <img src="img/assets/asset-enews-2.png" alt="e-news">
@@ -251,6 +237,19 @@ if (isset($nama_desa)) {
                             <h1 class="headline">HUT Kota Denpasar ke-234</h1>
                             <h5 class="tanggal-waktu">Rabu, 09 Maret 2022</h5>
                             <p class="ringkasan">HUT Kota Denpasar ke-234 ...</p>
+                            <div class="card-btn">
+                                <button class="enews-button">More</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-e-news">
+                        <div class="card-pict">
+                            <img src="img/assets/asset-enews-1.png" alt="e-news">
+                        </div>
+                        <div class="card-body">
+                            <h1 class="headline">Laporan Realisasi Anggaran Pendapatan Desa Tahun 2020</h1>
+                            <h5 class="tanggal-waktu">Selasa, 09 Maret 2021</h5>
+                            <p class="ringkasan">Laporan Realisasi Anggaran ...</p>
                             <div class="card-btn">
                                 <button class="enews-button">More</button>
                             </div>
