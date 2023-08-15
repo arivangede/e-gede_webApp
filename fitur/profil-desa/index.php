@@ -59,7 +59,7 @@ if ($desa == "Dauh Puri Kaja") {
         <a href="../../home.php"><i class='bx bx-arrow-back'></i></a>
         <img src="../../img/assets/asset-menu-2.png" alt="">
         <div class="title-fitur">
-            <h1>PROFIL DESA</h1>
+            <h1>Profil Desa</h1>
             <p><span>Desa <?= $desa; ?></span>, Kec. <?= $kecamatan; ?></p>
         </div>
     </header>

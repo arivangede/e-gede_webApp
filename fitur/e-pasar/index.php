@@ -53,7 +53,7 @@ if (isset($_GET['kategori'])) {
         <a href="../../home.php"><i class='bx bx-arrow-back'></i></a>
         <img src="../../img/assets/asset-menu-10.png" alt="">
         <div class="title-fitur">
-            <h1>E-PASAR</h1>
+            <h1>E-Pasar</h1>
             <p><span>Desa <?= $desa; ?></span>, Kec. <?= $kecamatan; ?></p>
         </div>
     </header>

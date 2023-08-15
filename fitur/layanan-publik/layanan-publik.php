@@ -50,7 +50,7 @@ if (mysqli_num_rows($result_desa) > 0) {
             </div>
             <div class="pembungkus-judul">
                 <div class="judul-layanan-publik">
-                    <p>LAYANAN PUBLIK</p>
+                    <p>Layanan Publik</p>
                 </div>
                 <div class="sub-judul-layanan-publik">
                     <p><span> Desa<?= $desa ?></span>, Kec <?= $kecamatan ?></p>

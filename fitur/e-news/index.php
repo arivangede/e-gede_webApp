@@ -45,7 +45,7 @@ $kecamatan = $nama_kecamatan;
     <i class='bx bx-arrow-back' onclick="backHome()"></i>
     <img src="../../img/assets/asset-menu-1.png" alt="">
     <div class="title-fitur">
-      <h1>E-NEWS</h1>
+      <h1>E-News</h1>
       <p><span>Desa <?= $desa; ?></span>, Kec. <?= $kecamatan; ?></p>
     </div>
   </header>
