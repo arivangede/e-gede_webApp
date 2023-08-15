@@ -8,6 +8,7 @@ body {
   box-sizing: border-box;
   user-select: none;
 }
+
 html {
   font-family: "poppins", sans-serif;
   color: var(--text);
@@ -16,6 +17,7 @@ html {
 :root {
   --text: #3a3a3a;
 }
+
 .container-layanan {
   width: 100%;
   height: auto;
@@ -24,6 +26,7 @@ html {
   position: fixed;
   align-items: center;
 }
+
 .pembungkus-head {
   width: 100%;
   height: auto;
@@ -34,6 +37,7 @@ html {
   padding-top: 0.3rem;
   padding-bottom: 0.3rem;
 }
+
 .btnkembali i {
   font-size: 2rem;
   margin-right: 0.5rem;
@@ -41,6 +45,7 @@ html {
   position: relative;
   margin-left: 0.5rem;
 }
+
 .btnkembali i::after {
   content: "";
   display: block;
@@ -51,6 +56,7 @@ html {
   top: 0;
   right: 0;
 }
+
 .pembungkus-judul {
   display: flex;
   align-items: center;
@@ -59,29 +65,35 @@ html {
   margin-left: 0.5rem;
   line-height: 1;
 }
+
 .head-layanan-publik {
   width: 100%;
   height: auto;
   display: contents;
   align-items: center;
 }
+
 .head-layanan-publik img {
   width: 2.5rem;
   height: auto;
   margin-left: 0.2rem;
 }
+
 .judul-layanan-publik p {
   font-size: 1.5rem;
   font-weight: 500;
 }
+
 .sub-judul-layanan-publik p {
   font-size: 0.6rem;
   font-weight: 400;
   padding: 0;
 }
+
 .sub-judul-layanan-publik p span {
   color: #d80000;
 }
+
 .kategori {
   width: 100%;
   height: 2rem;
@@ -92,12 +104,14 @@ html {
   position: relative;
   margin-top: 0.5rem;
 }
+
 .kategori-layanan p {
   font-size: 0.8rem;
   color: white;
   font-weight: 500;
   margin-left: 1rem;
 }
+
 .content-layanan-publik {
   width: 100%;
   height: auto;
@@ -108,6 +122,7 @@ html {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
+
 .e-bansos {
   display: flex;
   flex-direction: column;
@@ -118,6 +133,7 @@ html {
   padding: 0.5rem;
   position: relative;
 }
+
 .content1 {
   display: flex;
   flex-direction: row;
@@ -126,16 +142,19 @@ html {
   align-items: center;
   position: relative;
 }
+
 .text-content1 p {
   font-size: 2rem;
   font-weight: 600;
   margin-left: 2rem;
 }
+
 .img-content1 img {
   width: 6rem;
   height: 6rem;
   margin-left: 2rem;
 }
+
 .content2 {
   display: flex;
   flex-direction: row;
@@ -145,11 +164,13 @@ html {
   align-items: center;
   margin-bottom: 1rem;
 }
+
 .text-content2 p {
   font-size: 0.5rem;
   width: auto;
   height: auto;
 }
+
 .btnmore {
   background-color: #d80000;
   border-radius: 0.5rem;
@@ -161,19 +182,23 @@ html {
   padding: 0.3rem;
   margin-right: 1.5rem;
 }
+
 .btnmore p {
   font-size: 0.6rem;
   font-weight: 600;
   color: white;
 }
+
 .btnmore i {
   margin-left: 0.2rem;
 }
+
 .img-content2 img {
   width: 6rem;
   height: 6rem;
   margin-left: 4rem;
 }
+
 .content3 {
   display: flex;
   flex-direction: row;
@@ -183,11 +208,13 @@ html {
   align-items: center;
   margin-bottom: 1rem;
 }
+
 .text-content3 p {
   font-size: 0.5rem;
   width: auto;
   height: auto;
 }
+
 .btnmore1 {
   background-color: #d80000;
   border-radius: 0.5rem;
@@ -199,11 +226,13 @@ html {
   padding: 0.3rem;
   margin-right: 1.5rem;
 }
+
 .btnmore1 p {
   color: white;
   font-size: 0.6rem;
   font-weight: 600;
 }
+
 .btnmore1 i {
   margin-left: 0.2rem;
 }
@@ -221,6 +250,7 @@ html {
   width: 100%;
   height: auto;
 }
+
 .head-esurat {
   width: 100%;
   height: 3rem;
@@ -228,6 +258,7 @@ html {
   display: flex;
   align-items: center;
 }
+
 .head-esurat a {
   text-decoration: none;
   color: #d80000;
@@ -235,6 +266,7 @@ html {
   font-weight: 400;
   padding-left: 0.5rem;
 }
+
 .ketegori-esurat {
   width: 100%;
   height: 5rem;
@@ -245,6 +277,7 @@ html {
   align-items: center;
   padding-top: 0.5rem;
 }
+
 .pembungkus-head-esurat {
   display: flex;
   flex-direction: column;
@@ -255,6 +288,7 @@ html {
   padding: 0.2rem;
   margin-left: 0.7rem;
 }
+
 .head-kategori-esurat {
   display: flex;
   justify-content: center;
@@ -265,22 +299,27 @@ html {
   width: 2.8rem;
   background-color: #d80000;
 }
+
 .btn-pick.not-selected a .pembungkus-head-esurat .head-kategori-esurat {
   background-color: #909090;
 }
+
 .head-kategori-esurat i {
   font-size: 2rem;
   color: white;
 }
+
 .head-kategori-esurat:hover {
   color: white;
   background-color: #f81b1b;
   transition: 400ms;
 }
+
 .head-kategori2-esurat p {
   font-size: 0.5rem;
   padding-top: 0.3rem;
 }
+
 .body-esurat {
   width: 100%;
   height: auto;
@@ -291,6 +330,7 @@ html {
   justify-content: center;
   align-items: center;
 }
+
 .pembungkus-isi-esurat {
   width: 10rem;
   height: 10rem;
@@ -299,18 +339,22 @@ html {
   justify-content: center;
   align-items: center;
 }
+
 .gambar-esurat img {
   width: 5rem;
   height: 5rem;
 }
+
 .text-esurat p {
   font-size: 1rem;
   color: black;
 }
+
 .btn-pick a {
   text-decoration: none;
   color: black;
 }
+
 /* -------------------------------kategori esurat -----------------------------*/
 .jenis-surat {
   width: 100%;
@@ -320,6 +364,7 @@ html {
   grid-template-rows: auto;
   padding-top: 9rem;
 }
+
 .pembungkus-surat {
   padding: 0.5rem;
   padding: 0.5rem;
@@ -330,15 +375,18 @@ html {
   width: auto;
   height: auto;
 }
+
 .jenis-surat img {
   width: auto;
   height: 5rem;
 }
+
 .jenis-surat p {
   font-size: 0.8rem;
   font-weight: 600;
   text-align: center;
 }
+
 .jenis-surat-wrapper {
   display: flex;
   justify-content: center;
@@ -347,6 +395,7 @@ html {
   height: auto;
   margin: 0;
 }
+
 /* ------------------------------E Bansos---------------------------------- */
 .container-ebansos {
   width: 100%;
@@ -357,6 +406,7 @@ html {
   flex-direction: column;
   position: relative;
 }
+
 .head-ebansos {
   width: 100%;
   height: 3rem;
@@ -365,12 +415,14 @@ html {
   align-items: center;
   /* position: relative; */
 }
+
 .btn-ebansos a {
   color: #d80000;
   font-size: 1rem;
   text-decoration: none;
   padding-left: 0.5rem;
 }
+
 .ebansos-card {
   width: 91%;
   height: auto;
@@ -381,6 +433,7 @@ html {
   background-color: #d80000;
   border-radius: 1rem;
 }
+
 .e-bansos-box {
   width: 100%;
   height: auto;
@@ -399,6 +452,7 @@ html {
 
   padding: 0.5rem;
 }
+
 .e-bansos-box img {
   width: 100%;
   height: auto;
@@ -411,6 +465,7 @@ html {
   align-items: center;
   margin-top: 0.5rem;
 }
+
 .btnmore-card-ebansos p {
   width: auto;
   height: 4rem;
@@ -419,6 +474,7 @@ html {
 
   text-align: center;
 }
+
 .btnmore-card-ebansos a {
   text-decoration: none;
   font-size: 0.5rem;
@@ -429,6 +485,7 @@ html {
   padding: 0.2rem;
   margin-left: 6.5rem;
 }
+
 .container-body {
   width: 100%;
   height: auto;
@@ -437,6 +494,7 @@ html {
   border-top-right-radius: 1rem;
   margin-top: 1rem;
 }
+
 .ebansos-card-sum {
   width: 100%;
   height: auto;
@@ -450,6 +508,7 @@ html {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+
 .wrapper-card-sum {
   width: 80%;
   height: auto;
@@ -457,6 +516,7 @@ html {
 
   border-radius: 1rem;
 }
+
 .wrapper-card-sum h4 {
   border-top-left-radius: 0.7rem;
   border-top-right-radius: 0.7rem;
@@ -471,6 +531,7 @@ html {
   justify-content: center;
   align-items: center;
 }
+
 .card-sum {
   width: 100%;
   height: auto;
@@ -478,48 +539,60 @@ html {
   grid-template-columns: repeat(3, auto);
   grid-template-rows: auto;
 }
+
 .grafik-sum {
   width: 100%;
   height: auto;
   margin-left: 0.5rem;
 }
+
 .card-sum p {
   display: flex;
   align-items: center;
 }
+
 .card-sum img {
   width: 5rem;
   height: auto;
 }
+
 .jenis-sum {
   width: 100%;
   height: auto;
 }
+
 .jenis-sum p {
   margin-bottom: 1.5rem;
 }
+
 .jenis-sum h5 {
   font-size: 0.7rem;
   font-weight: 550;
 }
+
 .bxs-checkbox.kuning {
   color: yellow;
 }
+
 .bxs-checkbox.birumuda {
   color: #00acc1;
 }
+
 .jumlah-sum {
   width: 100%;
   height: auto;
   margin-left: 0.5rem;
 }
+
 .judul-jumlah {
   margin-bottom: 1.5rem;
 }
+
 .hasil-penerima-aktif {
   font-size: 0.7rem;
   font-weight: 550;
 }
+
 /* ------------------------konten ebansos----------------------------- */
 
 .ebansos-cards {
@@ -534,12 +607,14 @@ html {
   justify-content: center;
   align-items: center;
 }
+
 .pembungkus-card-ebansos {
   margin: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .penerima-bansos {
   width: 8rem;
   height: 7.5rem;
@@ -554,6 +629,7 @@ html {
   height: 1rem;
   width: 100%;
 }
+
 .style-penerima-bansos {
   width: 100%;
   height: auto;
@@ -562,6 +638,7 @@ html {
   justify-content: center;
   align-items: center;
 }
+
 .angka-penerima-bansos {
   width: 100%;
   height: 2rem;
@@ -572,11 +649,13 @@ html {
   margin-bottom: 0.2rem;
   margin-left: 0.3rem;
 }
+
 .penerima-bansos img {
   width: auto;
   height: 1.5rem;
   margin-bottom: 0.3rem;
 }
+
 .text-penerima-bansos {
   width: 6rem;
   height: auto;
@@ -584,4 +663,45 @@ html {
   font-weight: 600;
   text-align: center;
   margin: 0;
+}
+
+@media screen and (max-width: 765px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 85%;
+  }
+
+  .menu-popup .menu-wrapper .menu-box .menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 110px);
+  }
+}
+
+@media screen and (max-width: 365px) {
+  html {
+    font-size: 85%;
+  }
+
+  .menu-popup .menu-wrapper .menu-box .menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 90px);
+  }
 }
