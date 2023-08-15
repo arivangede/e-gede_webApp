@@ -70,6 +70,9 @@ function keuanganDesa() {
 function layananPublik() {
   window.location.href = "fitur/layanan-publik/layanan-publik.php";
 }
+function detailBerita() {
+  window.location.href = "fitur/e-news/detail_berita.php";
+}
 
 // aktivitas
 const laporanSaya = document.querySelector(".laporan-saya");
