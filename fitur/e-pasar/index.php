@@ -28,8 +28,8 @@ $kecamatan = $nama_kecamatan;
 
 // e-pasar content
 
-$kategori = $_GET['kategori'];
 if (isset($_GET['kategori'])) {
+    $kategori = $_GET['kategori'];
     $produk = query("SELECT * FROM ePasar WHERE kategori = '$kategori'");
 } else {
     $produk = query("SELECT * FROM ePasar");
@@ -82,7 +82,7 @@ if (isset($_GET['kategori'])) {
                 </a>
 
 
-                <a class="kategori-card 3 <?php if (isset($_GET['kategori']) && $kategori != "sembako") echo 'not-selected'; ?>"" href=" ?kategori=sembako">
+                <a class="kategori-card 3 <?php if (isset($_GET['kategori']) && $kategori != "sembako") echo 'not-selected'; ?>" href=" ?kategori=sembako">
                     <div class="icon-circle">
                         <i class='bx bxs-package'></i>
                     </div>

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,600;1,200;1,300;1,400;1,600&family=Poppins:ital,wght@0,100;0,200;0,400;0,700;1,200;1,400;1,700&display=swap");
+
 html {
   font-family: "poppins", sans-serif;
 }
@@ -10,14 +11,17 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --text: #3a3a3a;
 }
+
 html {
   color: var(--text);
 }
+
 /* index */
-.header-tampil{
+.header-tampil {
   display: flex;
   align-items: center;
   width: 100%;
@@ -32,7 +36,7 @@ html {
   z-index: -1;
 }
 
-.header-tampil i{
+.header-tampil i {
   color: #d80000;
   font-size: 2rem;
 
@@ -40,7 +44,8 @@ html {
 
   position: relative;
 }
-.header-tampil i::after{
+
+.header-tampil i::after {
   content: "";
   display: block;
   height: 100%;
@@ -52,61 +57,66 @@ html {
 
   background-color: #d80000;
 }
-.header-tampil img{
-  width: 3rem;
+
+.header-tampil img {
+  height: 2.5rem;
   margin-right: 0.3rem;
 }
 
-.header-tampil .title-fitur{
+.header-tampil .title-fitur {
   display: flex;
   flex-direction: column;
 
   line-height: 1rem;
 }
-.header-tampil .title-fitur h1{
+
+.header-tampil .title-fitur h1 {
   font-size: 1.1rem;
 }
-.header-tampil .title-fitur p{
+
+.header-tampil .title-fitur p {
   font-size: 0.8rem;
   white-space: nowrap;
 }
 
-.header-tampil .title-fitur p span{
+.header-tampil .title-fitur p span {
   color: #d80000;
 }
 
-.pengumuman-box{
+.pengumuman-box {
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
 
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5) ;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
   background-color: white;
 
   width: 100%;
   height: 15rem;
 }
-.pengumuman-box .title-box{
-display: flex;
-justify-content: space-between;
-align-items: center;
 
-position: sticky;
-top: 0;
-left: 0;
-z-index: 3;
+.pengumuman-box .title-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
-background-color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 3;
 
-box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+  background-color: white;
 
-padding: 0.5rem;
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+
+  padding: 0.5rem;
 }
-.pengumuman-box .title-box .selengkapnya-btn{
+
+.pengumuman-box .title-box .selengkapnya-btn {
   color: #d80000;
 }
 
-.pengumuman-card-screen{
+.pengumuman-card-screen {
   display: flex;
   justify-content: start;
   align-items: center;
@@ -118,25 +128,27 @@ padding: 0.5rem;
   width: 100%;
   height: 100%;
 }
-.pengumuman-card-wrapper{
+
+.pengumuman-card-wrapper {
   display: flex;
   justify-content: start;
   align-items: center;
   padding: 1.5rem 1rem 1.5rem 1rem;
-  
+
   scroll-snap-align: start;
 
   width: 100%;
   height: 100%;
 
 }
-.pengumuman-card-wrapper .card-pengumuman{
+
+.pengumuman-card-wrapper .card-pengumuman {
   display: flex;
   flex-direction: column;
 
   width: 100vw;
   height: 100%;
-  padding:  1rem;
+  padding: 1rem;
 
   background-color: white;
   border-radius: 1rem;
@@ -146,7 +158,7 @@ padding: 0.5rem;
   position: relative;
 }
 
-.pengumuman-card-wrapper .card-pengumuman img{
+.pengumuman-card-wrapper .card-pengumuman img {
   height: 3rem;
 
   position: absolute;
@@ -155,7 +167,7 @@ padding: 0.5rem;
   z-index: 1;
 }
 
-.pengumuman-card-wrapper .card-pengumuman .card-content{
+.pengumuman-card-wrapper .card-pengumuman .card-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -165,7 +177,8 @@ padding: 0.5rem;
   position: relative;
   z-index: 2;
 }
-.pengumuman-card-wrapper .card-pengumuman .card-content .card-title{
+
+.pengumuman-card-wrapper .card-pengumuman .card-content .card-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -173,30 +186,33 @@ padding: 0.5rem;
 
   padding-top: 0.5rem;
 }
-.pengumuman-card-wrapper .card-pengumuman .card-content .card-title h3{
+
+.pengumuman-card-wrapper .card-pengumuman .card-content .card-title h3 {
   font-size: 1.1rem;
   font-weight: 400;
 }
-.pengumuman-card-wrapper .card-pengumuman .card-content .card-title span{
+
+.pengumuman-card-wrapper .card-pengumuman .card-content .card-title span {
   font-size: 0.8rem;
   font-weight: 600;
 }
 
-.pengumuman-card-wrapper .card-pengumuman .card-content .card-bottom{
+.pengumuman-card-wrapper .card-pengumuman .card-content .card-bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   width: 100%;
 }
-.pengumuman-card-wrapper .card-pengumuman .card-content .card-bottom .button-wrapper{
+
+.pengumuman-card-wrapper .card-pengumuman .card-content .card-bottom .button-wrapper {
   display: flex;
   align-items: end;
 
   height: 100%;
 }
 
-.pengumuman-card-wrapper .card-pengumuman .card-content .card-bottom button{
+.pengumuman-card-wrapper .card-pengumuman .card-content .card-bottom button {
   background-color: #d80000;
   color: white;
   padding: 0.5rem;
@@ -209,7 +225,7 @@ padding: 0.5rem;
   align-items: center;
 }
 
-.pengumuman-card-wrapper .card-pengumuman .card-content .card-bottom .ringkasan-pengumuman{
+.pengumuman-card-wrapper .card-pengumuman .card-content .card-bottom .ringkasan-pengumuman {
   width: 65%;
 
   display: -webkit-box;
@@ -218,13 +234,14 @@ padding: 0.5rem;
   text-align: justify;
   overflow: hidden;
 }
-.pengumuman-card-wrapper .card-pengumuman .card-content .card-bottom .ringkasan-pengumuman p{
+
+.pengumuman-card-wrapper .card-pengumuman .card-content .card-bottom .ringkasan-pengumuman p {
   font-size: 0.6rem;
   color: #909090;
 }
 
 
-.berita-box{
+.berita-box {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -232,7 +249,7 @@ padding: 0.5rem;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
-.berita-box .title-box{
+.berita-box .title-box {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -246,7 +263,8 @@ padding: 0.5rem;
   padding: 0.5rem;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
 }
-.berita-box .title-box button{
+
+.berita-box .title-box button {
   background-color: #d80000;
   color: white;
 
@@ -258,11 +276,12 @@ padding: 0.5rem;
 
   padding: 0.5rem;
 }
-.berita-box .title-box button i{
+
+.berita-box .title-box button i {
   margin-right: 0.2rem;
 }
 
-.berita-card-wrapper{
+.berita-card-wrapper {
   width: 100%;
   height: 100%;
 
@@ -273,7 +292,7 @@ padding: 0.5rem;
   align-items: center;
 }
 
-.berita-card-wrapper .berita-card{
+.berita-card-wrapper .berita-card {
   display: flex;
   flex-direction: column;
 
@@ -288,11 +307,11 @@ padding: 0.5rem;
   overflow: hidden;
 }
 
-.berita-card-wrapper .berita-card .berita-image img{
+.berita-card-wrapper .berita-card .berita-image img {
   width: 100%;
 }
 
-.berita-card-wrapper .berita-card .berita-content{
+.berita-card-wrapper .berita-card .berita-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -301,7 +320,8 @@ padding: 0.5rem;
   height: 100%;
   width: 100%;
 }
-.berita-card-wrapper .berita-card .berita-content .title{
+
+.berita-card-wrapper .berita-card .berita-content .title {
   display: flex;
   flex-direction: column;
 
@@ -310,19 +330,22 @@ padding: 0.5rem;
   line-height: 1rem;
   margin-bottom: 0.5rem;
 }
-.berita-card-wrapper .berita-card .berita-content .title h3{
+
+.berita-card-wrapper .berita-card .berita-content .title h3 {
   font-size: 1.1rem;
 }
-.berita-card-wrapper .berita-card .berita-content .title span{
+
+.berita-card-wrapper .berita-card .berita-content .title span {
   font-size: 0.7rem;
   font-weight: 600;
 }
-.berita-card-wrapper .berita-card .berita-content .ringkasan p{
- font-size: 0.8rem;
- color: #909090;
+
+.berita-card-wrapper .berita-card .berita-content .ringkasan p {
+  font-size: 0.8rem;
+  color: #909090;
 }
 
-.berita-card-wrapper .berita-card .berita-content .button-wrapper{
+.berita-card-wrapper .berita-card .berita-content .button-wrapper {
   height: 100%;
 
 
@@ -331,7 +354,7 @@ padding: 0.5rem;
   justify-content: center;
 }
 
-.berita-card-wrapper .berita-card .berita-content button{
+.berita-card-wrapper .berita-card .berita-content button {
   background-color: #d80000;
   color: white;
 
@@ -362,6 +385,7 @@ padding: 0.5rem;
   left: 0;
   z-index: 2;
 }
+
 .pengumuman-head .header-halaman {
   width: 100%;
   padding: 0.5rem;
@@ -369,6 +393,7 @@ padding: 0.5rem;
 
   border-bottom: 1px solid var(--text);
 }
+
 .pengumuman-head .header-halaman a {
   text-decoration: none;
   font-weight: 600;
@@ -392,9 +417,11 @@ padding: 0.5rem;
   top: -0.2rem;
   z-index: 3;
 }
+
 .pengumuman-head .text-pengumuman h1 {
   font-size: 1.1rem;
 }
+
 .pengumuman-head .text-pengumuman p {
   font-size: 0.7rem;
 }
@@ -411,9 +438,11 @@ padding: 0.5rem;
   z-index: 0;
   top: 7rem;
 }
+
 .gambar-isi img {
   width: 100%;
 }
+
 .pengumuman-body .isi-pengumuman {
   display: flex;
   flex-direction: column;
@@ -441,6 +470,7 @@ padding: 0.5rem;
   position: relative;
   overflow-x: hidden;
 }
+
 .head-berita {
   width: 100%;
   height: auto;
@@ -449,6 +479,7 @@ padding: 0.5rem;
   position: fixed;
   background-color: white;
 }
+
 .head-berita a {
   text-decoration: none;
   font-weight: 600;
@@ -474,11 +505,13 @@ padding: 0.5rem;
   border-bottom-right-radius: 0.5rem;
   background-color: white;
 }
+
 .judul-berita h2 {
   font-weight: 600;
   font-size: 1.1rem;
   top: 3rem;
 }
+
 .judul-berita p {
   font-size: 0.7rem;
   top: 3rem;
@@ -505,12 +538,14 @@ padding: 0.5rem;
 .sosial-media i {
   font-size: 1rem;
 }
+
 .sosial-media .share {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 0.5rem;
 }
+
 .isi-berita {
   width: 100%;
   height: auto;
@@ -523,11 +558,13 @@ padding: 0.5rem;
   z-index: -1;
   padding-top: 7rem;
 }
+
 .gambar-berita img {
   width: 100%;
   height: auto;
   top: 7rem;
 }
+
 .text-berita {
   top: -2rem;
   height: 100%;
@@ -543,4 +580,45 @@ padding: 0.5rem;
   text-align: justify;
   text-indent: 20px;
   margin-bottom: 10px;
+}
+
+@media screen and (max-width: 765px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 85%;
+  }
+
+  .menu-popup .menu-wrapper .menu-box .menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 110px);
+  }
+}
+
+@media screen and (max-width: 365px) {
+  html {
+    font-size: 85%;
+  }
+
+  .menu-popup .menu-wrapper .menu-box .menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 90px);
+  }
 }

@@ -27,7 +27,6 @@ header {
   width: 100%;
   padding: 0.5rem;
 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 header a i {
@@ -53,7 +52,7 @@ header a i::after {
 }
 
 header img {
-  height: 3rem;
+  height: 2.5rem;
 
   margin-right: 0.3rem;
 }
@@ -85,8 +84,6 @@ header .title-fitur p span {
   flex-direction: column;
 
   width: 100%;
-
-  margin-top: 1rem;
 }
 
 .kategori-wrapper .title {
@@ -110,10 +107,17 @@ header .title-fitur p span {
   padding: 0.5rem 1rem;
 }
 
+.card-container a {
+  text-decoration: none;
+  color: var(--text);
+}
+
 .card-container .card-menu {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   width: 100%;
+  height: 12rem;
 
   padding: 1rem;
   margin-bottom: 0.5rem;
@@ -121,7 +125,7 @@ header .title-fitur p span {
   position: relative;
 
   border-radius: 1rem;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .card-menu .logo {
@@ -138,8 +142,12 @@ header .title-fitur p span {
   align-items: center;
 }
 
+.card-menu .upper h3 {
+  font-size: 1.5rem;
+}
+
 .card-menu .upper img {
-  width: 40%;
+  height: 5rem;
 }
 
 /* kategori end */
@@ -259,3 +267,44 @@ section .content-wrapper .desc-misi p {
 }
 
 /* visi misi end */
+
+@media screen and (max-width: 765px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 85%;
+  }
+
+  .menu-popup .menu-wrapper .menu-box .menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 110px);
+  }
+}
+
+@media screen and (max-width: 365px) {
+  html {
+    font-size: 85%;
+  }
+
+  .menu-popup .menu-wrapper .menu-box .menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 90px);
+  }
+}

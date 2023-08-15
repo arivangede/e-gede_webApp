@@ -43,42 +43,44 @@
                 <h2>Menu e-GeDe</h2>
             </div>
 
-            <div class="menu-content">
-                <div class="menu 1">
-                    <img src="img/assets/asset-menu-1.png" alt="icon">
-                    <p>E-News</p>
-                </div>
-                <div class="menu 2" onclick="pindahFiturProfilDesa()">
-                    <img src="img/assets/asset-menu-2.png" alt="icon">
-                    <p>Profil Desa</p>
-                </div>
-                <div class="menu 3" onclick="underConstruction()">
-                    <img src="img/assets/asset-menu-3.png" alt="icon">
-                    <p>Regulasi</p>
-                </div>
-                <div class="menu 4" onclick="underConstruction()">
-                    <img src="img/assets/asset-menu-4.png" alt="icon">
-                    <p>Pengaduan</p>
-                </div>
-                <div class="menu 5" onclick="dataDesa()">
-                    <img src="img/assets/asset-menu-5.png" alt="icon">
-                    <p>Data Desa</p>
-                </div>
-                <div class="menu 6" onclick="underConstruction()">
-                    <img src="img/assets/asset-menu-6.png" alt="icon">
-                    <p>Layanan Publik</p>
-                </div>
-                <div class="menu 7" onclick="keuanganDesa()">
-                    <img src="img/assets/asset-menu-7.png" alt="icon">
-                    <p>Keuangan Desa</p>
-                </div>
-                <div class="menu 8" onclick="underConstruction()">
-                    <img src="img/assets/asset-menu-8.png" alt="icon">
-                    <p>Wisata Budaya</p>
-                </div>
-                <div class="menu 9" onclick="ePasar()">
-                    <img src="img/assets/asset-menu-10.png" alt="icon">
-                    <p>E-Pasar</p>
+            <div class="menu-box">
+                <div class="menu-content">
+                    <div class="menu 1" onclick="fiturENews()">
+                        <img src="img/assets/asset-menu-1.png" alt="icon">
+                        <p>E-News</p>
+                    </div>
+                    <div class="menu 2" onclick="pindahFiturProfilDesa()">
+                        <img src="img/assets/asset-menu-2.png" alt="icon">
+                        <p>Profil Desa</p>
+                    </div>
+                    <div class="menu 3" onclick="underConstruction()">
+                        <img src="img/assets/asset-menu-3.png" alt="icon">
+                        <p>Regulasi</p>
+                    </div>
+                    <div class="menu 4" onclick="pengaduan()">
+                        <img src="img/assets/asset-menu-4.png" alt="icon">
+                        <p>Pengaduan</p>
+                    </div>
+                    <div class="menu 5" onclick="dataDesa()">
+                        <img src="img/assets/asset-menu-5.png" alt="icon">
+                        <p>Data Desa</p>
+                    </div>
+                    <div class="menu 6" onclick="underConstruction()">
+                        <img src="img/assets/asset-menu-6.png" alt="icon">
+                        <p>Layanan Publik</p>
+                    </div>
+                    <div class="menu 7" onclick="keuanganDesa()">
+                        <img src="img/assets/asset-menu-7.png" alt="icon">
+                        <p>Keuangan Desa</p>
+                    </div>
+                    <div class="menu 8" onclick="wisataBudaya()">
+                        <img src="img/assets/asset-menu-8.png" alt="icon">
+                        <p>Wisata Budaya</p>
+                    </div>
+                    <div class="menu 9" onclick="ePasar()">
+                        <img src="img/assets/asset-menu-10.png" alt="icon">
+                        <p>E-Pasar</p>
+                    </div>
                 </div>
             </div>
         </div>

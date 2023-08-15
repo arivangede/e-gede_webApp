@@ -67,6 +67,12 @@ function dataDesa() {
 function keuanganDesa() {
   window.location.href = "fitur/keuangan-desa/keuangan-desa.php";
 }
+function pengaduan() {
+  window.location.href = "fitur/pengaduan/";
+}
+function wisataBudaya() {
+  window.location.href = "fitur/wisata-budaya/";
+}
 
 // aktivitas
 const laporanSaya = document.querySelector(".laporan-saya");

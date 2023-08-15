@@ -312,6 +312,8 @@ form .input img {
   justify-content: center;
   align-items: start;
   padding: 0 0.5rem;
+
+  line-height: 1.5rem;
 }
 
 .logo-nama-desa .nama-desa h1 {
@@ -361,7 +363,7 @@ form .input img {
   background-color: white;
   border-top-left-radius: 1rem;
   border-top-right-radius: 1rem;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 
   position: relative;
 }
@@ -393,7 +395,7 @@ nav .nav-btn img {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .berandaBtn.active,
@@ -437,7 +439,7 @@ nav .nav-btn img {
   height: 23rem;
   background-color: white;
   border-radius: 1rem;
-  box-shadow: 0 0 10px black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 
   display: flex;
   flex-direction: column;
@@ -463,31 +465,39 @@ nav .nav-btn img {
   font-size: 1rem;
 }
 
-.menu-popup .menu-wrapper .menu-content {
+.menu-popup .menu-wrapper .menu-box {
   margin-top: 0.5rem;
-  width: 100%;
-  height: 20rem;
   overflow-y: auto;
   overflow-x: hidden;
 
+  display: flex;
+  justify-content: center;
+  align-items: start;
+
+  height: 100%;
+  width: 100%;
+  padding: 1rem 0;
+}
+
+.menu-popup .menu-wrapper .menu-box .menu-content {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 80px);
-  gap: 5px;
+  grid-template-columns: repeat(3, 90px);
+  grid-template-rows: repeat(3, 90px);
+  gap: 10px;
 }
 
 .menu-popup .menu-wrapper .menu-content .menu {
-  width: 5rem;
-  height: 5rem;
+  width: 100%;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   background-color: white;
   border-radius: 0.5rem;
-  margin: 0.5rem;
+  padding: 0.5rem;
 }
 
 .menu-popup .menu-wrapper .menu-content .menu img {
@@ -514,46 +524,62 @@ nav .nav-btn img {
   z-index: 2;
 }
 
-.carrousel-card {
+.carrousel-card-screen {
   position: sticky;
   top: 0;
   display: flex;
-  width: 100vw;
+  width: 100%;
   height: auto;
-  overflow-x: auto;
+  overflow-x: scroll;
   scroll-snap-type: x mandatory;
   background-color: white;
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.carrousel-card .card-carrousel {
-  width: max-content;
-  height: max-content;
+.carrousel-card-screen .carrousel-wrapper {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
-  border-radius: 0.3rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  margin: 0 0.5rem;
-  scroll-snap-align: start;
   padding: 0.2rem;
+
+  scroll-snap-align: start;
+
+  width: 100%;
+  height: 100%;
 }
 
-.carrousel-card .card-carrousel img {
-  width: 24rem;
-  object-fit: cover;
+.carrousel-card-screen .carrousel-wrapper .card-carrousel {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+
+  position: relative;
+}
+
+.carrousel-card-screen .card-carrousel img {
+  width: 100%;
 }
 
 /* MENU GRID */
+.menu-wrapper-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding: 1rem 0;
+}
+
 .menu-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 90px);
-  gap: 3px;
-  width: 100%;
+  grid-template-columns: repeat(3, 120px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 10px;
   background-color: white;
-  padding-top: 0.7rem;
-  padding-bottom: 1rem;
 }
 
 .menu-grid .menu {
@@ -561,15 +587,14 @@ nav .nav-btn img {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  height: 95%;
-  width: 90%;
+  height: 100%;
+  width: 100%;
   padding: 1rem 0 0 0;
   overflow: hidden;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
   border: none;
   background-color: white;
   border-radius: 0.5rem;
-  margin: 0.3rem;
 }
 
 .menu-grid .menu p {
@@ -1017,4 +1042,45 @@ nav .nav-btn img {
 .card-pilihdesa form .next-btn i {
   color: white;
   font-size: 4rem;
+}
+
+@media screen and (max-width: 765px) {
+  html {
+    font-size: 90%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  html {
+    font-size: 85%;
+  }
+
+  .menu-popup .menu-wrapper .menu-box .menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 110px);
+  }
+}
+
+@media screen and (max-width: 365px) {
+  html {
+    font-size: 85%;
+  }
+
+  .menu-popup .menu-wrapper .menu-box .menu-content {
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 8px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 90px);
+  }
 }
