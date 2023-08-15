@@ -43,7 +43,7 @@ $kecamatan = $nama_kecamatan;
         <a href="../../home.php"><i class='bx bx-arrow-back'></i></a>
         <img src="../../img/assets/asset-menu-5.png" alt="">
         <div class="title-fitur">
-            <h1>DATA DESA</h1>
+            <h1>Data Desa</h1>
             <p><span>Desa <?= $desa; ?></span>, Kec. <?= $kecamatan; ?></p>
         </div>
     </header>
